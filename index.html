@@ -103,21 +103,50 @@
    }
             const data = { name, message };
             try {
-                const response = await fetch(GOOGLE_SHEET_WEB_APP_URL, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(data)
-                });
-                const result = await response.json();
-                if (result.result === "success") {
-                    console.log("Message successfully logged to Google Sheet.");
-                } else {
-                    console.error("Error logging message to Google Sheet:", result.error);
-                }
-            } catch (error) {
-                console.error("Failed to post to Google Apps Script:", error);
+               /**
+ * Posts a message to the Google Apps Script to save it to the spreadsheet.
+ * Gracefully handles CORS and network errors.
+ * @param {string} name - The name of the person posting.
+ * @param {string} message - The message content.
+ */
+async function postToGoogleSheet(name, message) {
+    if (!GOOGLE_SHEET_WEB_APP_URL || GOOGLE_SHEET_WEB_APP_URL === "YOUR_WEB_APP_URL_HERE") {
+        console.error("Google Apps Script URL is not configured. Skipping post.");
+        messageDisplay.textContent = "Error: Google Sheet URL not configured.";
+        return;
+    }
+
+    const data = { name, message };
+
+    try {
+        const response = await fetch(GOOGLE_SHEET_WEB_APP_URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+
+        // Check for HTTP errors
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const result = await response.json();
+
+        if (result.result === "success") {
+            console.log("Message successfully logged to Google Sheet.");
+        } else {
+            console.error("Error logging message to Google Sheet:", result.error);
+            messageDisplay.textContent = `Error logging message: ${result.error}`;
+        }
+
+    } catch (error) {
+        console.error("Failed to post to Google Apps Script:", error);
+        messageDisplay.textContent = "Failed to send message. Please try again.";
+    }
+}
+
             }
         }
         
