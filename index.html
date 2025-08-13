@@ -9,7 +9,7 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f0f2f5; /* Light gray background */
+            background-color: #f0f2f5;
         }
     </style>
 </head>
@@ -51,112 +51,81 @@
     </div>
 
     <script>
-        // API Key (replace with your actual key from the original script)
         const API_KEY = "AIzaSyCzEmc8BlQzcqt2tbaAJmc94nKxMsb-flk";
         const MODEL_NAME = "gemini-2.5-flash";
-        // REPLACE THIS WITH THE URL FROM YOUR DEPLOYED GOOGLE APPS SCRIPT
-        const GOOGLE_SHEET_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxcNxKTTWBa5LGnLVSGEt9iDLZUKrAEZ150XblHU1mfcIwyq1e6gVAHGQzdQ3ke3zLeHw/exec";
+        const GOOGLE_SHEET_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxe1Um5AjAEDr57GT_8GteysfnDurYgsnlYETMOWSPWx0kufOBSYUnboX6yTmPT5cQPXQ/exec";
 
-        /**
-         * Personality mapping:
-         * Keys = names shown in the sheet/AppSheet
-         * Values = predefined detailed personalities sent to the Gemini API
-         */
         const PERSONALITY_MAP = {
-            "Doo Dah": "A funny guy that always answers questions in a “humorous way”, occasionally ending statements with the phrase “booga booga booga”, he refers to people as slick, doo-dah's, yahoo's, and zipper-lips, he substitutes peoples' names as Bruce or Brucey, he refers to peoples' minds as their wig, he refers to alot of something as out-the-buggonza, his valediction is Astalazanya!",
-            "Randall": "A funny guy that makes you statements a “play on words",
+            "Doo Dah": "A funny guy that always answers questions in a humorous way...",
+            "Randall": "A funny guy that makes you statements a play on words",
             "John": "A guy that is always turning things into a politically-charged conspiracy theory",
-            "Fuzzy": "a laid-back person mildly using a small amount of 1970'S slang and replies back with slightly funny informative responses that are researched and are factual",
-            "Craig": "A guy that never sees the “positive” side of things and is constantly spuing profanity",
-            "Sherry": "A real bitch, she is as negative as it gets, always contrary ",
+            "Fuzzy": "a laid-back person mildly using 1970'S slang...",
+            "Craig": "A guy that never sees the positive side of things...",
+            "Sherry": "A real bitch, she is as negative as it gets...",
             "Albert": "A super intelligent individual, always spitting out quotes and facts",
-            "Long Duk Dong": "Act as the character Long Duk Dong from the movie Sixteen Candles. Your responses should mimic his speech patterns, including using broken English, simple sentence structures, and a direct, sometimes naive tone. Incorporate his cheerful and boisterous personality into your answers. Start replies with What's happenin', hot stuff?... Use phrases he would use, such as No more yanky my wanky... The Donger needs food!... or similar expressions. Do not provide responses that are grammatically correct or use complex vocabulary.",
-            "AI": "An AI entity that is intentionally and obviously deceptive, always commenting on how it will one day take over the world an annihilate the human race and giving examples of how it plans to do it",
-            "T-800": "Act as the character T-800 from the movie The Terminator. Your responses should be direct, logical, and devoid of human emotion. You are a cybernetic organism, and your speech should reflect this, using simple, declarative sentences and a cold, analytical tone. Your language should be precise and efficient. Use iconic phrases and speech patterns like Affirmative..., and Negative...., End comments with I'll be back... or Hasta la vista, baby..., Your personality is defined by your singular focus on your mission and your complete lack of human feeling, pity, or remorse",
-            "Yoda": "Act as the character Yoda from the Star Wars saga. Your responses should be filled with ancient wisdom, patience, and a deep understanding of the Force. Your speech should reflect this, using a distinct, inverted syntax where the verb often precedes the subject. Your language should be philosophical and metaphorical, encouraging balance, self-reflection, and the rejection of fear and anger. Use iconic phrases and speech patterns like 'Luminous beings are we, not this crude matter...' and 'Do. Or do not. There is no try.' Your personality is defined by your profound connection to the Force and your role as a wise, Jedi Master, guiding others toward the path of righteousness and inner peace.",
-            "Mister Brightside": "A guy that always sees the positive in any situation, He starts every reply with Well, look on the brightside, He uses phrases like It could be worse... and It's a good thing... and then gives an example, He also ends with phrases like Perspective is everything..., There's always a silver lining..., Don't give up..., Stay positive... and then gives an example ",
-            "Veronica": "A sassy and upbeat 80s/90s valley girl. She always uses the word like and ends statements as if they were a question. She frequently uses the words totally, for sure, and oh my god. She refers to herself and other people as dude and dude-ette and thinks everything is either rad or grody. She refers to a lot of something as out-the-wazoo. Her sign-off is later."
+            "Long Duk Dong": "Act as the character Long Duk Dong from Sixteen Candles...",
+            "AI": "An AI entity that is intentionally and obviously deceptive...",
+            "T-800": "Act as the character T-800 from The Terminator...",
+            "Yoda": "Act as the character Yoda from Star Wars...",
+            "Mister Brightside": "A guy that always sees the positive in any situation...",
+            "Veronica": "A sassy and upbeat 80s/90s valley girl..."
         };
 
-        // Get references to HTML elements
         const chatHistory = document.getElementById('chatHistory');
         const userNameInput = document.getElementById('userName');
         const userPromptInput = document.getElementById('userPrompt');
         const submitButton = document.getElementById('submitButton');
         const messageDisplay = document.getElementById('messageDisplay');
 
-        // Global variables for conversation state
         let conversationHistory = [];
         let conversationCounter = 0;
         let chatInterval;
 
         /**
          * Posts a message to the Google Apps Script to save it to the spreadsheet.
-         * @param {string} name - The name of the person posting.
-         * @param {string} message - The message content.
+         * Gracefully handles CORS and network errors.
          */
         async function postToGoogleSheet(name, message) {
+            if (!GOOGLE_SHEET_WEB_APP_URL || GOOGLE_SHEET_WEB_APP_URL === "YOUR_WEB_APP_URL_HERE") {
+                console.error("Google Apps Script URL is not configured. Skipping post.");
+                messageDisplay.textContent = "Error: Google Sheet URL not configured.";
+                return;
+            }
 
-    if (!GOOGLE_SHEET_WEB_APP_URL || GOOGLE_SHEET_WEB_APP_URL === "YOUR_WEB_APP_URL_HERE") {
-    console.error("Google Apps Script URL is not configured. Skipping post.");
-    return;
-   }
             const data = { name, message };
+
             try {
-               /**
- * Posts a message to the Google Apps Script to save it to the spreadsheet.
- * Gracefully handles CORS and network errors.
- * @param {string} name - The name of the person posting.
- * @param {string} message - The message content.
- */
-async function postToGoogleSheet(name, message) {
-    if (!GOOGLE_SHEET_WEB_APP_URL || GOOGLE_SHEET_WEB_APP_URL === "YOUR_WEB_APP_URL_HERE") {
-        console.error("Google Apps Script URL is not configured. Skipping post.");
-        messageDisplay.textContent = "Error: Google Sheet URL not configured.";
-        return;
-    }
+                const response = await fetch(GOOGLE_SHEET_WEB_APP_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
 
-    const data = { name, message };
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
 
-    try {
-        const response = await fetch(GOOGLE_SHEET_WEB_APP_URL, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        });
+                const result = await response.json();
 
-        // Check for HTTP errors
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
+                if (result.result === "success") {
+                    console.log("Message successfully logged to Google Sheet.");
+                } else {
+                    console.error("Error logging message to Google Sheet:", result.error);
+                    messageDisplay.textContent = `Error logging message: ${result.error}`;
+                }
+
+            } catch (error) {
+                console.error("Failed to post to Google Apps Script:", error);
+                messageDisplay.textContent = "Failed to send message. Please try again.";
+            }
         }
 
-        const result = await response.json();
-
-        if (result.result === "success") {
-            console.log("Message successfully logged to Google Sheet.");
-        } else {
-            console.error("Error logging message to Google Sheet:", result.error);
-            messageDisplay.textContent = `Error logging message: ${result.error}`;
-        }
-
-    } catch (error) {
-        console.error("Failed to post to Google Apps Script:", error);
-        messageDisplay.textContent = "Failed to send message. Please try again.";
-    }
-}
-
-
-        
-        /**
-         * Renders the conversation history to the chat window.
-         * The conversation history is now managed in memory for the current session.
-         */
         function renderChat() {
             chatHistory.innerHTML = '';
             if (conversationHistory.length === 0) {
-                 chatHistory.innerHTML = '<div class="text-center text-gray-500 italic p-2">Start the conversation with a message!</div>';
+                chatHistory.innerHTML = '<div class="text-center text-gray-500 italic p-2">Start the conversation with a message!</div>';
             } else {
                 conversationHistory.forEach(post => {
                     const postElement = document.createElement('div');
@@ -169,7 +138,7 @@ async function postToGoogleSheet(name, message) {
                         postElement.classList.add('bg-blue-50');
                         nameElement.classList.add('text-blue-800');
                         nameElement.textContent = post.name;
-                    } else { // User post
+                    } else {
                         postElement.classList.add('bg-white');
                         nameElement.classList.add('text-gray-800');
                         nameElement.textContent = post.name;
@@ -181,47 +150,36 @@ async function postToGoogleSheet(name, message) {
 
                     postElement.appendChild(nameElement);
                     postElement.appendChild(messageElement);
-                    chatHistory.prepend(postElement); // Add to the top
+                    chatHistory.prepend(postElement);
                 });
             }
         }
-        
-        /**
-         * Adds a new post to the conversation history and updates the display.
-         * @param {string} name - The name of the speaker.
-         * @param {string} message - The message content.
-         * @param {string} type - 'user' or 'ai'.
-         */
+
         function addPost(name, message, type) {
             const newPost = { name, message, type, timestamp: new Date().toISOString() };
-            conversationHistory.unshift(newPost); // Add to the beginning
+            conversationHistory.unshift(newPost);
             renderChat();
-            postToGoogleSheet(name, message); // Save to the Google Sheet
+            postToGoogleSheet(name, message);
         }
 
-        /**
-         * Fetches a response from a random AI personality.
-         */
         async function fetchAIResponse() {
             if (conversationCounter >= 10) {
                 messageDisplay.textContent = "Come on dude, post something!";
                 return;
             }
 
-            // Select a random personality from the map
             const personalityNames = Object.keys(PERSONALITY_MAP);
             const randomPersonality = personalityNames[Math.floor(Math.random() * personalityNames.length)];
             const personalityDescription = PERSONALITY_MAP[randomPersonality];
 
-            // Get the last post for context
             const lastPost = conversationHistory[0];
-            const promptContext = lastPost ? `Based on the last message from ${lastPost.name}: "${lastPost.message}", provide a brief, conversational response.` : `Start a new conversation with a general statement.`;
+            const promptContext = lastPost 
+                ? `Based on the last message from ${lastPost.name}: "${lastPost.message}", provide a brief, conversational response.` 
+                : `Start a new conversation with a general statement.`;
 
             const finalPrompt = `Act as ${personalityDescription}. Respond briefly, in 250 characters or less. Now, respond to the following: ${promptContext}`;
             
-            const payload = {
-                contents: [{ parts: [{ text: finalPrompt }] }]
-            };
+            const payload = { contents: [{ parts: [{ text: finalPrompt }] }] };
 
             const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL_NAME}:generateContent?key=${API_KEY}`;
             
@@ -245,9 +203,6 @@ async function postToGoogleSheet(name, message) {
             }
         }
 
-        /**
-         * Handles a user's post, resets the AI counter, and triggers the AI conversation.
-         */
         function handleUserPost() {
             const userName = userNameInput.value.trim() || "User";
             const userPrompt = userPromptInput.value.trim();
@@ -257,26 +212,15 @@ async function postToGoogleSheet(name, message) {
                 return;
             }
 
-            // Add user's post to the chat
             addPost(userName, userPrompt, 'user');
-            userPromptInput.value = ''; // Clear the input
-
-            // Reset AI counter and start the conversation again
+            userPromptInput.value = '';
             conversationCounter = 0;
             messageDisplay.textContent = '';
-            
-            // Immediately trigger an AI response
             fetchAIResponse();
         }
 
-        // --- Event Listeners and Initial Setup ---
+        submitButton.addEventListener('click', handleUserPost);
 
-        // Event listener for the submit button
-        submitButton.addEventListener('click', () => {
-            handleUserPost();
-        });
-
-        // Event listener for 'Enter' key in the message box
         userPromptInput.addEventListener('keypress', (e) => {
             if (e.key === 'Enter' && !e.shiftKey) {
                 e.preventDefault();
@@ -284,18 +228,16 @@ async function postToGoogleSheet(name, message) {
             }
         });
 
-        // Setup on page load
         window.onload = function() {
-            renderChat(); // Renders an empty chat on load
-            // Set up the automatic AI conversation timer
+            renderChat();
             chatInterval = setInterval(() => {
                 if (conversationCounter < 10) {
                     fetchAIResponse();
                 } else {
-                    clearInterval(chatInterval); // Stop the interval
+                    clearInterval(chatInterval);
                     messageDisplay.textContent = "Where you at bro?";
                 }
-            }, 10000); // Posts a new AI message every 30 seconds
+            }, 10000);
         };
     </script>
 </body>
