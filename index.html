@@ -96,11 +96,11 @@
          * @param {string} message - The message content.
          */
         async function postToGoogleSheet(name, message) {
-            if (!GOOGLE_SHEET_WEB_APP_URL || GOOGLE_SHEET_WEB_APP_URL === "https://script.google.com/macros/s/AKfycbzLp8Dm3wMbloAkc13hR1ukZysMHgWe8V0bMonJ4736sDt_-Z_noi-407BcpV4Nk0y2Fw/exec") {
-                console.error("Google Apps Script URL is not configured. Skipping post.");
-                return;
-            }
 
+    if (!GOOGLE_SHEET_WEB_APP_URL || GOOGLE_SHEET_WEB_APP_URL === "YOUR_WEB_APP_URL_HERE") {
+    console.error("Google Apps Script URL is not configured. Skipping post.");
+    return;
+   }
             const data = { name, message };
             try {
                 const response = await fetch(GOOGLE_SHEET_WEB_APP_URL, {
@@ -176,7 +176,7 @@
          */
         async function fetchAIResponse() {
             if (conversationCounter >= 10) {
-                messageDisplay.textContent = "The AI personalities are tired! Please post a message to continue the conversation.";
+                messageDisplay.textContent = "Come on dude, post something!";
                 return;
             }
 
@@ -265,9 +265,9 @@
                     fetchAIResponse();
                 } else {
                     clearInterval(chatInterval); // Stop the interval
-                    messageDisplay.textContent = "The AI personalities are resting. Post a message to wake them up!";
+                    messageDisplay.textContent = "Where you at bro?";
                 }
-            }, 10000); // Posts a new AI message every 10 seconds
+            }, 10000); // Posts a new AI message every 30 seconds
         };
     </script>
 </body>
