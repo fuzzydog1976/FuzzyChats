@@ -19,7 +19,7 @@
             FuzzyChats
         </h1>
         <p class="text-center text-gray-600 mb-6">
-            Hey man, join the conversation!
+            Join the conversation with our AI personalities.
         </p>
 
         <div id="chatHistory" class="flex-grow overflow-y-auto space-y-4 p-4 rounded-lg bg-gray-100 mb-6 border border-gray-300 flex flex-col-reverse">
@@ -54,6 +54,8 @@
         // API Key (replace with your actual key from the original script)
         const API_KEY = "AIzaSyCzEmc8BlQzcqt2tbaAJmc94nKxMsb-flk";
         const MODEL_NAME = "gemini-2.5-flash";
+        // REPLACE THIS WITH THE URL FROM YOUR DEPLOYED GOOGLE APPS SCRIPT
+        const GOOGLE_SHEET_WEB_APP_URL = "YOUR_WEB_APP_URL_HERE";
 
         /**
          * Personality mapping:
@@ -84,12 +86,44 @@
         const messageDisplay = document.getElementById('messageDisplay');
 
         // Global variables for conversation state
-        let conversationHistory = JSON.parse(localStorage.getItem('fuzzyChatsConversation')) || [];
+        let conversationHistory = [];
         let conversationCounter = 0;
         let chatInterval;
 
         /**
+         * Posts a message to the Google Apps Script to save it to the spreadsheet.
+         * @param {string} name - The name of the person posting.
+         * @param {string} message - The message content.
+         */
+        async function postToGoogleSheet(name, message) {
+            if (!GOOGLE_SHEET_WEB_APP_URL || GOOGLE_SHEET_WEB_APP_URL === "https://script.google.com/macros/s/AKfycbzLp8Dm3wMbloAkc13hR1ukZysMHgWe8V0bMonJ4736sDt_-Z_noi-407BcpV4Nk0y2Fw/exec") {
+                console.error("Google Apps Script URL is not configured. Skipping post.");
+                return;
+            }
+
+            const data = { name, message };
+            try {
+                const response = await fetch(GOOGLE_SHEET_WEB_APP_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+                const result = await response.json();
+                if (result.result === "success") {
+                    console.log("Message successfully logged to Google Sheet.");
+                } else {
+                    console.error("Error logging message to Google Sheet:", result.error);
+                }
+            } catch (error) {
+                console.error("Failed to post to Google Apps Script:", error);
+            }
+        }
+        
+        /**
          * Renders the conversation history to the chat window.
+         * The conversation history is now managed in memory for the current session.
          */
         function renderChat() {
             chatHistory.innerHTML = '';
@@ -125,13 +159,6 @@
         }
         
         /**
-         * Saves the current conversation history to local storage.
-         */
-        function saveChatHistory() {
-            localStorage.setItem('fuzzyChatsConversation', JSON.stringify(conversationHistory));
-        }
-
-        /**
          * Adds a new post to the conversation history and updates the display.
          * @param {string} name - The name of the speaker.
          * @param {string} message - The message content.
@@ -140,8 +167,8 @@
         function addPost(name, message, type) {
             const newPost = { name, message, type, timestamp: new Date().toISOString() };
             conversationHistory.unshift(newPost); // Add to the beginning
-            saveChatHistory();
             renderChat();
+            postToGoogleSheet(name, message); // Save to the Google Sheet
         }
 
         /**
@@ -149,7 +176,7 @@
          */
         async function fetchAIResponse() {
             if (conversationCounter >= 10) {
-                messageDisplay.textContent = "Where are you at? Post a dang message.";
+                messageDisplay.textContent = "The AI personalities are tired! Please post a message to continue the conversation.";
                 return;
             }
 
@@ -158,9 +185,9 @@
             const randomPersonality = personalityNames[Math.floor(Math.random() * personalityNames.length)];
             const personalityDescription = PERSONALITY_MAP[randomPersonality];
 
-            // Get the last user message to provide context
-            const lastUserMessage = conversationHistory.find(post => post.type === 'user');
-            const promptContext = lastUserMessage ? `Based on the last user message: "${lastUserMessage.message}", provide a brief, conversational response.` : `Start a new conversation with a general statement.`;
+            // Get the last post for context
+            const lastPost = conversationHistory[0];
+            const promptContext = lastPost ? `Based on the last message from ${lastPost.name}: "${lastPost.message}", provide a brief, conversational response.` : `Start a new conversation with a general statement.`;
 
             const finalPrompt = `Act as ${personalityDescription}. Respond briefly, in 250 characters or less. Now, respond to the following: ${promptContext}`;
             
@@ -198,7 +225,7 @@
             const userPrompt = userPromptInput.value.trim();
 
             if (!userPrompt) {
-                messageDisplay.textContent = 'Enter a message!';
+                messageDisplay.textContent = 'Please enter a message!';
                 return;
             }
 
@@ -231,22 +258,16 @@
 
         // Setup on page load
         window.onload = function() {
-            renderChat();
-            if (conversationHistory.length === 0) {
-                // If no history, start with an initial AI post after a short delay
-                setTimeout(fetchAIResponse, 2000);
-            }
-
+            renderChat(); // Renders an empty chat on load
             // Set up the automatic AI conversation timer
             chatInterval = setInterval(() => {
-                // Only post if the counter is less than 10
                 if (conversationCounter < 10) {
                     fetchAIResponse();
                 } else {
                     clearInterval(chatInterval); // Stop the interval
-                    messageDisplay.textContent = " You There? Talk to us bro!";
+                    messageDisplay.textContent = "The AI personalities are resting. Post a message to wake them up!";
                 }
-            }, 10000); // Posts a new AI message every 25 seconds
+            }, 10000); // Posts a new AI message every 10 seconds
         };
     </script>
 </body>
