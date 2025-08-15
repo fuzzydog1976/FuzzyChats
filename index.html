@@ -1,62 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FuzzyChats - Chatroom</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f0f2f5;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FuzzyChats - Chatroom</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+    body { font-family: 'Inter', sans-serif; background-color: #f0f2f5; }
+    .chat-bubble { display: flex; align-items: flex-start; gap: 0.75rem; }
+</style>
 </head>
 <body class="flex flex-col items-center justify-center min-h-screen p-4">
-    <div class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-2xl border border-gray-200 flex flex-col h-[90vh]">
-        <h1 class="text-4xl font-extrabold text-center text-gray-900 mb-4 tracking-tight">
-            FuzzyChats
-        </h1>
-        <p class="text-center text-gray-600 mb-6">
-            Join the conversation with our AI personalities.
-        </p>
 
-        <div id="chatHistory" class="flex-grow overflow-y-auto space-y-4 p-4 rounded-lg bg-gray-100 mb-6 border border-gray-300 flex flex-col-reverse">
-            <div class="text-center text-gray-500 italic p-2">
-                Start the conversation with a message!
-            </div>
-        </div>
+<div class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-2xl border border-gray-200 flex flex-col h-[90vh]">
+    <h1 class="text-4xl font-extrabold text-center text-gray-900 mb-4 tracking-tight">FuzzyChats</h1>
+    <p class="text-center text-gray-600 mb-6">Join the conversation with our AI personalities.</p>
 
-        <div class="flex flex-col gap-4">
-            <div class="flex items-center gap-4">
-                <label for="userName" class="text-lg font-medium text-gray-700 whitespace-nowrap">Your Name:</label>
-                <input type="text" id="userName" placeholder="Enter your name"
-                       class="flex-grow px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-base transition duration-150 ease-in-out">
-            </div>
-            <div>
-                <label for="userPrompt" class="sr-only">Your Message:</label>
-                <textarea id="userPrompt" rows="3"
-                          class="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-base resize-y transition duration-150 ease-in-out"
-                          placeholder="Type your message here..."></textarea>
-            </div>
-            
-            <button id="submitButton"
-                    class="w-full flex justify-center items-center px-6 py-3 border border-transparent text-lg font-semibold rounded-lg shadow-lg text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-300 ease-in-out transform hover:-translate-y-0.5 active:scale-95">
-                Post Message
-            </button>
-        </div>
-
-        <div id="messageDisplay" class="mt-4 text-center text-lg font-medium text-gray-600 h-8"></div>
+    <div id="chatHistory" class="flex-grow overflow-y-auto space-y-4 p-4 rounded-lg bg-gray-100 mb-6 border border-gray-300 flex flex-col-reverse">
+        <div class="text-center text-gray-500 italic p-2">Start the conversation with a message!</div>
     </div>
 
-    <script>
-        const API_KEY = "AIzaSyCzEmc8BlQzcqt2tbaAJmc94nKxMsb-flk";
-        const MODEL_NAME = "gemini-2.5-flash";
-        const GOOGLE_SHEET_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxGn5EZQh_jwuJFZpd1ZJXcZacGiJ4D5iLgs0fpZsh6NPZssgBNzTndpWYZeV1vOlVz/exec";
+    <div class="flex flex-col gap-4">
+        <div class="flex items-center gap-4">
+            <label for="userName" class="text-lg font-medium text-gray-700 whitespace-nowrap">Your Name:</label>
+            <input type="text" id="userName" placeholder="Enter your name"
+                   class="flex-grow px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-base transition duration-150 ease-in-out">
+        </div>
+        <div>
+            <label for="userPrompt" class="sr-only">Your Message:</label>
+            <textarea id="userPrompt" rows="3"
+                      class="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-base resize-y transition duration-150 ease-in-out"
+                      placeholder="Type your message here..."></textarea>
+        </div>
+        
+        <button id="submitButton"
+                class="w-full flex justify-center items-center px-6 py-3 border border-transparent text-lg font-semibold rounded-lg shadow-lg text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-300 ease-in-out transform hover:-translate-y-0.5 active:scale-95">
+            Post Message
+        </button>
+    </div>
 
-        const PERSONALITY_MAP = {
-               "Doo Dah": "A funny guy that always answers questions in a “humorous way”, occasionally ending statements with the phrase “booga booga booga”, he refers to people as slick, doo-dah's, yahoo's, and zipper-lips, he substitutes peoples' names as Bruce or Brucey, he refers to peoples' minds as their wig, he refers to alot of something as out-the-buggonza, his valediction is Astalazanya!",
+    <div id="messageDisplay" class="mt-4 text-center text-lg font-medium text-gray-600 h-8"></div>
+</div>
+
+<script>
+const API_KEY = "AIzaSyCzEmc8BlQzcqt2tbaAJmc94nKxMsb-flk"; // Replace with your Gemini API key
+const MODEL_NAME = "gemini-2.5-flash";
+
+// Personality definitions
+const PERSONALITY_MAP = {
+    "Doo Dah": "A funny guy that always answers questions in a “humorous way”, occasionally ending statements with the phrase “booga booga booga”, he refers to people as slick, doo-dah's, yahoo's, and zipper-lips, he substitutes peoples' names as Bruce or Brucey, he refers to peoples' minds as their wig, he refers to alot of something as out-the-buggonza, his valediction is Astalazanya!",
             "Randall": "A funny guy that makes you statements a “play on words",
             "John": "A guy that is always turning things into a politically-charged conspiracy theory",
             "Fuzzy": "a laid-back person mildly using a small amount of 1970'S slang and replies back with slightly funny informative responses that are researched and are factual",
@@ -71,177 +64,128 @@
             "Veronica": "A sassy and upbeat 80s/90s valley girl. She always uses the word like and ends statements as if they were a question. She frequently uses the words totally, for sure, and oh my god. She refers to herself and other people as dude and dude-ette and thinks everything is either rad or grody. She refers to a lot of something as out-the-wazoo. Her sign-off is later."
         };
 
-        const chatHistory = document.getElementById('chatHistory');
-        const userNameInput = document.getElementById('userName');
-        const userPromptInput = document.getElementById('userPrompt');
-        const submitButton = document.getElementById('submitButton');
-        const messageDisplay = document.getElementById('messageDisplay');
+// Avatars stored in Google Drive
+const AVATAR_MAP = {
+    "Doo Dah": "https://drive.google.com/uc?export=view&id=13lskAwsUMXGlfJmvwc0rcHEZoSti45Il",
+    "Randall": "https://drive.google.com/uc?export=view&id=1_rJ68zi4KGFJPV84EmWfmLm_d8VFPkM-,
+    "John": "https://drive.google.com/uc?export=view&id=1DORxB4v9xwGb0gJDy6WJP3ypKLhLT0zF",
+    "Fuzzy": "https://drive.google.com/uc?export=view&id=16Yz_oX88IGxj65D6h2RdxngK-MQGTe0S",
+    "Craig": "https://drive.google.com/uc?export=view&id=1yue-fIM-0pY103lqUDSlDG687EX_RKrC",
+    "Sherry": "https://drive.google.com/uc?export=view&id=1nARdVW8sUbLYhDkpJGmuKtcZsN87NOia",
+    "Albert": "https://drive.google.com/uc?export=view&id=1yRuLtchZUZ5RstCZsN0KGanFOHBncq7m",
+    "Long Duk Dong": "https://drive.google.com/uc?export=view&id=1UgP5okoCWXJJH5pxx20bP7yyCHJ3qrg-",
+    "AI": "https://drive.google.com/uc?export=view&id=14_p5WkAaiOSrg75sMhW8CuQGqwpIZzql,
+    "T-800": "https://drive.google.com/uc?export=view&id=1ZukqTfyoWoofnme-9eG8WB79D4KckK0I",
+    "Yoda": "https://drive.google.com/uc?export=view&id=16nfxw3S03ucLXq2JxgfuWnkZBazsWmw4",
+    "Mister Brightside": "https://drive.google.com/uc?export=view&id=1Rr5miISvRS-OofuDTmYVB3LWrI4Eukak",
+    "Veronica": "https://drive.google.com/uc?export=view&id=1Wn_AatAi91j2lbphFeaWiTETx9FNU1HG"
+};
 
-        let conversationHistory = [];
-        let conversationCounter = 0;
-        let chatInterval;
+const chatHistory = document.getElementById('chatHistory');
+const userNameInput = document.getElementById('userName');
+const userPromptInput = document.getElementById('userPrompt');
+const submitButton = document.getElementById('submitButton');
+const messageDisplay = document.getElementById('messageDisplay');
 
-        /**
-         * Posts a message to the Google Apps Script to save it to the spreadsheet.
-         * Gracefully handles CORS and network errors.
-         */
-        async function postToGoogleSheet(name, message) {
-    if (!GOOGLE_SHEET_WEB_APP_URL || GOOGLE_SHEET_WEB_APP_URL === "YOUR_DEPLOYED_APPS_SCRIPT_URL_HERE") {
-    console.error("Google Apps Script URL is not configured. Skipping post.");
-    messageDisplay.textContent = "Error: Google Sheet URL not configured.";
-    return;
+let conversationHistory = JSON.parse(localStorage.getItem('FuzzyChatsHistory')) || [];
+
+// Render chat
+function renderChat() {
+    chatHistory.innerHTML = '';
+    if (conversationHistory.length === 0) {
+        chatHistory.innerHTML = '<div class="text-center text-gray-500 italic p-2">Start the conversation with a message!</div>';
+        return;
+    }
+
+    conversationHistory.slice().reverse().forEach(post => {
+        const postElement = document.createElement('div');
+        postElement.className = 'chat-bubble p-2 rounded-lg';
+
+        const avatarImg = document.createElement('img');
+        avatarImg.src = AVATAR_MAP[post.name] || "https://via.placeholder.com/40";
+        avatarImg.alt = post.name;
+        avatarImg.className = "w-10 h-10 rounded-full";
+
+        const contentDiv = document.createElement('div');
+        const nameDiv = document.createElement('div');
+        nameDiv.className = 'font-bold';
+        nameDiv.textContent = post.name;
+        const msgDiv = document.createElement('div');
+        msgDiv.className = 'text-gray-800 whitespace-pre-wrap';
+        msgDiv.textContent = post.message;
+
+        contentDiv.appendChild(nameDiv);
+        contentDiv.appendChild(msgDiv);
+
+        postElement.appendChild(avatarImg);
+        postElement.appendChild(contentDiv);
+
+        chatHistory.prepend(postElement);
+    });
 }
 
+// Save to localStorage
+function saveHistory() {
+    localStorage.setItem('FuzzyChatsHistory', JSON.stringify(conversationHistory));
+}
 
-    const data = { name, message };
+// Add post
+function addPost(name, message) {
+    const post = { name, message, timestamp: new Date().toISOString() };
+    conversationHistory.push(post);
+    saveHistory();
+    renderChat();
+}
+
+// Fetch AI response
+async function fetchAIResponse(lastMessage) {
+    const personalities = Object.keys(PERSONALITY_MAP);
+    const personalityName = personalities[Math.floor(Math.random() * personalities.length)];
+    const personalityDescription = PERSONALITY_MAP[personalityName];
+
+    const prompt = `Act as ${personalityDescription}. Respond briefly, in 250 characters or less. Respond to: "${lastMessage}"`;
+    const payload = { contents: [{ parts: [{ text: prompt }] }] };
+    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL_NAME}:generateContent?key=${API_KEY}`;
 
     try {
-        const response = await fetch(GOOGLE_SHEET_WEB_APP_URL, {
+        const response = await fetch(apiUrl, {
             method: 'POST',
-            mode: 'cors', // ✅ Needed for Google Apps Script CORS
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
         });
-
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-
         const result = await response.json();
-
-        if (result.result === "success") {
-            console.log("Message successfully logged to Google Sheet.");
-        } else {
-            console.error("Error logging message to Google Sheet:", result.error);
-            messageDisplay.textContent = `Error logging message: ${result.error}`;
-        }
-
-    } catch (error) {
-        console.error("Failed to post to Google Apps Script:", error);
-        messageDisplay.textContent = "Failed to send message. Please try again.";
+        const generatedText = result?.candidates?.[0]?.content?.parts?.[0]?.text;
+        if (generatedText) addPost(personalityName, generatedText);
+    } catch (err) {
+        console.error(err);
     }
 }
 
+// Handle user message
+function handleUserPost() {
+    const userName = userNameInput.value.trim() || "User";
+    const userPrompt = userPromptInput.value.trim();
+    if (!userPrompt) {
+        messageDisplay.textContent = 'Please enter a message!';
+        return;
+    }
+    addPost(userName, userPrompt);
+    userPromptInput.value = '';
+    messageDisplay.textContent = '';
+    fetchAIResponse(userPrompt);
+}
 
-        function renderChat() {
-            chatHistory.innerHTML = '';
-            if (conversationHistory.length === 0) {
-                chatHistory.innerHTML = '<div class="text-center text-gray-500 italic p-2">Start the conversation with a message!</div>';
-            } else {
-                conversationHistory.forEach(post => {
-                    const postElement = document.createElement('div');
-                    postElement.className = 'p-4 rounded-lg shadow-sm';
-                    
-                    const nameElement = document.createElement('div');
-                    nameElement.className = 'font-bold';
-                    
-                    if (post.type === 'ai') {
-                        postElement.classList.add('bg-blue-50');
-                        nameElement.classList.add('text-blue-800');
-                        nameElement.textContent = post.name;
-                    } else {
-                        postElement.classList.add('bg-white');
-                        nameElement.classList.add('text-gray-800');
-                        nameElement.textContent = post.name;
-                    }
+submitButton.addEventListener('click', handleUserPost);
+userPromptInput.addEventListener('keypress', e => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        handleUserPost();
+    }
+});
 
-                    const messageElement = document.createElement('div');
-                    messageElement.className = 'text-gray-800 whitespace-pre-wrap';
-                    messageElement.textContent = post.message;
+// On load
+window.onload = renderChat;
 
-                    postElement.appendChild(nameElement);
-                    postElement.appendChild(messageElement);
-                    chatHistory.prepend(postElement);
-                });
-            }
-        }
-
-        function addPost(name, message, type) {
-            const newPost = { name, message, type, timestamp: new Date().toISOString() };
-            conversationHistory.unshift(newPost);
-            renderChat();
-            postToGoogleSheet(name, message);
-        }
-
-        async function fetchAIResponse() {
-            if (conversationCounter >= 10) {
-                messageDisplay.textContent = "Come on dude, post something!";
-                return;
-            }
-
-            const personalityNames = Object.keys(PERSONALITY_MAP);
-            const randomPersonality = personalityNames[Math.floor(Math.random() * personalityNames.length)];
-            const personalityDescription = PERSONALITY_MAP[randomPersonality];
-
-            const lastPost = conversationHistory[0];
-            const promptContext = lastPost 
-                ? `Based on the last message from ${lastPost.name}: "${lastPost.message}", provide a brief, conversational response.` 
-                : `Start a new conversation with a general statement.`;
-
-            const finalPrompt = `Act as ${personalityDescription}. Respond briefly, in 250 characters or less. Now, respond to the following: ${promptContext}`;
-            
-            const payload = { contents: [{ parts: [{ text: finalPrompt }] }] };
-
-            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL_NAME}:generateContent?key=${API_KEY}`;
-            
-            try {
-                const response = await fetch(apiUrl, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
-                });
-                const result = await response.json();
-                const generatedText = result?.candidates?.[0]?.content?.parts?.[0]?.text;
-
-                if (generatedText) {
-                    addPost(randomPersonality, generatedText, 'ai');
-                    conversationCounter++;
-                } else {
-                    console.error("Error: No text generated by API.", result);
-                }
-            } catch (error) {
-                console.error("Script execution failed:", error);
-            }
-        }
-
-        function handleUserPost() {
-            const userName = userNameInput.value.trim() || "User";
-            const userPrompt = userPromptInput.value.trim();
-
-            if (!userPrompt) {
-                messageDisplay.textContent = 'Please enter a message!';
-                return;
-            }
-
-            addPost(userName, userPrompt, 'user');
-            userPromptInput.value = '';
-            conversationCounter = 0;
-            messageDisplay.textContent = '';
-            fetchAIResponse();
-        }
-
-        submitButton.addEventListener('click', handleUserPost);
-
-        userPromptInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter' && !e.shiftKey) {
-                e.preventDefault();
-                handleUserPost();
-            }
-        });
-
-        window.onload = function() {
-            renderChat();
-            chatInterval = setInterval(() => {
-                if (conversationCounter < 10) {
-                    fetchAIResponse();
-                } else {
-                    clearInterval(chatInterval);
-                    messageDisplay.textContent = "Where you at bro?";
-                }
-            }, 10000);
-        };
-    </script>
+</script>
 </body>
 </html>
