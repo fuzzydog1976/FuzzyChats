@@ -86,11 +86,12 @@
          * Gracefully handles CORS and network errors.
          */
         async function postToGoogleSheet(name, message) {
-    if (!GOOGLE_SHEET_WEB_APP_URL || GOOGLE_SHEET_WEB_APP_URL === "https://script.google.com/macros/s/AKfycbxGn5EZQh_jwuJFZpd1ZJXcZacGiJ4D5iLgs0fpZsh6NPZssgBNzTndpWYZeV1vOlVz/exec") {
-        console.error("Google Apps Script URL is not configured. Skipping post.");
-        messageDisplay.textContent = "Error: Google Sheet URL not configured.";
-        return;
-    }
+    if (!GOOGLE_SHEET_WEB_APP_URL || GOOGLE_SHEET_WEB_APP_URL === "YOUR_DEPLOYED_APPS_SCRIPT_URL_HERE") {
+    console.error("Google Apps Script URL is not configured. Skipping post.");
+    messageDisplay.textContent = "Error: Google Sheet URL not configured.";
+    return;
+}
+
 
     const data = { name, message };
 
