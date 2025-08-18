@@ -169,10 +169,27 @@ submitButton.addEventListener('click', () => {
     const userName = userNameInput.value.trim() || "User";
     const userMessage = userPromptInput.value.trim();
     if (!userMessage) return;
+    
     addPost(userName, userMessage);
-    userPromptInput.value = '';
+
+    // Check for mentioned personalities
+    const mentionedPersonalities = Object.keys(PERSONALITY_MAP).filter(name =>
+        userMessage.toLowerCase().includes(name.toLowerCase())
+    );
+
+    // Reply from mentioned personalities
+    mentionedPersonalities.forEach(personality => {
+        const delay = 5000 + Math.random() * 10000; // 5–15s delay
+        setTimeout(async () => {
+            const aiReply = await fetchAIResponse(personality, userMessage);
+            addPost(personality, aiReply);
+        }, delay);
+    });
+
+    // Schedule random AI responses from others
     scheduleAIResponses(userMessage);
 });
+
 
 renderChat();
 </script>
