@@ -23,15 +23,15 @@
 
     <div class="flex flex-col gap-4">
         <div class="flex items-center gap-4">
-            <label for="userName" class="text-lg font-medium text-gray-700 whitespace-nowrap">Your Name:</label>
-            <input type="text" id="userName" placeholder="Enter your name"
+            <label for="userName" class="text-lg font-medium text-gray-700 whitespace-nowrap">Username:</label>
+            <input type="text" id="userName" placeholder="Enter your username"
                    class="flex-grow px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-base transition duration-150 ease-in-out">
         </div>
         <div>
-            <label for="userPrompt" class="sr-only">Your Message:</label>
+            <label for="userPrompt" class="sr-only">Comment or Question?:</label>
             <textarea id="userPrompt" rows="3"
                       class="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-base resize-y transition duration-150 ease-in-out"
-                      placeholder="Type your message here..."></textarea>
+                      placeholder="Type your Comment or Question here..."></textarea>
         </div>
         
         <button id="submitButton"
@@ -74,6 +74,7 @@ const AVATAR_MAP = {
     "Long Duk Dong": "avatars/Long Duk Dong.png",
     "AI": "avatars/AI.png",
     "T-800": "avatars/T-800.png",
+    "Timbo": "avatars/Timbo.png",
     "Yoda": "avatars/Yoda.png",
     "Mister Brightside": "avatars/Mister Brightside.png",
     "Veronica": "avatars/Veronica.png"
@@ -149,17 +150,20 @@ function getRandomPersonalities(count) {
 }
 
 function scheduleAIResponses(userMessage) {
-    const numReplies = Math.floor(Math.random() * 2) + 2; // 2 or 3 personalities
+    const numReplies = 5; // At least 5 personalities
     const selected = getRandomPersonalities(numReplies);
 
-    selected.forEach((personality, index) => {
-        const delay = 40000 + Math.random() * 20000; // 40–60s
+    selected.forEach((personality) => {
+        // Each comment gets its own random delay between 30 and 60 seconds
+        const delay = 30000 + Math.random() * 30000; // 30–60s
+
         setTimeout(async () => {
             const aiReply = await fetchAIResponse(personality, userMessage);
             addPost(personality, aiReply);
-        }, delay * index); // stagger replies
+        }, delay);
     });
 }
+
 
 submitButton.addEventListener('click', () => {
     const userName = userNameInput.value.trim() || "User";
