@@ -17,9 +17,11 @@
     <h1 class="text-4xl font-extrabold text-center text-gray-900 mb-4 tracking-tight">FuzzFeed</h1>
     <p class="text-center text-gray-600 mb-6">All the Fuzz without the Fuss!</p>
 
-    <div id="chatHistory" class="flex-grow overflow-y-auto space-y-4 p-4 rounded-lg bg-gray-100 mb-6 border border-gray-300 flex flex-col-reverse">
-        <div class="text-center text-gray-500 italic p-2">Start the conversation with a message!</div>
+    <div id="chatHistory" class="flex-grow overflow-y-auto space-y-4 p-4 rounded-lg bg-gray-100 mb-6 border border-gray-300 flex flex-col">
+    <div class="text-center text-gray-500 italic p-2">
+        Start the conversation with a message!
     </div>
+</div>
 
     <div class="flex flex-col gap-4">
         <div class="flex items-center gap-4">
@@ -97,7 +99,8 @@ function renderChat() {
         chatHistory.innerHTML = '<div class="text-center text-gray-500 italic p-2">Start the conversation with a message!</div>';
         return;
     }
-    conversationHistory.slice().reverse().forEach(post => {
+    // Changed this line to remove .slice().reverse()
+    conversationHistory.forEach(post => {
         const postElement = document.createElement('div');
         postElement.className = 'chat-bubble p-2 rounded-lg';
         const avatarImg = document.createElement('img');
@@ -114,7 +117,8 @@ function renderChat() {
         contentDiv.appendChild(msgDiv);
         postElement.appendChild(avatarImg);
         postElement.appendChild(contentDiv);
-        chatHistory.prepend(postElement);
+        // Changed from prepend to appendChild
+        chatHistory.appendChild(postElement);
     });
 }
 function saveHistory() {
