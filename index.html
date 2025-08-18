@@ -85,6 +85,7 @@ const AVATAR_MAP = {
 
 
 
+<script>
 const chatHistory = document.getElementById('chatHistory');
 const userNameInput = document.getElementById('userName');
 const userPromptInput = document.getElementById('userPrompt');
@@ -93,43 +94,50 @@ const messageDisplay = document.getElementById('messageDisplay');
 
 let conversationHistory = JSON.parse(localStorage.getItem('FuzzyChatsHistory')) || [];
 
+// ----------------- Rendering -----------------
 function renderChat() {
     chatHistory.innerHTML = '';
     if (conversationHistory.length === 0) {
         chatHistory.innerHTML = '<div class="text-center text-gray-500 italic p-2">Start the conversation with a message!</div>';
         return;
     }
-    // Changed this line to remove .slice().reverse()
     conversationHistory.forEach(post => {
         const postElement = document.createElement('div');
         postElement.className = 'chat-bubble p-2 rounded-lg';
+
         const avatarImg = document.createElement('img');
         avatarImg.src = AVATAR_MAP[post.name] || "https://via.placeholder.com/40";
         avatarImg.className = "w-10 h-10 rounded-full";
+
         const contentDiv = document.createElement('div');
         const nameDiv = document.createElement('div');
         nameDiv.className = 'font-bold';
         nameDiv.textContent = post.name;
+
         const msgDiv = document.createElement('div');
         msgDiv.className = 'text-gray-800 whitespace-pre-wrap';
         msgDiv.textContent = post.message;
+
         contentDiv.appendChild(nameDiv);
         contentDiv.appendChild(msgDiv);
+
         postElement.appendChild(avatarImg);
         postElement.appendChild(contentDiv);
-        // Changed from prepend to appendChild
         chatHistory.appendChild(postElement);
     });
 }
+
 function saveHistory() {
     localStorage.setItem('FuzzyChatsHistory', JSON.stringify(conversationHistory));
 }
+
 function addPost(name, message) {
     conversationHistory.push({ name, message, timestamp: new Date().toISOString() });
     saveHistory();
     renderChat();
 }
 
+// ----------------- AI Fetch -----------------
 async function fetchAIResponse(personalityName, lastMessage) {
     const personalityDescription = PERSONALITY_MAP[personalityName];
     const prompt = `Act as ${personalityDescription}. Respond briefly, in 250 characters or less. Respond to: "${lastMessage}"`;
@@ -149,54 +157,119 @@ async function fetchAIResponse(personalityName, lastMessage) {
     }
 }
 
-function getRandomPersonalities(count) {
-    const names = Object.keys(PERSONALITY_MAP);
+// ----------------- Helpers -----------------
+function getRandomPersonalities(count, exclude = []) {
+    const names = Object.keys(PERSONALITY_MAP).filter(n => !exclude.includes(n));
     return names.sort(() => 0.5 - Math.random()).slice(0, count);
 }
 
+function detectMentions(message) {
+    return Object.keys(PERSONALITY_MAP).filter(name =>
+        message.toLowerCase().includes(name.toLowerCase())
+    );
+}
+
+// ----------------- Enhanced Schedule -----------------
 function scheduleAIResponses(userMessage) {
     const numReplies = 5; // At least 5 personalities
     const selected = getRandomPersonalities(numReplies);
 
-    selected.forEach((personality) => {
-        // Each comment gets its own random delay between 30 and 60 seconds
-        const delay = 30000 + Math.random() * 30000; // 30–60s
+    const mentions = detectMentions(userMessage);
 
+    // Handle mentions
+    mentions.forEach((name, idx) => {
         setTimeout(async () => {
-            const aiReply = await fetchAIResponse(personality, userMessage);
-            addPost(personality, aiReply);
-        }, delay);
+            const aiReply = await fetchAIResponse(
+                name,
+                `You were mentioned! Respond to: "${userMessage}"`
+            );
+            addPost(name, aiReply);
+
+            // Chance of others piling on
+            if (Math.random() < 0.7) {
+                const pileOnGroup = getRandomPersonalities(
+                    Math.floor(Math.random() * 2) + 1, // 1–2 extras
+                    [name]
+                );
+                pileOnGroup.forEach((member, j) => {
+                    const pileDelay = 5000 + Math.random() * 10000;
+                    setTimeout(async () => {
+                        const aiReply2 = await fetchAIResponse(
+                            member,
+                            `React to ${name}'s reply about "${userMessage}"`
+                        );
+                        addPost(member, aiReply2);
+                    }, pileDelay * (j + 1));
+                });
+            }
+        }, 5000 + idx * 2000); // Mention replies quickly (5–10s)
+    });
+
+    // Normal chatter cycle
+    selected.forEach((personality, index) => {
+        if (mentions.includes(personality)) return; // avoid double reply
+
+        const delay = 30000 + Math.random() * 30000; // 30–60s
+        setTimeout(async () => {
+            let replyTarget;
+            const roll = Math.random();
+
+            if (roll < 0.4) {
+                // Reply to user
+                replyTarget = { name: "User", message: userMessage };
+            } else if (roll < 0.8 && conversationHistory.length > 0) {
+                // Reply to another AI
+                const othersPosts = conversationHistory.filter(
+                    p => p.name !== personality
+                );
+                if (othersPosts.length > 0) {
+                    replyTarget = othersPosts[othersPosts.length - 1];
+                }
+            } else if (roll < 1.0 && conversationHistory.length > 0) {
+                // Group reply (mini-thread)
+                const threadTarget = conversationHistory[conversationHistory.length - 1];
+                const groupMembers = getRandomPersonalities(
+                    Math.floor(Math.random() * 2) + 2,
+                    [threadTarget.name]
+                );
+
+                groupMembers.forEach((member, idx) => {
+                    const groupDelay = 5000 + Math.random() * 5000;
+                    setTimeout(async () => {
+                        const aiReply = await fetchAIResponse(
+                            member,
+                            `Join ${threadTarget.name}'s conversation: "${threadTarget.message}"`
+                        );
+                        addPost(member, aiReply);
+                    }, groupDelay * idx);
+                });
+                return;
+            }
+
+            // Normal single reply
+            if (replyTarget) {
+                const aiReply = await fetchAIResponse(
+                    personality,
+                    `Reply to ${replyTarget.name}'s message: "${replyTarget.message}"`
+                );
+                addPost(personality, aiReply);
+            }
+        }, delay * index);
     });
 }
 
-
+// ----------------- Event Listener -----------------
 submitButton.addEventListener('click', () => {
     const userName = userNameInput.value.trim() || "User";
     const userMessage = userPromptInput.value.trim();
     if (!userMessage) return;
     
     addPost(userName, userMessage);
-
-    // Check for mentioned personalities
-    const mentionedPersonalities = Object.keys(PERSONALITY_MAP).filter(name =>
-        userMessage.toLowerCase().includes(name.toLowerCase())
-    );
-
-    // Reply from mentioned personalities
-    mentionedPersonalities.forEach(personality => {
-        const delay = 5000 + Math.random() * 10000; // 5–15s delay
-        setTimeout(async () => {
-            const aiReply = await fetchAIResponse(personality, userMessage);
-            addPost(personality, aiReply);
-        }, delay);
-    });
-
-    // Schedule random AI responses from others
-    scheduleAIResponses(userMessage);
+    scheduleAIResponses(userMessage); // mentions + chatter handled here
 });
-
 
 renderChat();
 </script>
+
 </body>
 </html>
