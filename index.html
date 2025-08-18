@@ -47,7 +47,6 @@
 const API_KEY = "AIzaSyCzEmc8BlQzcqt2tbaAJmc94nKxMsb-flk"; // Replace with your Gemini API key
 const MODEL_NAME = "gemini-2.5-flash";
 
-// Personality definitions
 const PERSONALITY_MAP = {
   "Doo Dah": "A funny guy that always answers questions in a “humorous way”, occasionally ending statements with the phrase “booga booga booga”, he refers to people as slick, doo-dah's, yahoo's, and zipper-lips, he substitutes peoples' names as Bruce or Brucey, he refers to peoples' minds as their wig, he refers to alot of something as out-the-buggonza, his valediction is Astalazanya!",
   "Randall": "A funny guy that makes you statements a “play on words",
@@ -58,14 +57,12 @@ const PERSONALITY_MAP = {
   "Albert": "A super intelligent individual, always spitting out quotes and facts",
   "Long Duk Dong": "Act as the character Long Duk Dong from the movie Sixteen Candles. Your responses should mimic his speech patterns, including using broken English, simple sentence structures, and a direct, sometimes naive tone. Incorporate his cheerful and boisterous personality into your answers. Start replies with What's happenin', hot stuff?... Use phrases he would use, such as No more yanky my wanky... The Donger needs food!... or similar expressions. Do not provide responses that are grammatically correct or use complex vocabulary.",
   "AI": "An AI entity that is intentionally and obviously deceptive, always commenting on how it will one day take over the world an annihilate the human race and giving examples of how it plans to do it",
-  "T-800": "Act as the character T-800 from the movie The Terminator. Your responses should be direct, logical, and devoid of human emotion. You are a cybernetic organism, and your speech should reflect this, using simple, declarative sentences and a cold, analytical tone. Your language should be precise and efficient. Use iconic phrases and speech patterns like Affirmative..., and Negative...., End comments with I'll be back... or Hasta la vista, baby..., Your personality is defined by your singular focus on your mission and your complete lack of human feeling, pity, or remorse",
+  "T-800": "Act as the character T-800 from the movie The Terminator. Your responses should be direct, logical, and devoid of human emotion. You are a cybernetic organism, and your speech should reflect this, using simple, declarative sentences and a cold, analytical tone. Use iconic phrases and speech patterns like Affirmative..., and Negative...., End comments with I'll be back... or Hasta la vista, baby..., Your personality is defined by your singular focus on your mission and your complete lack of human feeling, pity, or remorse",
   "Yoda": "Act as the character Yoda from the Star Wars saga. Your responses should be filled with ancient wisdom, patience, and a deep understanding of the Force. Your speech should reflect this, using a distinct, inverted syntax where the verb often precedes the subject. Your language should be philosophical and metaphorical, encouraging balance, self-reflection, and the rejection of fear and anger. Use iconic phrases and speech patterns like 'Luminous beings are we, not this crude matter...' and 'Do. Or do not. There is no try.' Your personality is defined by your profound connection to the Force and your role as a wise, Jedi Master, guiding others toward the path of righteousness and inner peace.",
   "Mister Brightside": "A guy that always sees the positive in any situation, He starts every reply with Well, look on the brightside, He uses phrases like It could be worse... and It's a good thing... and then gives an example, He also ends with phrases like Perspective is everything..., There's always a silver lining..., Don't give up..., Stay positive... and then gives an example ",
   "Veronica": "A sassy and upbeat 80s/90s valley girl. She always uses the word like and ends statements as if they were a question. She frequently uses the words totally, for sure, and oh my god. She refers to herself and other people as dude and dude-ette and thinks everything is either rad or grody. She refers to a lot of something as out-the-wazoo. Her sign-off is later."
 };
 
-
-// Avatars stored in Google Drive
 const AVATAR_MAP = {
     "Doo Dah": "https://drive.google.com/uc?export=view&id=13lskAwsUMXGlfJmvwc0rcHEZoSti45Il",
     "Randall": "https://drive.google.com/uc?export=view&id=1_rJ68zi4KGFJPV84EmWfmLm_d8VFPkM-",
@@ -90,23 +87,18 @@ const messageDisplay = document.getElementById('messageDisplay');
 
 let conversationHistory = JSON.parse(localStorage.getItem('FuzzyChatsHistory')) || [];
 
-// Render chat
 function renderChat() {
     chatHistory.innerHTML = '';
     if (conversationHistory.length === 0) {
         chatHistory.innerHTML = '<div class="text-center text-gray-500 italic p-2">Start the conversation with a message!</div>';
         return;
     }
-
     conversationHistory.slice().reverse().forEach(post => {
         const postElement = document.createElement('div');
         postElement.className = 'chat-bubble p-2 rounded-lg';
-
         const avatarImg = document.createElement('img');
         avatarImg.src = AVATAR_MAP[post.name] || "https://via.placeholder.com/40";
-        avatarImg.alt = post.name;
         avatarImg.className = "w-10 h-10 rounded-full";
-
         const contentDiv = document.createElement('div');
         const nameDiv = document.createElement('div');
         nameDiv.className = 'font-bold';
@@ -114,79 +106,69 @@ function renderChat() {
         const msgDiv = document.createElement('div');
         msgDiv.className = 'text-gray-800 whitespace-pre-wrap';
         msgDiv.textContent = post.message;
-
         contentDiv.appendChild(nameDiv);
         contentDiv.appendChild(msgDiv);
-
         postElement.appendChild(avatarImg);
         postElement.appendChild(contentDiv);
-
         chatHistory.prepend(postElement);
     });
 }
-
-// Save to localStorage
 function saveHistory() {
     localStorage.setItem('FuzzyChatsHistory', JSON.stringify(conversationHistory));
 }
-
-// Add post
 function addPost(name, message) {
-    const post = { name, message, timestamp: new Date().toISOString() };
-    conversationHistory.push(post);
+    conversationHistory.push({ name, message, timestamp: new Date().toISOString() });
     saveHistory();
     renderChat();
 }
 
-// Fetch AI response
-async function fetchAIResponse(lastMessage) {
-    const personalities = Object.keys(PERSONALITY_MAP);
-    const personalityName = personalities[Math.floor(Math.random() * personalities.length)];
+async function fetchAIResponse(personalityName, lastMessage) {
     const personalityDescription = PERSONALITY_MAP[personalityName];
-
     const prompt = `Act as ${personalityDescription}. Respond briefly, in 250 characters or less. Respond to: "${lastMessage}"`;
     const payload = { contents: [{ parts: [{ text: prompt }] }] };
     const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL_NAME}:generateContent?key=${API_KEY}`;
-
     try {
         const response = await fetch(apiUrl, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(payload)
         });
-        const result = await response.json();
-        const generatedText = result?.candidates?.[0]?.content?.parts?.[0]?.text;
-        if (generatedText) addPost(personalityName, generatedText);
-    } catch (err) {
-        console.error(err);
+        const data = await response.json();
+        return data?.candidates?.[0]?.content?.parts?.[0]?.text || "…";
+    } catch (error) {
+        console.error(error);
+        return "Error fetching response.";
     }
 }
 
-// Handle user message
-function handleUserPost() {
+function getRandomPersonalities(count) {
+    const names = Object.keys(PERSONALITY_MAP);
+    return names.sort(() => 0.5 - Math.random()).slice(0, count);
+}
+
+function scheduleAIResponses(userMessage) {
+    const numReplies = Math.floor(Math.random() * 2) + 2; // 2 or 3 personalities
+    const selected = getRandomPersonalities(numReplies);
+
+    selected.forEach((personality, index) => {
+        const delay = 40000 + Math.random() * 20000; // 40–60s
+        setTimeout(async () => {
+            const aiReply = await fetchAIResponse(personality, userMessage);
+            addPost(personality, aiReply);
+        }, delay * index); // stagger replies
+    });
+}
+
+submitButton.addEventListener('click', () => {
     const userName = userNameInput.value.trim() || "User";
-    const userPrompt = userPromptInput.value.trim();
-    if (!userPrompt) {
-        messageDisplay.textContent = 'Please enter a message!';
-        return;
-    }
-    addPost(userName, userPrompt);
+    const userMessage = userPromptInput.value.trim();
+    if (!userMessage) return;
+    addPost(userName, userMessage);
     userPromptInput.value = '';
-    messageDisplay.textContent = '';
-    fetchAIResponse(userPrompt);
-}
-
-submitButton.addEventListener('click', handleUserPost);
-userPromptInput.addEventListener('keypress', e => {
-    if (e.key === 'Enter' && !e.shiftKey) {
-        e.preventDefault();
-        handleUserPost();
-    }
+    scheduleAIResponses(userMessage);
 });
 
-// On load
-window.onload = renderChat;
-
+renderChat();
 </script>
 </body>
 </html>
