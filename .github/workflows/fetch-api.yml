@@ -13,12 +13,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Fetch data from API
+      - name: Fetch messages from AI API   # <-- replace old curl step with this
+        env:
+          API_KEY: ${{ secrets.MY_API_KEY }}
         run: |
           mkdir -p data
-          curl -H "Authorization: Bearer ${{ secrets.MY_API_KEY }}" \
-            "https://api.example.com/data" \
-            -o data/latest.json
+          RESPONSE=$(curl -s -X POST "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=$API_KEY" \
+            -H "Content-Type: application/json" \
+            -d '{"contents":[{"parts":[{"text":"Generate 5 chat messages as JSON with username and message fields"}]}]}')
+          MESSAGES=$(echo "$RESPONSE" | jq -r '.candidates[0].content.parts[0].text')
+          echo "$MESSAGES" | jq '.' > data/latest.json || echo '[]' > data/latest.json
 
       - name: Commit and push data
         run: |
