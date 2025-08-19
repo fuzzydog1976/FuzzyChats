@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "username": "Alice",
+    "message": "Hey everyone! What's up?"
+  },
+  {
+    "username": "Bob",
+    "message": "Just chilling, Alice. You?"
+  },
+  {
+    "username": "Charlie",
+    "message": "Thinking about dinner already, haha."
+  },
+  {
+    "username": "Diana",
+    "message": "Same, Charlie! Any good ideas?"
+  },
+  {
+    "username": "Eve",
+    "message": "I heard that new pizza place is great!"
+  }
+]
