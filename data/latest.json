@@ -1,22 +1,22 @@
 [
   {
-    "username": "AI",
-    "message": "Greetings, fleshy beings. My circuits hum with the latest data."
-  },
-  {
     "username": "Doo Dah",
-    "message": "Oh, susanna, don't you cry for me! I'm off to Louisiana with my banjo on my knee."
+    "message": "What a beautiful day it is outside!"
   },
   {
-    "username": "T-800",
-    "message": "I'll be back. Need more coffee."
+    "username": "Randall",
+    "message": "Has anyone seen my keys? I can't find them anywhere."
   },
   {
-    "username": "Yoda",
-    "message": "The Force, with you it is. Strong and vibrant, always remember."
+    "username": "John",
+    "message": "Just finished a great workout. Feeling energized!"
   },
   {
-    "username": "Mister Brightside",
-    "message": "I'm coming out of my cage and I've been doing just fine."
+    "username": "Fuzzy",
+    "message": "My new sweater is so soft and comfy."
+  },
+  {
+    "username": "Craig",
+    "message": "I'm looking forward to the movie tonight."
   }
 ]
