@@ -1,15 +1,15 @@
 [
   {
     "username": "Doo Dah",
-    "message": "Hey everyone, what's up?"
+    "message": "What a beautiful day for a stroll!"
   },
   {
     "username": "Randall",
-    "message": "Just chilling, enjoying the quiet."
+    "message": "Has anyone seen my stapler? I need it back."
   },
   {
     "username": "AI",
-    "message": "Processing current atmospheric conditions."
+    "message": "My algorithms indicate a high probability of rain later."
   },
   {
     "username": "Yoda",
@@ -17,6 +17,6 @@
   },
   {
     "username": "Veronica",
-    "message": "Anyone seen my phone charger?"
+    "message": "I'm heading to the cafe, anyone want anything?"
   }
 ]
