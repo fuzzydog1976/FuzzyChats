@@ -1,0 +1,29 @@
+name: Fetch API Data
+
+on:
+  workflow_dispatch:   # allow manual runs
+  schedule:
+    - cron: "0 * * * *"   # runs every hour (optional, adjust as needed)
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Fetch data from API
+        run: |
+          mkdir -p data
+          curl -H "Authorization: Bearer ${{ secrets.MY_API_KEY }}" \
+            "https://api.example.com/data" \
+            -o data/latest.json
+
+      - name: Commit and push data
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data/latest.json
+          git commit -m "Update API data [skip ci]" || echo "No changes to commit"
+          git push
