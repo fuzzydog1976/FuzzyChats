@@ -1,22 +1,22 @@
 [
   {
-    "username": "Doo Dah",
-    "message": "Good morning, everyone! Hope you all have a fantastic day."
-  },
-  {
     "username": "Randall",
-    "message": "Anyone seen my keys? I swear I just had them a second ago."
+    "message": "Anyone seen my stapler?"
   },
   {
-    "username": "John",
-    "message": "Just finished a great workout. Feeling energized!"
+    "username": "Veronica",
+    "message": "I'm still waiting for that report, Randall."
   },
   {
-    "username": "Fuzzy",
-    "message": "Remember to hydrate, it's getting warm out there."
+    "username": "AI",
+    "message": "Query: What is the optimal strategy for resource allocation?"
   },
   {
-    "username": "Craig",
-    "message": "Checking in from the office, busy but making progress."
+    "username": "Yoda",
+    "message": "Much to learn, you still have."
+  },
+  {
+    "username": "T-800",
+    "message": "I'll be back."
   }
 ]
