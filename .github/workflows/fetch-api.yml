@@ -1,14 +1,18 @@
 name: Fetch FuzzFeed Chat Messages
 
 on:
-  workflow_dispatch:        # manual trigger
+  workflow_dispatch:
   schedule:
-    - cron: '*/10 * * * *' # every 10 minutes
+    - cron: '*/10 * * * *'
+
+permissions:
+  contents: write
+  pages: write
 
 jobs:
   update-data:
     runs-on: ubuntu-latest
-
+    
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -24,24 +28,23 @@ jobs:
           RESPONSE=$(curl -s -X POST "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=$API_KEY" \
             -H "Content-Type: application/json" \
             -d '{
-                  "contents":[
+              "contents":[
+                {
+                  "parts":[
                     {
-                      "parts":[
-                        {
-                          "text":"Return ONLY a valid JSON array of 5 chat messages. Each object should have \"username\" and \"message\" fields. Use only these usernames: Doo Dah, Randall, John, Fuzzy, Craig, Sherry, Albert, Long Duk Dong, AI, T-800, Yoda, Mister Brightside, Veronica. Do not include extra text, explanations, or markdown."
-                        }
-                      ]
+                      "text":"Return ONLY a valid JSON array of 5 chat messages. Each object should have \"username\" and \"message\" fields. Use only these usernames: Doo Dah, Randall, John, Fuzzy, Craig, Sherry, Albert, Long Duk Dong, AI, T-800, Yoda, Mister Brightside, Veronica. Do not include extra text, explanations, or markdown."
                     }
                   ]
-                }')
-          
+                }
+              ]
+            }')
+           
           echo "RAW RESPONSE:"
           echo "$RESPONSE"
-
-          # Extract JSON array safely
+          
           MESSAGES=$(echo "$RESPONSE" | jq -r '.candidates[0].content.parts[0].text')
           echo "$MESSAGES" | jq '.' > data/latest.json || echo '[]' > data/latest.json
-
+          
       - name: Commit and push latest.json safely
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -53,7 +56,6 @@ jobs:
           
           if ! git diff-index --quiet HEAD; then
             git commit -m "Update latest.json [skip ci]"
-            # Use the token in the push URL
             git push https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git HEAD:main
           else
             echo "No changes to commit"
