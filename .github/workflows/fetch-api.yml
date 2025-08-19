@@ -3,10 +3,10 @@ name: Fetch FuzzFeed Chat Messages
 on:
   workflow_dispatch:        # manual trigger
   schedule:
-    - cron: '*/10 * * * *' # every 10 minutes, adjust as needed
+    - cron: '*/10 * * * *'  # every 10 minutes
 
 permissions:
-  contents: write   # necessary for pushing to repo
+  contents: write           # needed to push latest.json back to the repo
 
 jobs:
   update-data:
@@ -14,38 +14,62 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Fetch messages from AI API
         env:
           API_KEY: ${{ secrets.MY_API_KEY }}
+        shell: bash
         run: |
+          set -euo pipefail
           mkdir -p data
+
+          # Call Gemini API
           RESPONSE=$(curl -s -X POST "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=$API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{
-        "contents":[
-          {
-            "parts":[
-              {
-                "text":"Return ONLY a valid JSON array of 5 chat messages. Each object should have \"username\" and \"message\" fields. Do not include extra text, explanations, or markdown. Example: [{\"username\":\"Fuzzy\",\"message\":\"Hi\"}]"
-              }
-            ]
-          }
-        ]
-      }')
+            -H "Content-Type: application/json" \
+            -d '{
+                  "contents": [
+                    {
+                      "parts": [
+                        {
+                          "text": "Return ONLY a valid JSON array of 5 chat messages. Each object must have \"username\" and \"message\" fields. Only output JSON, no explanations or markdown. Example: [{\"username\":\"Fuzzy\",\"message\":\"Hi\"}]"
+                        }
+                      ]
+                    }
+                  ]
+                }')
 
-          MESSAGES=$(echo "$RESPONSE" | jq -r '.candidates[0].content.parts[0].text')
-          echo "$MESSAGES" | jq '.' > data/latest.json || echo '[]' > data/latest.json
+          echo "RAW RESPONSE:"
+          echo "$RESPONSE"
 
-      - name: Commit and push latest.json safely
+          # Pull the model text field that should contain JSON
+          RAW=$(echo "$RESPONSE" | jq -r '.candidates[0].content.parts[0].text // ""')
+
+          # If RAW is valid JSON, use it; else try to extract the first [ ... ] block; else fall back to []
+          if echo "$RAW" | jq -e . >/dev/null 2>&1; then
+            JSON="$RAW"
+          else
+            JSON=$(printf "%s" "$RAW" | sed -n '/\[/,/\]/p' || true)
+            if ! echo "$JSON" | jq -e . >/dev/null 2>&1; then
+              echo "Model did not return valid JSON. Falling back to empty array."
+              JSON='[]'
+            fi
+          fi
+
+          echo "$JSON" | jq '.' > data/latest.json
+
+      - name: Commit and push latest.json
+        shell: bash
         run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/latest.json
-          if ! git diff-index --quiet HEAD; then
+
+          if ! git diff --cached --quiet; then
             git commit -m "Update latest.json [skip ci]"
-            git push origin main
+            # Push to the checked-out branch (usually main for Pages)
+            git push
           else
             echo "No changes to commit"
           fi
