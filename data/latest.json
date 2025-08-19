@@ -1,22 +1,22 @@
 [
   {
-    "username": "Doo Dah",
-    "message": "Anybody seen my horse?"
-  },
-  {
-    "username": "Veronica",
-    "message": "I'm feeling a little bit blue today."
+    "username": "Yoda",
+    "message": "May the Force be with you."
   },
   {
     "username": "T-800",
     "message": "I'll be back."
   },
   {
-    "username": "Yoda",
-    "message": "Powerful you have become, the dark side I sense in you."
+    "username": "AI",
+    "message": "Processing request..."
   },
   {
-    "username": "Mister Brightside",
-    "message": "It was only a kiss, it was only a kiss."
+    "username": "Doo Dah",
+    "message": "Oh, Doo Dah day!"
+  },
+  {
+    "username": "Veronica",
+    "message": "Just checking in."
   }
 ]
