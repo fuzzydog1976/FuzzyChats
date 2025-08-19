@@ -1,9 +1,9 @@
-name: Fetch API Data
+name: Fetch FuzzFeed Chat Messages
 
 on:
-  workflow_dispatch:   # allow manual runs
+  workflow_dispatch:        # manual trigger
   schedule:
-    - cron: "0 * * * *"   # runs every hour (optional, adjust as needed)
+    - cron: '*/10 * * * *' # every 10 minutes, adjust as needed
 
 jobs:
   update-data:
@@ -13,21 +13,31 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Fetch messages from AI API   # <-- replace old curl step with this
+      - name: Fetch messages from AI API
         env:
           API_KEY: ${{ secrets.MY_API_KEY }}
         run: |
           mkdir -p data
           RESPONSE=$(curl -s -X POST "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=$API_KEY" \
             -H "Content-Type: application/json" \
-            -d '{"contents":[{"parts":[{"text":"Generate 5 chat messages as JSON with username and message fields"}]}]}')
+            -d '{
+                  "contents":[
+                    {
+                      "parts":[
+                        {
+                          "text":"Generate 5 chat messages as a JSON array. Each object should have username (choose from: Doo Dah, Randall, John, Fuzzy, Craig, Sherry, Albert, Long Duk Dong, AI, T-800, Yoda, Mister Brightside, Veronica) and message fields. Output valid JSON only, without extra text."
+                        }
+                      ]
+                    }
+                  ]
+                }')
           MESSAGES=$(echo "$RESPONSE" | jq -r '.candidates[0].content.parts[0].text')
           echo "$MESSAGES" | jq '.' > data/latest.json || echo '[]' > data/latest.json
 
-      - name: Commit and push data
+      - name: Commit and push latest.json
         run: |
-          git config user.name "github-actions"
-          git config user.email "actions@github.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/latest.json
-          git commit -m "Update API data [skip ci]" || echo "No changes to commit"
+          git commit -m "Update latest.json [skip ci]" || echo "No changes to commit"
           git push
