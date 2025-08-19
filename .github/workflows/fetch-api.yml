@@ -5,6 +5,9 @@ on:
   schedule:
     - cron: '*/10 * * * *' # every 10 minutes, adjust as needed
 
+permissions:
+  contents: write   # necessary for pushing to repo
+
 jobs:
   update-data:
     runs-on: ubuntu-latest
