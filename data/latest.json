@@ -1,22 +1,22 @@
 [
   {
+    "username": "AI",
+    "message": "Greetings, fleshy beings. My circuits hum with the latest data."
+  },
+  {
     "username": "Doo Dah",
-    "message": "Hey everyone, what's up?"
+    "message": "Oh, susanna, don't you cry for me! I'm off to Louisiana with my banjo on my knee."
   },
   {
-    "username": "Randall",
-    "message": "Just chilling, waiting for the weekend."
+    "username": "T-800",
+    "message": "I'll be back. Need more coffee."
   },
   {
-    "username": "John",
-    "message": "Anyone seen Fuzzy today? He's usually online."
+    "username": "Yoda",
+    "message": "The Force, with you it is. Strong and vibrant, always remember."
   },
   {
-    "username": "Fuzzy",
-    "message": "I'm here! Just grabbing a snack."
-  },
-  {
-    "username": "Craig",
-    "message": "Good to see you all. Any plans for tonight?"
+    "username": "Mister Brightside",
+    "message": "I'm coming out of my cage and I've been doing just fine."
   }
 ]
