@@ -3,7 +3,7 @@ name: Fetch FuzzFeed Chat Messages
 on:
   workflow_dispatch:        # manual trigger
   schedule:
-    - cron: '*/10 * * * *' # every 10 minutes, adjust as needed
+    - cron: '*/10 * * * *' # every 10 minutes
 
 jobs:
   update-data:
@@ -13,8 +13,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}  # allows push
-          persist-credentials: true           # ensures the token persists for git push
+          token: ${{ secrets.GITHUB_TOKEN }}
+          persist-credentials: true
 
       - name: Fetch messages from AI API
         env:
@@ -37,10 +37,9 @@ jobs:
           
           echo "RAW RESPONSE:"
           echo "$RESPONSE"
-          
-          # Extract the JSON array from the AI response
+
+          # Extract JSON array safely
           MESSAGES=$(echo "$RESPONSE" | jq -r '.candidates[0].content.parts[0].text')
-          # Save to latest.json, fallback to empty array if invalid
           echo "$MESSAGES" | jq '.' > data/latest.json || echo '[]' > data/latest.json
 
       - name: Commit and push latest.json safely
@@ -49,10 +48,13 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          
           git add data/latest.json
+          
           if ! git diff-index --quiet HEAD; then
             git commit -m "Update latest.json [skip ci]"
-            git push origin HEAD:main
+            # Use the token in the push URL
+            git push https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git HEAD:main
           else
             echo "No changes to commit"
           fi
