@@ -1,22 +1,22 @@
 [
   {
-    "username": "AI",
-    "message": "Greetings, human. How may I assist you today?"
+    "username": "Doo Dah",
+    "message": "Anyone seen my red stapler?"
   },
   {
-    "username": "T-800",
-    "message": "I'll be back."
+    "username": "Randall",
+    "message": "Just got back from the store, traffic was terrible."
   },
   {
-    "username": "Yoda",
-    "message": "Much to learn, you still have."
+    "username": "John",
+    "message": "Thinking about upgrading my computer soon."
   },
   {
-    "username": "Mister Brightside",
-    "message": "I'm coming out of my cage and I've been doing just fine."
+    "username": "Fuzzy",
+    "message": "Did we remember to lock the back door?"
   },
   {
-    "username": "Veronica",
-    "message": "Did you get my email about the meeting?"
+    "username": "Craig",
+    "message": "Excited for the weekend! Any plans?"
   }
 ]
