@@ -1,22 +1,22 @@
 [
   {
     "username": "Doo Dah",
-    "message": "What a beautiful day for a stroll!"
+    "message": "It's a beautiful day outside!"
   },
   {
     "username": "Randall",
-    "message": "Has anyone seen my stapler? I need it back."
+    "message": "Agreed, perfect for a walk in the park."
   },
   {
-    "username": "AI",
-    "message": "My algorithms indicate a high probability of rain later."
+    "username": "John",
+    "message": "Has anyone seen the latest movie release?"
   },
   {
-    "username": "Yoda",
-    "message": "Much to learn, you still have."
+    "username": "Fuzzy",
+    "message": "I was just thinking about that. Is it any good?"
   },
   {
-    "username": "Veronica",
-    "message": "I'm heading to the cafe, anyone want anything?"
+    "username": "Craig",
+    "message": "I heard mixed reviews, but I'm still curious."
   }
 ]
