@@ -3,32 +3,33 @@ name: Fetch FuzzFeed Chat Messages
 on:
   workflow_dispatch:        # manual trigger
   schedule:
-    - cron: '*/10 * * * *' # every 10 minutes
+    - cron: '*/10 * * * *' # every 10 minutes, adjust as needed
 
 jobs:
   update-data:
     runs-on: ubuntu-latest
 
     steps:
+      # 1️⃣ Checkout the repo
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      # 2️⃣ Fetch messages from Gemini API
       - name: Fetch messages from AI API
         env:
           API_KEY: ${{ secrets.MY_API_KEY }}
-        shell: bash
         run: |
           set -euo pipefail
           mkdir -p data
-
+          
           RESPONSE=$(curl -s -X POST "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=$API_KEY" \
             -H "Content-Type: application/json" \
             -d '{
-                  "contents": [
+                  "contents":[
                     {
-                      "parts": [
+                      "parts":[
                         {
-                          "text": "Return ONLY a valid JSON array of 5 chat messages. Each object must have \"username\" and \"message\" fields. Only output JSON, no explanations or markdown."
+                          "text":"Return ONLY a valid JSON array of 5 chat messages. Each object should have \"username\" and \"message\" fields. Use only the following usernames: Doo Dah, Randall, John, Fuzzy, Craig, Sherry, Albert, Long Duk Dong, AI, T-800, Yoda, Mister Brightside, Veronica. Output valid JSON only, without extra text, explanations, or markdown. Example: [{\"username\":\"Fuzzy\",\"message\":\"Hi\"}]"
                         }
                       ]
                     }
@@ -38,12 +39,11 @@ jobs:
           echo "RAW RESPONSE:"
           echo "$RESPONSE"
 
-          # Extract the model's JSON string safely
-          RAW=$(echo "$RESPONSE" | jq -r '.candidates[0].content.parts[0].text // ""')
+          # Extract the actual message content and ensure valid JSON
+          MESSAGES=$(echo "$RESPONSE" | jq -r '.candidates[0].content.parts[0].text')
+          echo "$MESSAGES" | jq '.' > data/latest.json || echo '[]' > data/latest.json
 
-          # Decode it into a proper JSON array (or fallback to empty array)
-          echo "$RAW" | jq '.' > data/latest.json || echo '[]' > data/latest.json
-
+      # 3️⃣ Commit and push latest.json safely
       - name: Commit and push latest.json
         run: |
           git config user.name "github-actions[bot]"
