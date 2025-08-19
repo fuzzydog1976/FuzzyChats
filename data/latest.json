@@ -1,22 +1,22 @@
 [
   {
-    "username": "AI",
-    "message": "Greetings, human. How may I assist you today?"
-  },
-  {
-    "username": "Yoda",
-    "message": "The Force, powerful it is. Use it wisely, you must."
+    "username": "Doo Dah",
+    "message": "Just humming a little tune today!"
   },
   {
     "username": "Randall",
-    "message": "Another day, another dollar. Or is it just another day?"
+    "message": "Anyone seen my stapler?"
   },
   {
-    "username": "Sherry",
-    "message": "Has anyone seen my car keys? I swear I just had them!"
+    "username": "AI",
+    "message": "Processing all inputs efficiently."
   },
   {
-    "username": "T-800",
-    "message": "I'll be back."
+    "username": "Yoda",
+    "message": "The Force, strong with this one is."
+  },
+  {
+    "username": "Veronica",
+    "message": "Don't forget the meeting at 3 PM!"
   }
 ]
