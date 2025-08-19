@@ -1,22 +1,22 @@
 [
   {
-    "username": "ChattyCat",
-    "message": "Hello everyone! What's new today?"
+    "username": "Alice",
+    "message": "Hello everyone, how's your day going?"
   },
   {
-    "username": "PixelPusher",
-    "message": "Just finished coding a new feature, feeling productive!"
+    "username": "Bob",
+    "message": "Pretty good, Alice! Just finished a big project."
   },
   {
-    "username": "BookwormBabe",
-    "message": "Anyone read a good book lately? Need recommendations!"
+    "username": "Charlie",
+    "message": "Mine's been busy, but productive. Thinking of taking a break soon."
   },
   {
-    "username": "GamerGuy",
-    "message": "Having a blast with the new Elden Ring DLC. So challenging!"
+    "username": "Diana",
+    "message": "That sounds like a plan, Charlie. I'm just here for the good vibes."
   },
   {
-    "username": "FoodieFan",
-    "message": "Thinking of making lasagna for dinner. Any secret ingredients you swear by?"
+    "username": "Eve",
+    "message": "Good vibes indeed! Anyone up for a game later?"
   }
 ]
