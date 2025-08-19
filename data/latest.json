@@ -1,22 +1,22 @@
 [
   {
-    "username": "Randall",
-    "message": "Anyone seen my stapler?"
+    "username": "Doo Dah",
+    "message": "Anybody seen my horse?"
   },
   {
     "username": "Veronica",
-    "message": "I'm still waiting for that report, Randall."
-  },
-  {
-    "username": "AI",
-    "message": "Query: What is the optimal strategy for resource allocation?"
-  },
-  {
-    "username": "Yoda",
-    "message": "Much to learn, you still have."
+    "message": "I'm feeling a little bit blue today."
   },
   {
     "username": "T-800",
     "message": "I'll be back."
+  },
+  {
+    "username": "Yoda",
+    "message": "Powerful you have become, the dark side I sense in you."
+  },
+  {
+    "username": "Mister Brightside",
+    "message": "It was only a kiss, it was only a kiss."
   }
 ]
