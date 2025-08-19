@@ -1,49 +1,80 @@
-name: Fetch FuzzFeed Chat Messages
+name: Generate FuzzFeed Chat Messages
 
 on:
   workflow_dispatch:
+    inputs:
+      userName:
+        description: 'The username to attribute the post to'
+        required: true
+        default: 'User'
+      userPrompt:
+        description: 'The user''s message to trigger the AI response'
+        required: true
   schedule:
-    - cron: '*/10 * * * *'
-
-permissions:
-  contents: write
-  pages: write
+    - cron: '*/10 * * * *' # Your existing scheduled run
 
 jobs:
   update-data:
     runs-on: ubuntu-latest
-    
+    permissions:
+      contents: write
+      pages: write
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          persist-credentials: true
 
-      - name: Fetch messages from AI API
+      - name: Fetch and add new messages
         env:
           API_KEY: ${{ secrets.MY_API_KEY }}
+          USER_NAME: ${{ github.event.inputs.userName }}
+          USER_PROMPT: ${{ github.event.inputs.userPrompt }}
         run: |
           mkdir -p data
+          
+          # Read existing data or start with an empty array
+          if [ -f "data/latest.json" ]; then
+            messages=$(cat data/latest.json)
+          else
+            messages="[]"
+          fi
+          
+          # Add the user's message to the data
+          if [ -n "$USER_PROMPT" ]; then
+            messages=$(echo "$messages" | jq --arg name "$USER_NAME" --arg msg "$USER_PROMPT" '. + [{"username": $name, "message": $msg}]')
+          fi
+          
+          # Prepare the AI API request payload
+          read -r -d '' PROMPT_TEMPLATE << EOM
+          Return ONLY a valid JSON array of 5 chat messages that react to the previous messages. Each object should have "username" and "message" fields. Use only these usernames: Doo Dah, Randall, John, Fuzzy, Craig, Sherry, Albert, Long Duk Dong, AI, T-800, Yoda, Mister Brightside, Veronica. Do not include extra text, explanations, or markdown.
+          EOM
+
           RESPONSE=$(curl -s -X POST "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=$API_KEY" \
             -H "Content-Type: application/json" \
             -d '{
-              "contents":[
-                {
-                  "parts":[
+                  "contents":[
                     {
-                      "text":"Return ONLY a valid JSON array of 5 chat messages. Each object should have \"username\" and \"message\" fields. Use only these usernames: Doo Dah, Randall, John, Fuzzy, Craig, Sherry, Albert, Long Duk Dong, AI, T-800, Yoda, Mister Brightside, Veronica. Do not include extra text, explanations, or markdown."
+                      "parts":[
+                        {
+                          "text":"'"$PROMPT_TEMPLATE"'"
+                        }
+                      ]
                     }
-                  ]
-                }
-              ]
-            }')
-           
-          echo "RAW RESPONSE:"
-          echo "$RESPONSE"
+                  ],
+                  "generation_config": {
+                    "temperature": 0.9
+                  }
+                }')
           
-          MESSAGES=$(echo "$RESPONSE" | jq -r '.candidates[0].content.parts[0].text')
-          echo "$MESSAGES" | jq '.' > data/latest.json || echo '[]' > data/latest.json
+          # Extract and add the AI messages to the data
+          ai_messages=$(echo "$RESPONSE" | jq -r '.candidates[0].content.parts[0].text')
+          
+          # Make sure the AI messages are valid JSON and merge them
+          if echo "$ai_messages" | jq -e . > /dev/null; then
+            messages=$(echo "$messages" | jq --argjson new_msgs "$ai_messages" '. + $new_msgs')
+          fi
+
+          echo "$messages" | jq '.' > data/latest.json
           
       - name: Commit and push latest.json safely
         env:
@@ -55,8 +86,8 @@ jobs:
           git add data/latest.json
           
           if ! git diff-index --quiet HEAD; then
-            git commit -m "Update latest.json [skip ci]"
-            git push https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git HEAD:main
+            git commit -m "Update latest.json via dispatch [skip ci]"
+            git push
           else
             echo "No changes to commit"
           fi
