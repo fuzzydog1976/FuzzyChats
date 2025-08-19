@@ -22,18 +22,19 @@ jobs:
         run: |
           mkdir -p data
           RESPONSE=$(curl -s -X POST "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=$API_KEY" \
-            -H "Content-Type: application/json" \
-            -d '{
-                  "contents":[
-                    {
-                      "parts":[
-                        {
-                          "text":"Generate 5 chat messages as a JSON array. Each object should have username (choose from: Doo Dah, Randall, John, Fuzzy, Craig, Sherry, Albert, Long Duk Dong, AI, T-800, Yoda, Mister Brightside, Veronica) and message fields. Output valid JSON only, without extra text."
-                        }
-                      ]
-                    }
-                  ]
-                }')
+  -H "Content-Type: application/json" \
+  -d '{
+        "contents":[
+          {
+            "parts":[
+              {
+                "text":"Return ONLY a valid JSON array of 5 chat messages. Each object should have \"username\" and \"message\" fields. Do not include extra text, explanations, or markdown. Example: [{\"username\":\"Fuzzy\",\"message\":\"Hi\"}]"
+              }
+            ]
+          }
+        ]
+      }')
+
           MESSAGES=$(echo "$RESPONSE" | jq -r '.candidates[0].content.parts[0].text')
           echo "$MESSAGES" | jq '.' > data/latest.json || echo '[]' > data/latest.json
 
