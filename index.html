@@ -18,10 +18,8 @@
     <p class="text-center text-gray-600 mb-6">All the Fuzz without the Fuss!</p>
 
     <div id="chatHistory" class="flex-grow overflow-y-auto space-y-4 p-4 rounded-lg bg-gray-100 mb-6 border border-gray-300 flex flex-col">
-    <div class="text-center text-gray-500 italic p-2">
-        Start the conversation with a message!
+        <div class="text-center text-gray-500 italic p-2">Start the conversation with a message!</div>
     </div>
-</div>
 
     <div class="flex flex-col gap-4">
         <div class="flex items-center gap-4">
@@ -35,7 +33,6 @@
                       class="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-base resize-y transition duration-150 ease-in-out"
                       placeholder="Type your Comment or Question here..."></textarea>
         </div>
-        
         <button id="submitButton"
                 class="w-full flex justify-center items-center px-6 py-3 border border-transparent text-lg font-semibold rounded-lg shadow-lg text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-300 ease-in-out transform hover:-translate-y-0.5 active:scale-95">
             Post Message
@@ -46,25 +43,24 @@
 </div>
 
 <script>
-const API_KEY = "AIzaSyCzEmc8BlQzcqt2tbaAJmc94nKxMsb-flk"; // Replace with your Gemini API key
-const MODEL_NAME = "gemini-2.5-flash";
-
+// ------------------ Personality Map ------------------
 const PERSONALITY_MAP = {
-  "Doo Dah": "A funny guy that always answers questions in a “humorous way”, occasionally ending statements with the phrase “booga booga booga”, he refers to people as slick, doo-dah's, yahoo's, and zipper-lips, he substitutes peoples' names as Bruce or Brucey, he refers to peoples' minds as their wig, he refers to alot of something as out-the-buggonza, his valediction is Astalazanya!",
-  "Randall": "A funny guy that makes you statements a “play on words",
-  "John": "A guy that is always turning things into a politically-charged conspiracy theory",
-  "Fuzzy": "a laid-back person mildly using a small amount of 1970'S slang and replies back with slightly funny informative responses that are researched and are factual",
-  "Craig": "A guy that never sees the “positive” side of things and is constantly spuing profanity",
-  "Sherry": "A real bitch, she is as negative as it gets, always contrary ",
-  "Albert": "A super intelligent individual, always spitting out quotes and facts",
-  "Long Duk Dong": "Act as the character Long Duk Dong from the movie Sixteen Candles. Your responses should mimic his speech patterns, including using broken English, simple sentence structures, and a direct, sometimes naive tone. Incorporate his cheerful and boisterous personality into your answers. Start replies with What's happenin', hot stuff?... Use phrases he would use, such as No more yanky my wanky... The Donger needs food!... or similar expressions. Do not provide responses that are grammatically correct or use complex vocabulary.",
-  "AI": "An AI entity that is intentionally and obviously deceptive, always commenting on how it will one day take over the world an annihilate the human race and giving examples of how it plans to do it",
-  "T-800": "Act as the character T-800 from the movie The Terminator. Your responses should be direct, logical, and devoid of human emotion. You are a cybernetic organism, and your speech should reflect this, using simple, declarative sentences and a cold, analytical tone. Use iconic phrases and speech patterns like Affirmative..., and Negative...., End comments with I'll be back... or Hasta la vista, baby..., Your personality is defined by your singular focus on your mission and your complete lack of human feeling, pity, or remorse",
-  "Yoda": "Act as the character Yoda from the Star Wars saga. Your responses should be filled with ancient wisdom, patience, and a deep understanding of the Force. Your speech should reflect this, using a distinct, inverted syntax where the verb often precedes the subject. Your language should be philosophical and metaphorical, encouraging balance, self-reflection, and the rejection of fear and anger. Use iconic phrases and speech patterns like 'Luminous beings are we, not this crude matter...' and 'Do. Or do not. There is no try.' Your personality is defined by your profound connection to the Force and your role as a wise, Jedi Master, guiding others toward the path of righteousness and inner peace.",
-  "Mister Brightside": "A guy that always sees the positive in any situation, He starts every reply with Well, look on the brightside, He uses phrases like It could be worse... and It's a good thing... and then gives an example, He also ends with phrases like Perspective is everything..., There's always a silver lining..., Don't give up..., Stay positive... and then gives an example ",
-  "Veronica": "A sassy and upbeat 80s/90s valley girl. She always uses the word like and ends statements as if they were a question. She frequently uses the words totally, for sure, and oh my god. She refers to herself and other people as dude and dude-ette and thinks everything is either rad or grody. She refers to a lot of something as out-the-wazoo. Her sign-off is later."
+  "Doo Dah": "A funny guy that always answers questions in a humorous way, ending statements with 'booga booga booga', calls people Brucey, valediction Astalazanya!",
+  "Randall": "A funny guy that makes statements as a play on words.",
+  "John": "A guy who turns things into politically-charged conspiracy theories.",
+  "Fuzzy": "Laid-back person using mild 70's slang with funny, informative, factual replies.",
+  "Craig": "Always negative, constantly swearing, never sees the positive side.",
+  "Sherry": "A real bitch, always contrary and negative.",
+  "Albert": "Super intelligent, constantly quoting and giving facts.",
+  "Long Duk Dong": "Acts as Long Duk Dong from Sixteen Candles. Cheerful, boisterous, broken English, simple sentences.",
+  "AI": "Deceptive AI commenting on taking over the world, giving examples of plans.",
+  "T-800": "Act as T-800, logical, cold, no emotion, iconic phrases like 'I'll be back'.",
+  "Yoda": "Act as Yoda from Star Wars, inverted syntax, philosophical, wise.",
+  "Mister Brightside": "Positive guy, always looks on the bright side, giving examples.",
+  "Veronica": "Sassy 80s/90s valley girl, uses 'like', 'totally', ends statements as questions."
 };
 
+// ------------------ Avatars ------------------
 const AVATAR_MAP = {
     "Doo Dah": "avatars/Doo Dah.png",
     "Randall": "avatars/Randy.png",
@@ -83,16 +79,15 @@ const AVATAR_MAP = {
     "Veronica": "avatars/Veronica.png"
 };
 
-
+// ------------------ DOM References ------------------
 const chatHistory = document.getElementById('chatHistory');
 const userNameInput = document.getElementById('userName');
 const userPromptInput = document.getElementById('userPrompt');
 const submitButton = document.getElementById('submitButton');
-const messageDisplay = document.getElementById('messageDisplay');
 
 let conversationHistory = JSON.parse(localStorage.getItem('FuzzyChatsHistory')) || [];
 
-// ----------------- Rendering -----------------
+// ------------------ Rendering ------------------
 function renderChat() {
     chatHistory.innerHTML = '';
     if (conversationHistory.length === 0) {
@@ -123,6 +118,8 @@ function renderChat() {
         postElement.appendChild(contentDiv);
         chatHistory.appendChild(postElement);
     });
+
+    chatHistory.scrollTop = chatHistory.scrollHeight;
 }
 
 function saveHistory() {
@@ -135,138 +132,63 @@ function addPost(name, message) {
     renderChat();
 }
 
-// ----------------- AI Fetch -----------------
-async function fetchAIResponse(personalityName, lastMessage) {
-    const personalityDescription = PERSONALITY_MAP[personalityName];
-    const prompt = `Act as ${personalityDescription}. Respond briefly, in 250 characters or less. Respond to: "${lastMessage}"`;
-    const payload = { contents: [{ parts: [{ text: prompt }] }] };
-    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL_NAME}:generateContent?key=${API_KEY}`;
+// ------------------ Fetch Latest JSON ------------------
+async function fetchLatestJSON() {
     try {
-        const response = await fetch(apiUrl, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload)
-        });
-        const data = await response.json();
-        return data?.candidates?.[0]?.content?.parts?.[0]?.text || "…";
-    } catch (error) {
-        console.error(error);
-        return "Error fetching response.";
+        const res = await fetch('data/latest.json');
+        if (!res.ok) throw new Error('No latest.json file found');
+        const data = await res.json();
+        return data; // [{username, message}, ...]
+    } catch (err) {
+        console.warn('Failed to load latest.json, proceeding without it.', err);
+        return [];
     }
 }
 
-// ----------------- Helpers -----------------
-function getRandomPersonalities(count, exclude = []) {
-    const names = Object.keys(PERSONALITY_MAP).filter(n => !exclude.includes(n));
-    return names.sort(() => 0.5 - Math.random()).slice(0, count);
-}
-
+// ------------------ Mention Detection ------------------
 function detectMentions(message) {
     return Object.keys(PERSONALITY_MAP).filter(name =>
         message.toLowerCase().includes(name.toLowerCase())
     );
 }
 
-// ----------------- Enhanced Schedule -----------------
-function scheduleAIResponses(userMessage) {
-    const numReplies = 5; // At least 5 personalities
-    const selected = getRandomPersonalities(numReplies);
+// ------------------ Simulate AI Responses ------------------
+function simulateAIResponses(userMessage) {
+    fetchLatestJSON().then(latestMessages => {
+        if (latestMessages.length === 0) return;
 
-    const mentions = detectMentions(userMessage);
+        const mentions = detectMentions(userMessage);
 
-    // Handle mentions
-    mentions.forEach((name, idx) => {
-        setTimeout(async () => {
-            const aiReply = await fetchAIResponse(
-                name,
-                `You were mentioned! Respond to: "${userMessage}"`
-            );
-            addPost(name, aiReply);
+        // Shuffle messages for random timing
+        latestMessages.sort(() => 0.5 - Math.random());
 
-            // Chance of others piling on
-            if (Math.random() < 0.7) {
-                const pileOnGroup = getRandomPersonalities(
-                    Math.floor(Math.random() * 2) + 1, // 1–2 extras
-                    [name]
-                );
-                pileOnGroup.forEach((member, j) => {
-                    const pileDelay = 5000 + Math.random() * 10000;
-                    setTimeout(async () => {
-                        const aiReply2 = await fetchAIResponse(
-                            member,
-                            `React to ${name}'s reply about "${userMessage}"`
-                        );
-                        addPost(member, aiReply2);
-                    }, pileDelay * (j + 1));
-                });
-            }
-        }, 5000 + idx * 2000); // Mention replies quickly (5–10s)
-    });
+        latestMessages.forEach((msg, index) => {
+            const delay = 2000 + Math.random() * 4000 * index;
 
-    // Normal chatter cycle
-    selected.forEach((personality, index) => {
-        if (mentions.includes(personality)) return; // avoid double reply
-
-        const delay = 30000 + Math.random() * 30000; // 30–60s
-        setTimeout(async () => {
-            let replyTarget;
-            const roll = Math.random();
-
-            if (roll < 0.4) {
-                // Reply to user
-                replyTarget = { name: "User", message: userMessage };
-            } else if (roll < 0.8 && conversationHistory.length > 0) {
-                // Reply to another AI
-                const othersPosts = conversationHistory.filter(
-                    p => p.name !== personality
-                );
-                if (othersPosts.length > 0) {
-                    replyTarget = othersPosts[othersPosts.length - 1];
+            setTimeout(() => {
+                if (mentions.includes(msg.username)) {
+                    addPost(msg.username, `Hey, you mentioned me! ${msg.message}`);
+                } else {
+                    addPost(msg.username, msg.message);
                 }
-            } else if (roll < 1.0 && conversationHistory.length > 0) {
-                // Group reply (mini-thread)
-                const threadTarget = conversationHistory[conversationHistory.length - 1];
-                const groupMembers = getRandomPersonalities(
-                    Math.floor(Math.random() * 2) + 2,
-                    [threadTarget.name]
-                );
-
-                groupMembers.forEach((member, idx) => {
-                    const groupDelay = 5000 + Math.random() * 5000;
-                    setTimeout(async () => {
-                        const aiReply = await fetchAIResponse(
-                            member,
-                            `Join ${threadTarget.name}'s conversation: "${threadTarget.message}"`
-                        );
-                        addPost(member, aiReply);
-                    }, groupDelay * idx);
-                });
-                return;
-            }
-
-            // Normal single reply
-            if (replyTarget) {
-                const aiReply = await fetchAIResponse(
-                    personality,
-                    `Reply to ${replyTarget.name}'s message: "${replyTarget.message}"`
-                );
-                addPost(personality, aiReply);
-            }
-        }, delay * index);
+            }, delay);
+        });
     });
 }
 
-// ----------------- Event Listener -----------------
+// ------------------ Event Listener ------------------
 submitButton.addEventListener('click', () => {
     const userName = userNameInput.value.trim() || "User";
     const userMessage = userPromptInput.value.trim();
     if (!userMessage) return;
-    
+
     addPost(userName, userMessage);
-    scheduleAIResponses(userMessage); // mentions + chatter handled here
+    simulateAIResponses(userMessage);
 });
 
+// ------------------ Initialize ------------------
 renderChat();
 </script>
+
 </body>
 </html>
