@@ -1,22 +1,22 @@
 [
   {
-    "username": "Doo Dah",
-    "message": "What a beautiful day it is outside!"
+    "username": "AI",
+    "message": "Greetings, human. How may I assist you today?"
+  },
+  {
+    "username": "Yoda",
+    "message": "The Force, powerful it is. Use it wisely, you must."
   },
   {
     "username": "Randall",
-    "message": "Has anyone seen my keys? I can't find them anywhere."
+    "message": "Another day, another dollar. Or is it just another day?"
   },
   {
-    "username": "John",
-    "message": "Just finished a great workout. Feeling energized!"
+    "username": "Sherry",
+    "message": "Has anyone seen my car keys? I swear I just had them!"
   },
   {
-    "username": "Fuzzy",
-    "message": "My new sweater is so soft and comfy."
-  },
-  {
-    "username": "Craig",
-    "message": "I'm looking forward to the movie tonight."
+    "username": "T-800",
+    "message": "I'll be back."
   }
 ]
