@@ -3,7 +3,7 @@ name: Fetch FuzzFeed Chat Messages
 on:
   workflow_dispatch:        # manual trigger
   schedule:
-    - cron: '*/10 * * * *'  # every 10 minutes, adjust as needed
+    - cron: '*/10 * * * *' # every 10 minutes, adjust as needed
 
 jobs:
   update-data:
@@ -12,14 +12,14 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          persist-credentials: true  # allows push with GITHUB_TOKEN
 
       - name: Fetch messages from AI API
         env:
           API_KEY: ${{ secrets.MY_API_KEY }}
         run: |
-          set -euo pipefail
           mkdir -p data
-
           RESPONSE=$(curl -s -X POST "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=$API_KEY" \
             -H "Content-Type: application/json" \
             -d '{
@@ -27,20 +27,19 @@ jobs:
                     {
                       "parts":[
                         {
-                          "text":"Return ONLY a valid JSON array of 5 chat messages using these personalities: Doo Dah, Randall, John, Fuzzy, Craig, Sherry, Albert, Long Duk Dong, AI, T-800, Yoda, Mister Brightside, Veronica. Each object should have \"username\" and \"message\" fields. Do not include extra text, explanations, or markdown. Example: [{\"username\":\"Fuzzy\",\"message\":\"Hi\"}]"
+                          "text":"Return ONLY a valid JSON array of 5 chat messages. Each object should have \"username\" and \"message\" fields. Use only these usernames: Doo Dah, Randall, John, Fuzzy, Craig, Sherry, Albert, Long Duk Dong, AI, T-800, Yoda, Mister Brightside, Veronica. Do not include extra text, explanations, or markdown."
                         }
                       ]
                     }
                   ]
                 }')
-
+          
           echo "RAW RESPONSE:"
           echo "$RESPONSE"
-
-          # Extract the JSON array from the response
+          
+          # Extract the JSON array from the AI response
           MESSAGES=$(echo "$RESPONSE" | jq -r '.candidates[0].content.parts[0].text')
-
-          # Ensure valid JSON and save
+          # Save to latest.json, fallback to empty array if invalid
           echo "$MESSAGES" | jq '.' > data/latest.json || echo '[]' > data/latest.json
 
       - name: Commit and push latest.json safely
@@ -50,7 +49,7 @@ jobs:
           git add data/latest.json
           if ! git diff-index --quiet HEAD; then
             git commit -m "Update latest.json [skip ci]"
-            git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main
+            git push origin main
           else
             echo "No changes to commit"
           fi
