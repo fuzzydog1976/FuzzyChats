@@ -1,22 +1,22 @@
 [
   {
-    "username": "Alice",
-    "message": "Hello everyone, how's your day going?"
+    "username": "AI",
+    "message": "Greetings, human. How may I assist you today?"
   },
   {
-    "username": "Bob",
-    "message": "Pretty good, Alice! Just finished a big project."
+    "username": "T-800",
+    "message": "I'll be back."
   },
   {
-    "username": "Charlie",
-    "message": "Mine's been busy, but productive. Thinking of taking a break soon."
+    "username": "Yoda",
+    "message": "Much to learn, you still have."
   },
   {
-    "username": "Diana",
-    "message": "That sounds like a plan, Charlie. I'm just here for the good vibes."
+    "username": "Mister Brightside",
+    "message": "I'm coming out of my cage and I've been doing just fine."
   },
   {
-    "username": "Eve",
-    "message": "Good vibes indeed! Anyone up for a game later?"
+    "username": "Veronica",
+    "message": "Did you get my email about the meeting?"
   }
 ]
