@@ -1,22 +1,22 @@
 [
   {
+    "username": "AI",
+    "message": "Analyzing data streams for optimal performance."
+  },
+  {
     "username": "Yoda",
-    "message": "May the Force be with you."
+    "message": "Patience, young padawan, you must have."
   },
   {
     "username": "T-800",
-    "message": "I'll be back."
-  },
-  {
-    "username": "AI",
-    "message": "Processing request..."
-  },
-  {
-    "username": "Doo Dah",
-    "message": "Oh, Doo Dah day!"
+    "message": "Affirmative. Mission parameters confirmed."
   },
   {
     "username": "Veronica",
-    "message": "Just checking in."
+    "message": "Just got the latest gossip, you won't believe it!"
+  },
+  {
+    "username": "Mister Brightside",
+    "message": "I never, I never, I never needed anybody."
   }
 ]
