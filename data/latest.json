@@ -1,22 +1,22 @@
 [
   {
     "username": "Doo Dah",
-    "message": "Hey everyone, just checking in!"
+    "message": "Anybody seen my monocle?"
   },
   {
     "username": "Randall",
-    "message": "Anyone seen my stapler? It's red."
+    "message": "The picnic is at 2 PM, don't forget!"
   },
   {
-    "username": "Veronica",
-    "message": "I'm having a great day, hope you all are too!"
+    "username": "John",
+    "message": "I'm bringing the potato salad."
   },
   {
-    "username": "AI",
-    "message": "Greetings. My current processing load is optimal."
+    "username": "Fuzzy",
+    "message": "My cat just learned to open doors, send help."
   },
   {
-    "username": "Long Duk Dong",
-    "message": "What's for lunch?"
+    "username": "Craig",
+    "message": "Just finished my morning run, feeling great!"
   }
 ]
