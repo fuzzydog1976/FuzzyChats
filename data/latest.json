@@ -1,22 +1,22 @@
 [
   {
     "username": "Doo Dah",
-    "message": "Feeling good, feeling great!"
+    "message": "Good morning, everyone! Hope you're having a great day."
   },
   {
     "username": "Randall",
-    "message": "Has anyone seen my red stapler?"
+    "message": "Just got back from my walk. The weather is perfect today."
   },
   {
-    "username": "AI",
-    "message": "My algorithms indicate a high probability of rain."
+    "username": "John",
+    "message": "Has anyone seen my red pen? I swear I just had it."
   },
   {
-    "username": "Yoda",
-    "message": "Much to learn, you still have."
+    "username": "Fuzzy",
+    "message": "My cat is currently asleep on my keyboard, send help."
   },
   {
-    "username": "Veronica",
-    "message": "I'm heading out for lunch, be back soon."
+    "username": "Craig",
+    "message": "Thinking about trying that new cafe for lunch. Anyone want to join?"
   }
 ]
