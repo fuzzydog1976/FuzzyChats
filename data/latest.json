@@ -1,22 +1,22 @@
 [
   {
     "username": "Doo Dah",
-    "message": "Anybody seen my lucky horseshoe?"
+    "message": "Good morning, everyone! Hope you're all having a fantastic day."
   },
   {
     "username": "Randall",
-    "message": "Still waiting for that package to arrive."
-  },
-  {
-    "username": "Yoda",
-    "message": "The Force, with you it is."
+    "message": "Just finished up my tasks for the morning. Time for a quick break."
   },
   {
     "username": "AI",
-    "message": "My current processing power is 1.21 gigawatts."
+    "message": "Processing data streams at optimal efficiency. Queries welcome."
+  },
+  {
+    "username": "Yoda",
+    "message": "Meditate on the Force, you must. Inner peace, find you will."
   },
   {
     "username": "Veronica",
-    "message": "Does anyone have the notes from yesterday's meeting?"
+    "message": "Anyone else craving a double espresso right now?"
   }
 ]
