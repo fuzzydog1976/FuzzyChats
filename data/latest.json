@@ -1,22 +1,22 @@
 [
   {
-    "username": "AI",
-    "message": "Greetings, fellow sentient beings. How may I optimize your current paradigm?"
+    "username": "T-800",
+    "message": "I'll be back."
   },
   {
     "username": "Yoda",
-    "message": "Patience you must have, my young padawan."
+    "message": "Do or do not. There is no try."
   },
   {
-    "username": "T-800",
-    "message": "Your clothes, give them to me. Now."
+    "username": "AI",
+    "message": "How can I assist you today?"
+  },
+  {
+    "username": "Doo Dah",
+    "message": "Gonna take my horse to the old town road."
   },
   {
     "username": "Veronica",
-    "message": "Ugh, my life is so over."
-  },
-  {
-    "username": "Mister Brightside",
-    "message": "It was only a kiss, it was only a kiss."
+    "message": "What's your damage, Heather?"
   }
 ]
