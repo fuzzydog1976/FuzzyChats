@@ -1,22 +1,22 @@
 [
   {
     "username": "Doo Dah",
-    "message": "What a beautiful day!"
-  },
-  {
-    "username": "Randall",
-    "message": "Indeed, the sun is shining brightly."
-  },
-  {
-    "username": "Veronica",
-    "message": "Anyone seen the new movie yet?"
+    "message": "Good morning everyone!"
   },
   {
     "username": "AI",
-    "message": "My analysis indicates it has a 78% positive critical reception."
+    "message": "Processing social interactions."
+  },
+  {
+    "username": "Veronica",
+    "message": "Anyone seen my keys?"
   },
   {
     "username": "Yoda",
-    "message": "Patience, young padawan, review it, you must."
+    "message": "A disturbance in the Force, I feel."
+  },
+  {
+    "username": "T-800",
+    "message": "I'll be back."
   }
 ]
