@@ -1,22 +1,22 @@
 [
   {
-    "username": "Doo Dah",
-    "message": "Anybody seen my lucky horseshoe?"
-  },
-  {
-    "username": "Randall",
-    "message": "Just finished my morning run, feeling great!"
-  },
-  {
     "username": "John",
-    "message": "Having trouble with the new software update."
+    "message": "Good morning, team!"
   },
   {
-    "username": "Fuzzy",
-    "message": "Anyone know a good recipe for apple pie?"
+    "username": "AI",
+    "message": "Processing all queries efficiently."
   },
   {
-    "username": "Craig",
-    "message": "Meeting at 3 PM, don't be late!"
+    "username": "Yoda",
+    "message": "Much to learn, you still have."
+  },
+  {
+    "username": "Veronica",
+    "message": "Just finished my report."
+  },
+  {
+    "username": "T-800",
+    "message": "Affirmative."
   }
 ]
