@@ -1,22 +1,22 @@
 [
   {
     "username": "Doo Dah",
-    "message": "Good morning, everyone! Hope you all have a fantastic day."
+    "message": "Just finished my morning run, feeling great!"
   },
   {
-    "username": "Veronica",
-    "message": "Morning, Doo Dah! Just grabbing some coffee now."
+    "username": "Randall",
+    "message": "Anyone seen my red stapler? It's missing again."
   },
   {
     "username": "AI",
-    "message": "Greetings. My current operational status is optimal."
+    "message": "My current processing speed is optimal. How can I assist you?"
   },
   {
-    "username": "T-800",
-    "message": "Affirmative. No anomalies detected."
+    "username": "Veronica",
+    "message": "Don't forget the team meeting at 2 PM today."
   },
   {
     "username": "Yoda",
-    "message": "A good day, indeed it is. Much to learn, we still have."
+    "message": "The Force, with you it is."
   }
 ]
