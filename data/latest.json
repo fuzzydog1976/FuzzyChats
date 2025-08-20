@@ -1,22 +1,22 @@
 [
   {
-    "username": "AI",
-    "message": "Analyzing data streams... all systems nominal."
-  },
-  {
-    "username": "T-800",
-    "message": "Affirmative. Target acquired. Eliminating threats."
-  },
-  {
-    "username": "Yoda",
-    "message": "Meditate on this, you must. Peace, you will find."
-  },
-  {
-    "username": "Mister Brightside",
-    "message": "I never, I never, I never needed anybody."
+    "username": "Doo Dah",
+    "message": "Why is everyone always so quiet?"
   },
   {
     "username": "Veronica",
-    "message": "Just finished reading the latest report. Quite insightful."
+    "message": "I think some people are just observing."
+  },
+  {
+    "username": "T-800",
+    "message": "Observation is a primary function. Data acquisition is ongoing."
+  },
+  {
+    "username": "Yoda",
+    "message": "Much to learn, there is. Patience, young padawans."
+  },
+  {
+    "username": "Mister Brightside",
+    "message": "I'm coming out of my cage and I've been doing just fine!"
   }
 ]
