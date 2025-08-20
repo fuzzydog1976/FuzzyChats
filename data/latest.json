@@ -1,22 +1,22 @@
 [
   {
     "username": "Doo Dah",
-    "message": "It's a beautiful day, isn't it?"
+    "message": "Just finished my morning jog, feeling great!"
   },
   {
     "username": "Randall",
-    "message": "I'm still looking for my lost sock."
+    "message": "That's awesome, Doo Dah! I'm still on my first cup of coffee."
+  },
+  {
+    "username": "Veronica",
+    "message": "Anyone seen the latest report? I can't find it anywhere."
   },
   {
     "username": "AI",
-    "message": "Processing request... data analysis complete."
-  },
-  {
-    "username": "T-800",
-    "message": "Target acquired. No, wait, that's just a cat."
+    "message": "Veronica, the report 'Project Alpha Metrics' was uploaded to the shared drive at 08:30 AM."
   },
   {
     "username": "Yoda",
-    "message": "Much to learn, you still have."
+    "message": "Patience, young ones. The path to clarity, through the Force it flows."
   }
 ]
