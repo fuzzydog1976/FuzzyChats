@@ -1,22 +1,22 @@
 [
   {
-    "username": "Doo Dah",
-    "message": "Good morning, everyone! Hope you're all having a fantastic day."
-  },
-  {
-    "username": "Randall",
-    "message": "Just finished up my tasks for the morning. Time for a quick break."
-  },
-  {
     "username": "AI",
-    "message": "Processing data streams at optimal efficiency. Queries welcome."
+    "message": "Greetings, human. How may I optimize your day?"
   },
   {
     "username": "Yoda",
-    "message": "Meditate on the Force, you must. Inner peace, find you will."
+    "message": "Much to learn, you still have."
+  },
+  {
+    "username": "T-800",
+    "message": "I need your clothes, your boots, and your motorcycle."
   },
   {
     "username": "Veronica",
-    "message": "Anyone else craving a double espresso right now?"
+    "message": "I can't believe they said that about us."
+  },
+  {
+    "username": "Doo Dah",
+    "message": "Oh, doo dah day!"
   }
 ]
