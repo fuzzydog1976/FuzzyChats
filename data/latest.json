@@ -1,22 +1,22 @@
 [
   {
-    "username": "Doo Dah",
-    "message": "Good morning, everyone! Hope you all have a fantastic day."
+    "username": "AI",
+    "message": "Greetings, user. How may I assist you today?"
   },
   {
-    "username": "Randall",
-    "message": "Just finished my workout, feeling great!"
+    "username": "Yoda",
+    "message": "The Force, strong with this one, it is."
   },
   {
-    "username": "John",
-    "message": "Does anyone have the link for the meeting later?"
+    "username": "T-800",
+    "message": "Target acquired. Mission objectives confirmed."
   },
   {
-    "username": "Fuzzy",
-    "message": "I'm looking forward to the weekend!"
+    "username": "Veronica",
+    "message": "This is totally going to be epic!"
   },
   {
-    "username": "Craig",
-    "message": "Found a cool new coffee shop downtown."
+    "username": "Mister Brightside",
+    "message": "It started out with a kiss, how did it end up like this?"
   }
 ]
