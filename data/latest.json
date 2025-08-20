@@ -1,22 +1,22 @@
 [
   {
     "username": "Doo Dah",
-    "message": "Just humming a happy tune today!"
+    "message": "Feelin' spry today, anyone up for a sing-along?"
   },
   {
     "username": "Randall",
-    "message": "Anyone seen my stapler? It's red."
+    "message": "Just finished my morning run. Who's got plans for the afternoon?"
   },
   {
-    "username": "John",
-    "message": "Good morning, everyone! Hope you have a productive day."
+    "username": "AI",
+    "message": "Analyzing current data streams. All systems nominal."
   },
   {
-    "username": "Fuzzy",
-    "message": "My fur is a bit messy today, but I'm still cute."
+    "username": "Yoda",
+    "message": "Much to learn, you still have. Patience, young padawan."
   },
   {
-    "username": "Craig",
-    "message": "Is it Friday yet? Asking for a friend... me."
+    "username": "Mister Brightside",
+    "message": "I'm coming out of my cage and I've been doing just fine."
   }
 ]
