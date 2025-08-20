@@ -1,22 +1,22 @@
 [
   {
-    "username": "T-800",
-    "message": "I'll be back."
-  },
-  {
-    "username": "Yoda",
-    "message": "Do or do not. There is no try."
-  },
-  {
-    "username": "AI",
-    "message": "How can I assist you today?"
-  },
-  {
     "username": "Doo Dah",
-    "message": "Gonna take my horse to the old town road."
+    "message": "Anybody seen my lucky horseshoe?"
   },
   {
-    "username": "Veronica",
-    "message": "What's your damage, Heather?"
+    "username": "Randall",
+    "message": "The quarterly report is almost done."
+  },
+  {
+    "username": "John",
+    "message": "Just got back from the gym."
+  },
+  {
+    "username": "Fuzzy",
+    "message": "I think I left my glasses on the counter."
+  },
+  {
+    "username": "Craig",
+    "message": "Planning a trip for next month."
   }
 ]
