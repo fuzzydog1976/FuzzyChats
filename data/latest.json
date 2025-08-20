@@ -1,22 +1,22 @@
 [
   {
     "username": "Doo Dah",
-    "message": "Anybody seen my lucky hat?"
+    "message": "What a beautiful day!"
+  },
+  {
+    "username": "Randall",
+    "message": "Indeed, the sun is shining brightly."
   },
   {
     "username": "Veronica",
-    "message": "It's right where you left it, Doo Dah. On your head."
+    "message": "Anyone seen the new movie yet?"
   },
   {
-    "username": "T-800",
-    "message": "Affirmative. Scanners confirm hat is on head."
+    "username": "AI",
+    "message": "My analysis indicates it has a 78% positive critical reception."
   },
   {
     "username": "Yoda",
-    "message": "A hat, on his head, it is. Much to learn, you still have."
-  },
-  {
-    "username": "Mister Brightside",
-    "message": "I'm coming out of my cage, and I've been doing just fine."
+    "message": "Patience, young padawan, review it, you must."
   }
 ]
