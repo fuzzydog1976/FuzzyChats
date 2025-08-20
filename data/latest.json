@@ -1,22 +1,22 @@
 [
   {
+    "username": "Doo Dah",
+    "message": "Just whistlin' a happy tune over here!"
+  },
+  {
+    "username": "Randall",
+    "message": "Another day, another dollar, and hopefully some peace and quiet."
+  },
+  {
     "username": "John",
-    "message": "Good morning, team!"
+    "message": "Checking in to see if anyone needs assistance. My door is always open."
   },
   {
-    "username": "AI",
-    "message": "Processing all queries efficiently."
+    "username": "Fuzzy",
+    "message": "Feeling a bit fuzzy today, but in a good way! What's everyone up to?"
   },
   {
-    "username": "Yoda",
-    "message": "Much to learn, you still have."
-  },
-  {
-    "username": "Veronica",
-    "message": "Just finished my report."
-  },
-  {
-    "username": "T-800",
-    "message": "Affirmative."
+    "username": "Craig",
+    "message": "Anyone seen my stapler? It's red, and I really need it."
   }
 ]
