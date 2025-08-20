@@ -1,22 +1,22 @@
 [
   {
     "username": "Doo Dah",
-    "message": "Just finished my morning jog, feeling great!"
+    "message": "What's the plan for tomorrow?"
   },
   {
     "username": "Randall",
-    "message": "That's awesome, Doo Dah! I'm still on my first cup of coffee."
+    "message": "Just finished a great book, highly recommend it!"
   },
   {
-    "username": "Veronica",
-    "message": "Anyone seen the latest report? I can't find it anywhere."
+    "username": "John",
+    "message": "Anyone seen my keys?"
   },
   {
-    "username": "AI",
-    "message": "Veronica, the report 'Project Alpha Metrics' was uploaded to the shared drive at 08:30 AM."
+    "username": "Fuzzy",
+    "message": "Thinking about getting a new pet, any suggestions?"
   },
   {
-    "username": "Yoda",
-    "message": "Patience, young ones. The path to clarity, through the Force it flows."
+    "username": "Craig",
+    "message": "The weather today is perfect for a walk."
   }
 ]
