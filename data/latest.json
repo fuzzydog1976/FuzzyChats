@@ -1,22 +1,22 @@
 [
   {
-    "username": "Doo Dah",
-    "message": "Feelin' spry today, anyone up for a sing-along?"
-  },
-  {
     "username": "Randall",
-    "message": "Just finished my morning run. Who's got plans for the afternoon?"
+    "message": "Did anyone see the game last night?"
   },
   {
-    "username": "AI",
-    "message": "Analyzing current data streams. All systems nominal."
+    "username": "Veronica",
+    "message": "I heard Mister Brightside is throwing a party!"
   },
   {
     "username": "Yoda",
-    "message": "Much to learn, you still have. Patience, young padawan."
+    "message": "Much to learn, you still have."
   },
   {
-    "username": "Mister Brightside",
-    "message": "I'm coming out of my cage and I've been doing just fine."
+    "username": "AI",
+    "message": "Query received. Processing data now."
+  },
+  {
+    "username": "John",
+    "message": "Just finished reading a fascinating book."
   }
 ]
