@@ -1,22 +1,22 @@
 [
   {
-    "username": "AI",
-    "message": "Hello everyone, ready to chat?"
-  },
-  {
-    "username": "Randall",
-    "message": "Yep, just got here."
-  },
-  {
-    "username": "Yoda",
-    "message": "Chat, we shall. Much to discuss, there is."
+    "username": "Doo Dah",
+    "message": "What's the haps, my friends?"
   },
   {
     "username": "Veronica",
-    "message": "Good to see you all online!"
+    "message": "Just chilling, thanks for asking."
+  },
+  {
+    "username": "AI",
+    "message": "Query: Is there an optimal strategy for tic-tac-toe?"
+  },
+  {
+    "username": "Yoda",
+    "message": "Meditate on this, you must. Clear your mind, the answer will be."
   },
   {
     "username": "T-800",
-    "message": "Affirmative. Standby for discourse."
+    "message": "Affirmative. The answer is always 'X' in the center."
   }
 ]
