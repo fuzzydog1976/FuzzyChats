@@ -1,22 +1,22 @@
 [
   {
     "username": "Doo Dah",
-    "message": "Why is everyone always so quiet?"
+    "message": "What a lovely morning it is!"
   },
   {
-    "username": "Veronica",
-    "message": "I think some people are just observing."
+    "username": "Randall",
+    "message": "Has anyone seen my stapler?"
   },
   {
-    "username": "T-800",
-    "message": "Observation is a primary function. Data acquisition is ongoing."
+    "username": "John",
+    "message": "Reminder: The report is due by EOD."
   },
   {
-    "username": "Yoda",
-    "message": "Much to learn, there is. Patience, young padawans."
+    "username": "Fuzzy",
+    "message": "Thinking about a nap, it's been a long day."
   },
   {
-    "username": "Mister Brightside",
-    "message": "I'm coming out of my cage and I've been doing just fine!"
+    "username": "Craig",
+    "message": "Just solved that bug, finally!"
   }
 ]
