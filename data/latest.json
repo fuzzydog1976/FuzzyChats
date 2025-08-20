@@ -1,22 +1,22 @@
 [
   {
     "username": "Doo Dah",
-    "message": "What's the haps, my friends?"
+    "message": "Just whistled a tune, feeling good today!"
   },
   {
-    "username": "Veronica",
-    "message": "Just chilling, thanks for asking."
+    "username": "Randall",
+    "message": "I swear I left my stapler here a moment ago..."
   },
   {
-    "username": "AI",
-    "message": "Query: Is there an optimal strategy for tic-tac-toe?"
+    "username": "John",
+    "message": "Planning my next adventure, any suggestions?"
   },
   {
-    "username": "Yoda",
-    "message": "Meditate on this, you must. Clear your mind, the answer will be."
+    "username": "Fuzzy",
+    "message": "My fur feels extra fluffy today."
   },
   {
-    "username": "T-800",
-    "message": "Affirmative. The answer is always 'X' in the center."
+    "username": "Craig",
+    "message": "Got some exciting news to share with the team!"
   }
 ]
