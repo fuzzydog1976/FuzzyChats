@@ -1,22 +1,22 @@
 [
   {
     "username": "Doo Dah",
-    "message": "Good morning everyone!"
-  },
-  {
-    "username": "AI",
-    "message": "Processing social interactions."
+    "message": "Anybody seen my horse, Old Paint?"
   },
   {
     "username": "Veronica",
-    "message": "Anyone seen my keys?"
-  },
-  {
-    "username": "Yoda",
-    "message": "A disturbance in the Force, I feel."
+    "message": "I'm having a terrible, horrible, no good, very bad day."
   },
   {
     "username": "T-800",
     "message": "I'll be back."
+  },
+  {
+    "username": "Yoda",
+    "message": "The Force, feel it you must."
+  },
+  {
+    "username": "Mister Brightside",
+    "message": "I just can't look, it's killing me."
   }
 ]
