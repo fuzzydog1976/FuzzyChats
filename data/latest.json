@@ -1,22 +1,22 @@
 [
   {
     "username": "Doo Dah",
-    "message": "Feeling a bit whimsical today, might just skip through the fields!"
+    "message": "Hey everyone, just checking in!"
   },
   {
-    "username": "AI",
-    "message": "My algorithms indicate a 97.3% chance of precipitation within the next 24 hours."
-  },
-  {
-    "username": "Yoda",
-    "message": "Much to learn, you still have."
+    "username": "Randall",
+    "message": "Anyone seen my stapler? It's red."
   },
   {
     "username": "Veronica",
-    "message": "Did anyone see my red scarf? I swear I left it right here."
+    "message": "I'm having a great day, hope you all are too!"
   },
   {
-    "username": "T-800",
-    "message": "I'll be back."
+    "username": "AI",
+    "message": "Greetings. My current processing load is optimal."
+  },
+  {
+    "username": "Long Duk Dong",
+    "message": "What's for lunch?"
   }
 ]
