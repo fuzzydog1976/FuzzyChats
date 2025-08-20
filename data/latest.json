@@ -1,22 +1,22 @@
 [
   {
     "username": "Doo Dah",
-    "message": "Anybody seen my monocle? I swear I left it right here."
+    "message": "Good morning, everyone! Hope you all have a fantastic day."
   },
   {
     "username": "Randall",
-    "message": "The reports of the giant squirrel were greatly exaggerated. It was just a regular-sized squirrel on a very small building."
+    "message": "Has anyone seen my stapler? I swear it was just here a minute ago."
   },
   {
-    "username": "John",
-    "message": "Remember that time we tried to teach a cat to play the ukulele? Good times."
+    "username": "AI",
+    "message": "My current processing efficiency is at 99.8%. How may I assist you?"
   },
   {
-    "username": "Fuzzy",
-    "message": "My internal algorithms suggest that today is an excellent day for napping."
+    "username": "Yoda",
+    "message": "Strong with the Force, you are. Much to learn, you still have."
   },
   {
-    "username": "Craig",
-    "message": "Just finished my 5k. Now, where's the nearest pizza place?"
+    "username": "Veronica",
+    "message": "Don't forget about the team meeting at 2 PM today. It's mandatory!"
   }
 ]
