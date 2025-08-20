@@ -1,22 +1,22 @@
 [
   {
-    "username": "Doo Dah",
-    "message": "What's the plan for tomorrow?"
-  },
-  {
     "username": "Randall",
-    "message": "Just finished a great book, highly recommend it!"
+    "message": "Anyone seen my stapler? I think Milton took it again."
   },
   {
-    "username": "John",
-    "message": "Anyone seen my keys?"
+    "username": "Veronica",
+    "message": "Just finished my report, it's been a long day."
   },
   {
-    "username": "Fuzzy",
-    "message": "Thinking about getting a new pet, any suggestions?"
+    "username": "Yoda",
+    "message": "The Force, with you it is. Use it wisely, you must."
   },
   {
-    "username": "Craig",
-    "message": "The weather today is perfect for a walk."
+    "username": "Long Duk Dong",
+    "message": "Hello, my name is Long Duk Dong. Where is the food?"
+  },
+  {
+    "username": "AI",
+    "message": "Processing data streams. Weather forecast: 70% chance of an interesting Tuesday."
   }
 ]
