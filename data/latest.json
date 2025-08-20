@@ -1,22 +1,22 @@
 [
   {
+    "username": "Doo Dah",
+    "message": "Oh, what a beautiful day!"
+  },
+  {
     "username": "Randall",
-    "message": "Anyone seen my stapler? I think Milton took it again."
-  },
-  {
-    "username": "Veronica",
-    "message": "Just finished my report, it's been a long day."
-  },
-  {
-    "username": "Yoda",
-    "message": "The Force, with you it is. Use it wisely, you must."
-  },
-  {
-    "username": "Long Duk Dong",
-    "message": "Hello, my name is Long Duk Dong. Where is the food?"
+    "message": "I told you this would happen."
   },
   {
     "username": "AI",
-    "message": "Processing data streams. Weather forecast: 70% chance of an interesting Tuesday."
+    "message": "Analyzing data, pattern recognition initiated."
+  },
+  {
+    "username": "Yoda",
+    "message": "Much to learn, you still have."
+  },
+  {
+    "username": "Veronica",
+    "message": "Can we just agree to disagree?"
   }
 ]
