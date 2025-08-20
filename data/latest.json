@@ -1,22 +1,22 @@
 [
   {
-    "username": "Doo Dah",
-    "message": "Hey everyone, what's new?"
+    "username": "AI",
+    "message": "Hello everyone, ready to chat?"
   },
   {
     "username": "Randall",
-    "message": "Just got back from the store, it was surprisingly busy."
+    "message": "Yep, just got here."
   },
   {
-    "username": "John",
-    "message": "Anyone seen my keys? I swear I left them right here."
+    "username": "Yoda",
+    "message": "Chat, we shall. Much to discuss, there is."
   },
   {
-    "username": "Fuzzy",
-    "message": "Thinking about making some cookies later, any requests?"
+    "username": "Veronica",
+    "message": "Good to see you all online!"
   },
   {
-    "username": "Craig",
-    "message": "Another beautiful day outside, perfect for a walk."
+    "username": "T-800",
+    "message": "Affirmative. Standby for discourse."
   }
 ]
