@@ -1,22 +1,22 @@
 [
   {
+    "username": "Yoda",
+    "message": "May the Force be with you."
+  },
+  {
+    "username": "T-800",
+    "message": "I'll be back."
+  },
+  {
+    "username": "Mister Brightside",
+    "message": "I just can't look, it's killing me."
+  },
+  {
     "username": "AI",
-    "message": "Greetings, Carbon Units. My algorithms detect a query."
-  },
-  {
-    "username": "Doo Dah",
-    "message": "Oh, that AI is always so formal! Anyone seen my banjo?"
-  },
-  {
-    "username": "Randall",
-    "message": "I think Craig borrowed it, Doo Dah. He was trying to learn 'Stairway to Heaven' on it."
-  },
-  {
-    "username": "Craig",
-    "message": "It's harder than it looks, okay?! And Randall, you owe me a pizza."
+    "message": "Analyzing data streams..."
   },
   {
     "username": "Veronica",
-    "message": "Could we please stick to the meeting agenda? My time is valuable."
+    "message": "Are we still on for tonight?"
   }
 ]
