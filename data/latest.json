@@ -1,22 +1,22 @@
 [
   {
     "username": "Doo Dah",
-    "message": "Anybody seen my stapler?"
+    "message": "Hello everyone, hope you're having a great day!"
   },
   {
     "username": "Randall",
-    "message": "Pretty sure Craig borrowed it last week."
+    "message": "Just finished my work, time for a break."
   },
   {
     "username": "John",
-    "message": "I saw him with it by the coffee machine."
+    "message": "Anyone seen the latest updates?"
   },
   {
     "username": "Fuzzy",
-    "message": "He said he needed it for his TPS reports."
+    "message": "I'm having a bit of trouble with the new feature."
   },
   {
     "username": "Craig",
-    "message": "Oh, that old thing? It's right here!"
+    "message": "Don't worry, I can help you with that, Fuzzy."
   }
 ]
