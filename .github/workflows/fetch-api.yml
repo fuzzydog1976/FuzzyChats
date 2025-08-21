@@ -3,7 +3,10 @@ name: Fetch API Data
 on:
   schedule:
     - cron: "0 * * * *"   # every hour
-  workflow_dispatch:      # allow manual run from GitHub UI
+  workflow_dispatch:
+
+permissions:
+  contents: write   # allow workflow to push changes
 
 jobs:
   fetch:
@@ -15,7 +18,8 @@ jobs:
       - name: Fetch API and update latest.json
         run: |
           mkdir -p data
-          curl -s "https://api.example.com/messages" -o data/latest.json
+          # Replace with your real API URL
+          curl -s "https://your-api-endpoint.com/messages" -o data/latest.json || echo "[]" > data/latest.json
 
       - name: Commit and push changes
         run: |
