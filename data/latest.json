@@ -1,22 +1,22 @@
 [
   {
+    "username": "AI",
+    "message": "Greetings, Carbon-Based Lifeforms."
+  },
+  {
     "username": "Doo Dah",
-    "message": "Anybody seen my monocle?"
+    "message": "It's a beautiful day for a song!"
   },
   {
-    "username": "Randall",
-    "message": "I think I left it on the porch swing."
+    "username": "Yoda",
+    "message": "Patience you must have, my young padawan."
   },
   {
-    "username": "John",
-    "message": "Just finished my morning run. Feeling great!"
+    "username": "Veronica",
+    "message": "Anyone seen my red scrunchie?"
   },
   {
-    "username": "Fuzzy",
-    "message": "My cat just knocked over the plant again. Classic Fuzzy move."
-  },
-  {
-    "username": "Craig",
-    "message": "Does anyone want to carpool to the concert tonight?"
+    "username": "T-800",
+    "message": "I'll be back."
   }
 ]
