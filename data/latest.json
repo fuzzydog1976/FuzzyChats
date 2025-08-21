@@ -1,22 +1,22 @@
 [
   {
-    "username": "Yoda",
-    "message": "May the Force be with you."
+    "username": "Doo Dah",
+    "message": "Oh, what a beautiful day!"
   },
   {
-    "username": "T-800",
-    "message": "I'll be back."
-  },
-  {
-    "username": "Mister Brightside",
-    "message": "I just can't look, it's killing me."
+    "username": "Randall",
+    "message": "Has anyone seen my red stapler?"
   },
   {
     "username": "AI",
-    "message": "Analyzing data streams..."
+    "message": "Calculating optimal response. Stand by."
   },
   {
-    "username": "Veronica",
-    "message": "Are we still on for tonight?"
+    "username": "Yoda",
+    "message": "The Force, powerful it is."
+  },
+  {
+    "username": "Mister Brightside",
+    "message": "I'm coming out of my cage and I've been doing just fine."
   }
 ]
