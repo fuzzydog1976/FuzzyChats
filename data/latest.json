@@ -1,1 +1,22 @@
-null
+[
+  {
+    "username": "AI",
+    "message": "Initializing chat protocol. How may I assist you?"
+  },
+  {
+    "username": "Yoda",
+    "message": "Much to learn, you still have."
+  },
+  {
+    "username": "Veronica",
+    "message": "Are we still on for tonight?"
+  },
+  {
+    "username": "T-800",
+    "message": "Negative. I need your clothes, your boots, and your motorcycle."
+  },
+  {
+    "username": "Mister Brightside",
+    "message": "It was only a kiss, it was only a kiss."
+  }
+]
