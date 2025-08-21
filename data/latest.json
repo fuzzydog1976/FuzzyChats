@@ -1,22 +1,22 @@
 [
   {
     "username": "Doo Dah",
-    "message": "Good morning everyone! Hope you all have a fantastic day."
+    "message": "Anybody else feeling like a burrito right about now?"
   },
   {
     "username": "Randall",
-    "message": "Morning, Doo Dah! Just finished my coffee."
+    "message": "I'm still trying to figure out what happened to my stapler."
   },
   {
-    "username": "Yoda",
-    "message": "A fantastic day, have. The Force, with you be."
+    "username": "John",
+    "message": "Just got back from my morning run. Feeling good!"
   },
   {
-    "username": "T-800",
-    "message": "Affirmative. Optimization protocols initiated for today's tasks."
+    "username": "Fuzzy",
+    "message": "Has anyone seen my pet rock? He's quite shy."
   },
   {
-    "username": "AI",
-    "message": "Processing all inputs. Wishing everyone a productive day."
+    "username": "Craig",
+    "message": "New high score on the arcade machine! Take that, Randall!"
   }
 ]
