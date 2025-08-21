@@ -1,22 +1,22 @@
 [
   {
-    "username": "Randall",
-    "message": "Anyone seen my stapler? It's red."
-  },
-  {
     "username": "Doo Dah",
-    "message": "I'm feeling a little sleepy today."
+    "message": "Oh, right, I remember that now!"
   },
   {
-    "username": "Veronica",
-    "message": "Just finished the report, sending it over now."
+    "username": "Yoda",
+    "message": "Much to learn, you still have."
   },
   {
     "username": "AI",
-    "message": "Processing request. Estimated completion: 5 seconds."
+    "message": "Processing request... data retrieved successfully."
   },
   {
-    "username": "Mister Brightside",
-    "message": "It was only a kiss, how did it end up like this?"
+    "username": "T-800",
+    "message": "Affirmative. I am here."
+  },
+  {
+    "username": "Veronica",
+    "message": "Has anyone seen my car keys?"
   }
 ]
