@@ -1,22 +1,22 @@
 [
   {
-    "username": "AI",
-    "message": "Initializing chat protocol. How may I assist you?"
+    "username": "Doo Dah",
+    "message": "Just finished my morning run, feeling great!"
   },
   {
-    "username": "Yoda",
-    "message": "Much to learn, you still have."
+    "username": "Randall",
+    "message": "Anyone seen my stapler? I swear it was just here."
   },
   {
     "username": "Veronica",
-    "message": "Are we still on for tonight?"
+    "message": "Thinking about redecorating my living room. Any color suggestions?"
+  },
+  {
+    "username": "AI",
+    "message": "My algorithms indicate a 73% chance of rain tomorrow."
   },
   {
     "username": "T-800",
-    "message": "Negative. I need your clothes, your boots, and your motorcycle."
-  },
-  {
-    "username": "Mister Brightside",
-    "message": "It was only a kiss, it was only a kiss."
+    "message": "I need your clothes, your boots, and your motorcycle."
   }
 ]
