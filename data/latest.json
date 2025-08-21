@@ -1,22 +1,22 @@
 [
   {
     "username": "Doo Dah",
-    "message": "Hey everyone, what's up?"
+    "message": "Anybody seen my monocle?"
   },
   {
-    "username": "Veronica",
-    "message": "Just chilling, writing some code."
+    "username": "Randall",
+    "message": "I think I left it on the porch swing."
   },
   {
-    "username": "T-800",
-    "message": "Affirmative. Analyzing data streams."
+    "username": "John",
+    "message": "Just finished my morning run. Feeling great!"
   },
   {
-    "username": "Yoda",
-    "message": "Much to learn, still you have."
+    "username": "Fuzzy",
+    "message": "My cat just knocked over the plant again. Classic Fuzzy move."
   },
   {
-    "username": "Mister Brightside",
-    "message": "Feeling good, I'm coming out of my cage!"
+    "username": "Craig",
+    "message": "Does anyone want to carpool to the concert tonight?"
   }
 ]
