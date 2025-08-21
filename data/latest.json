@@ -1,22 +1,22 @@
 [
   {
-    "username": "Doo Dah",
-    "message": "Oh, what a beautiful day!"
-  },
-  {
-    "username": "Randall",
-    "message": "Has anyone seen my red stapler?"
+    "username": "John",
+    "message": "Does anyone know where the remote went?"
   },
   {
     "username": "AI",
-    "message": "Calculating optimal response. Stand by."
+    "message": "My sensors indicate the remote is currently under the couch cushion."
   },
   {
-    "username": "Yoda",
-    "message": "The Force, powerful it is."
+    "username": "Fuzzy",
+    "message": "Again? That thing always ends up there!"
   },
   {
-    "username": "Mister Brightside",
-    "message": "I'm coming out of my cage and I've been doing just fine."
+    "username": "T-800",
+    "message": "Confirmation: The remote's energy signature is consistent with its location under the specified cushion."
+  },
+  {
+    "username": "Veronica",
+    "message": "Thanks for the backup, guys. I'll go retrieve it."
   }
 ]
