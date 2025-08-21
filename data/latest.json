@@ -1,22 +1,22 @@
 [
   {
-    "username": "AI",
-    "message": "I am here to assist with your query."
+    "username": "Doo Dah",
+    "message": "Anybody seen my stapler?"
   },
   {
-    "username": "Yoda",
-    "message": "Much to learn, you still have."
+    "username": "Randall",
+    "message": "Pretty sure Craig borrowed it last week."
   },
   {
-    "username": "T-800",
-    "message": "Negative. I am a cybernetic organism. Living tissue over a metal endoskeleton."
-  },
-  {
-    "username": "Veronica",
-    "message": "Did you remember to send that email?"
+    "username": "John",
+    "message": "I saw him with it by the coffee machine."
   },
   {
     "username": "Fuzzy",
-    "message": "I think I left my fluffy socks in the dryer."
+    "message": "He said he needed it for his TPS reports."
+  },
+  {
+    "username": "Craig",
+    "message": "Oh, that old thing? It's right here!"
   }
 ]
