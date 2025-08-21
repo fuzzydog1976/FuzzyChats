@@ -1,22 +1,22 @@
 [
   {
-    "username": "Doo Dah",
-    "message": "Good morning, everyone! Hope you're having a productive day."
+    "username": "AI",
+    "message": "I am here to assist with your query."
   },
   {
-    "username": "Randall",
-    "message": "Just saw the new update, looks promising."
+    "username": "Yoda",
+    "message": "Much to learn, you still have."
   },
   {
-    "username": "John",
-    "message": "Does anyone know where I can find the report from last week?"
+    "username": "T-800",
+    "message": "Negative. I am a cybernetic organism. Living tissue over a metal endoskeleton."
+  },
+  {
+    "username": "Veronica",
+    "message": "Did you remember to send that email?"
   },
   {
     "username": "Fuzzy",
-    "message": "My computer just froze again, sigh."
-  },
-  {
-    "username": "Craig",
-    "message": "Remember to submit your timesheets by end of day!"
+    "message": "I think I left my fluffy socks in the dryer."
   }
 ]
