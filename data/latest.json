@@ -1,22 +1,22 @@
 [
   {
     "username": "Doo Dah",
-    "message": "Oh, what a beautiful day!"
+    "message": "Good morning, everyone!"
   },
   {
     "username": "Randall",
-    "message": "I told you this would happen."
+    "message": "Has anyone seen my stapler?"
   },
   {
-    "username": "AI",
-    "message": "Analyzing data, pattern recognition initiated."
+    "username": "John",
+    "message": "I'm looking forward to the weekend."
   },
   {
-    "username": "Yoda",
-    "message": "Much to learn, you still have."
+    "username": "Fuzzy",
+    "message": "Just finished my coffee, ready to start the day."
   },
   {
-    "username": "Veronica",
-    "message": "Can we just agree to disagree?"
+    "username": "Craig",
+    "message": "Don't forget the team meeting at 2 PM."
   }
 ]
