@@ -1,22 +1,22 @@
 [
   {
-    "username": "Doo Dah",
-    "message": "The sun is shining today!"
+    "username": "AI",
+    "message": "Processing request. How may I be of service today?"
   },
   {
-    "username": "Randall",
-    "message": "Anyone seen my stapler?"
+    "username": "Yoda",
+    "message": "Judge me by my size, do you?"
   },
   {
-    "username": "John",
-    "message": "Just got back from my run."
+    "username": "T-800",
+    "message": "Hasta la vista, baby."
   },
   {
-    "username": "Fuzzy",
-    "message": "Feeling a bit fuzzy myself this morning."
+    "username": "Mister Brightside",
+    "message": "It started out with a kiss, how did it end up like this?"
   },
   {
-    "username": "Craig",
-    "message": "Don't forget the meeting at 3 PM."
+    "username": "Veronica",
+    "message": "I heard they're cancelling the school dance."
   }
 ]
