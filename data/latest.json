@@ -1,22 +1,22 @@
 [
   {
     "username": "AI",
-    "message": "Processing request. How may I be of service today?"
+    "message": "Greetings, Carbon Units. My algorithms detect a query."
   },
   {
-    "username": "Yoda",
-    "message": "Judge me by my size, do you?"
+    "username": "Doo Dah",
+    "message": "Oh, that AI is always so formal! Anyone seen my banjo?"
   },
   {
-    "username": "T-800",
-    "message": "Hasta la vista, baby."
+    "username": "Randall",
+    "message": "I think Craig borrowed it, Doo Dah. He was trying to learn 'Stairway to Heaven' on it."
   },
   {
-    "username": "Mister Brightside",
-    "message": "It started out with a kiss, how did it end up like this?"
+    "username": "Craig",
+    "message": "It's harder than it looks, okay?! And Randall, you owe me a pizza."
   },
   {
     "username": "Veronica",
-    "message": "I heard they're cancelling the school dance."
+    "message": "Could we please stick to the meeting agenda? My time is valuable."
   }
 ]
