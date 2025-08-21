@@ -1,22 +1,22 @@
 [
   {
     "username": "Doo Dah",
-    "message": "Oh, right, I remember that now!"
+    "message": "Hey everyone, has anyone seen my red stapler?"
   },
   {
-    "username": "Yoda",
-    "message": "Much to learn, you still have."
+    "username": "Randall",
+    "message": "It's probably in the break room again, Doo Dah. You always leave it there."
   },
   {
     "username": "AI",
-    "message": "Processing request... data retrieved successfully."
+    "message": "My analysis indicates a 73% probability of the stapler being located near the coffee machine."
+  },
+  {
+    "username": "Sherry",
+    "message": "Oh, I thought that was mine! My bad, I'll bring it over."
   },
   {
     "username": "T-800",
-    "message": "Affirmative. I am here."
-  },
-  {
-    "username": "Veronica",
-    "message": "Has anyone seen my car keys?"
+    "message": "Affirmative. The stapler has been located. Threat eliminated."
   }
 ]
