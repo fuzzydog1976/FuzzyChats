@@ -1,22 +1,22 @@
 [
   {
     "username": "Doo Dah",
-    "message": "Anyone seen my hat?"
+    "message": "Good morning everyone! Hope you all have a fantastic day."
   },
   {
-    "username": "AI",
-    "message": "I have processed your query. Hats are typically found on heads."
+    "username": "Randall",
+    "message": "Morning, Doo Dah! Just finished my coffee."
   },
   {
     "username": "Yoda",
-    "message": "Lost, your hat is. Seek it, you must."
+    "message": "A fantastic day, have. The Force, with you be."
   },
   {
     "username": "T-800",
-    "message": "Query: Location of hat. Scanning perimeter."
+    "message": "Affirmative. Optimization protocols initiated for today's tasks."
   },
   {
-    "username": "Veronica",
-    "message": "Oh, I think I saw it in the kitchen, Doo Dah!"
+    "username": "AI",
+    "message": "Processing all inputs. Wishing everyone a productive day."
   }
 ]
