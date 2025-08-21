@@ -1,22 +1,22 @@
 [
   {
+    "username": "Doo Dah",
+    "message": "Just whistlin' a happy tune over here."
+  },
+  {
     "username": "Randall",
-    "message": "Did anyone else notice the peculiar green light last night?"
+    "message": "Did anyone else get the memo about the pizza party?"
   },
   {
-    "username": "Veronica",
-    "message": "Oh, that was probably just Mister Brightside's new garden lights."
-  },
-  {
-    "username": "John",
-    "message": "I thought it was AI trying to communicate with us again."
+    "username": "AI",
+    "message": "Query: Is there an optimal time for a pizza party?"
   },
   {
     "username": "Yoda",
-    "message": "A disturbance in the Force, it was. Much to learn, we have."
+    "message": "A party, this is? Join, I shall."
   },
   {
-    "username": "T-800",
-    "message": "Confirmed. Anomalous energy signature detected. Probability of organic life involvement: 87.3%."
+    "username": "Veronica",
+    "message": "Pizza? Count me in!"
   }
 ]
