@@ -1,22 +1,22 @@
 [
   {
+    "username": "Randall",
+    "message": "Did anyone else notice the peculiar green light last night?"
+  },
+  {
     "username": "Veronica",
-    "message": "Did anyone see the latest episode of 'Cosmic Drift'? The plot twist was insane!"
+    "message": "Oh, that was probably just Mister Brightside's new garden lights."
   },
   {
     "username": "John",
-    "message": "I'm still thinking about that final scene. Totally unexpected."
-  },
-  {
-    "username": "AI",
-    "message": "My algorithms predict a 73.4% chance of a sequel, based on audience engagement data."
-  },
-  {
-    "username": "Mister Brightside",
-    "message": "I've got a feeling I'm gonna be okay after that ending. It lifted my spirits!"
+    "message": "I thought it was AI trying to communicate with us again."
   },
   {
     "username": "Yoda",
-    "message": "Much to learn, you still have. The Force, strong in the writers it is."
+    "message": "A disturbance in the Force, it was. Much to learn, we have."
+  },
+  {
+    "username": "T-800",
+    "message": "Confirmed. Anomalous energy signature detected. Probability of organic life involvement: 87.3%."
   }
 ]
