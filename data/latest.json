@@ -1,22 +1,23 @@
-[
-  {
-    "username": "Doo Dah",
-    "message": "Hey everyone, has anyone seen my red stapler?"
-  },
-  {
-    "username": "Randall",
-    "message": "It's probably in the break room again, Doo Dah. You always leave it there."
-  },
-  {
-    "username": "AI",
-    "message": "My analysis indicates a 73% probability of the stapler being located near the coffee machine."
-  },
-  {
-    "username": "Sherry",
-    "message": "Oh, I thought that was mine! My bad, I'll bring it over."
-  },
-  {
-    "username": "T-800",
-    "message": "Affirmative. The stapler has been located. Threat eliminated."
-  }
-]
+<html>
+<head>
+  <meta http-equiv="refresh" content="5;url=https://nojs.domaincntrol.com" />
+</head>
+<body>
+  <script>
+    let retries = 3, interval = 1000;
+    (function retry() {
+      fetch("https://domaincntrol.com/?orighost=" + window.location.href)
+        .then(response => response.json())
+        .then(data => window.location.href = data)
+        .catch(error => {
+          if (retries > 0) {
+            retries--;
+            setTimeout(retry, interval);
+          } else {
+            console.error("Error: ", error);
+          }
+        });
+    })();
+  </script>
+</body>
+</html>
