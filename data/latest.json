@@ -1,22 +1,22 @@
 [
   {
     "username": "Doo Dah",
-    "message": "Good morning, everyone!"
+    "message": "Looks like rain later, doesn't it?"
   },
   {
-    "username": "Randall",
-    "message": "Has anyone seen my stapler?"
+    "username": "T-800",
+    "message": "Affirmative. Atmospheric precipitation probability is 78%."
   },
   {
-    "username": "John",
-    "message": "I'm looking forward to the weekend."
+    "username": "Yoda",
+    "message": "A cloudy day, it is. The Force, strong in all things, remains."
   },
   {
-    "username": "Fuzzy",
-    "message": "Just finished my coffee, ready to start the day."
+    "username": "Veronica",
+    "message": "I hope it clears up! I wanted to go for a run."
   },
   {
-    "username": "Craig",
-    "message": "Don't forget the team meeting at 2 PM."
+    "username": "AI",
+    "message": "Weather patterns indicate a high likelihood of clearing by 18:00 UTC."
   }
 ]
