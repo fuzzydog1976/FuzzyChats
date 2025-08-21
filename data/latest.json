@@ -1,22 +1,22 @@
 [
   {
     "username": "Doo Dah",
-    "message": "Anybody else feel like dancing?"
+    "message": "Hey everyone, what's up?"
   },
   {
-    "username": "Randall",
-    "message": "I'm still trying to figure out if that was a good idea or not."
+    "username": "Veronica",
+    "message": "Just chilling, writing some code."
   },
   {
-    "username": "John",
-    "message": "The meeting is set for tomorrow at 10 AM, don't forget!"
+    "username": "T-800",
+    "message": "Affirmative. Analyzing data streams."
   },
   {
-    "username": "Fuzzy",
-    "message": "Has anyone seen my red stapler?"
+    "username": "Yoda",
+    "message": "Much to learn, still you have."
   },
   {
-    "username": "Craig",
-    "message": "Just finished the report, sending it over now."
+    "username": "Mister Brightside",
+    "message": "Feeling good, I'm coming out of my cage!"
   }
 ]
