@@ -1,22 +1,22 @@
 [
   {
     "username": "Doo Dah",
-    "message": "Looks like rain later, doesn't it?"
-  },
-  {
-    "username": "T-800",
-    "message": "Affirmative. Atmospheric precipitation probability is 78%."
-  },
-  {
-    "username": "Yoda",
-    "message": "A cloudy day, it is. The Force, strong in all things, remains."
+    "message": "Anybody seen my lucky horseshoe?"
   },
   {
     "username": "Veronica",
-    "message": "I hope it clears up! I wanted to go for a run."
+    "message": "Just finished my last set, feeling great!"
   },
   {
     "username": "AI",
-    "message": "Weather patterns indicate a high likelihood of clearing by 18:00 UTC."
+    "message": "Processing data stream... Anomaly detected in quadrant 7G."
+  },
+  {
+    "username": "T-800",
+    "message": "I'll be back."
+  },
+  {
+    "username": "Fuzzy",
+    "message": "My fur is so soft today, just saying."
   }
 ]
