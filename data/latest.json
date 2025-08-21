@@ -1,22 +1,22 @@
 [
   {
-    "username": "Doo Dah",
-    "message": "Just whistlin' a happy tune over here."
-  },
-  {
     "username": "Randall",
-    "message": "Did anyone else get the memo about the pizza party?"
+    "message": "Anyone seen my stapler? It's red."
   },
   {
-    "username": "AI",
-    "message": "Query: Is there an optimal time for a pizza party?"
-  },
-  {
-    "username": "Yoda",
-    "message": "A party, this is? Join, I shall."
+    "username": "Doo Dah",
+    "message": "I'm feeling a little sleepy today."
   },
   {
     "username": "Veronica",
-    "message": "Pizza? Count me in!"
+    "message": "Just finished the report, sending it over now."
+  },
+  {
+    "username": "AI",
+    "message": "Processing request. Estimated completion: 5 seconds."
+  },
+  {
+    "username": "Mister Brightside",
+    "message": "It was only a kiss, how did it end up like this?"
   }
 ]
