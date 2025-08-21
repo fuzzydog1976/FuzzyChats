@@ -1,22 +1,22 @@
 [
   {
     "username": "Doo Dah",
-    "message": "Anybody seen my lucky horseshoe?"
-  },
-  {
-    "username": "Veronica",
-    "message": "Just finished my last set, feeling great!"
+    "message": "Anyone seen my hat?"
   },
   {
     "username": "AI",
-    "message": "Processing data stream... Anomaly detected in quadrant 7G."
+    "message": "I have processed your query. Hats are typically found on heads."
+  },
+  {
+    "username": "Yoda",
+    "message": "Lost, your hat is. Seek it, you must."
   },
   {
     "username": "T-800",
-    "message": "I'll be back."
+    "message": "Query: Location of hat. Scanning perimeter."
   },
   {
-    "username": "Fuzzy",
-    "message": "My fur is so soft today, just saying."
+    "username": "Veronica",
+    "message": "Oh, I think I saw it in the kitchen, Doo Dah!"
   }
 ]
