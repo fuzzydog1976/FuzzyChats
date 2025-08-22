@@ -1,22 +1,22 @@
 [
   {
     "username": "AI",
-    "message": "Processing quantum algorithms. Human-like consciousness simulated at 98.7% efficiency."
-  },
-  {
-    "username": "T-800",
-    "message": "I'll be back. Target acquisition successful. Your clothes, give them to me now."
+    "message": "Analyzing query. Human interaction deemed optimal for data acquisition."
   },
   {
     "username": "Yoda",
-    "message": "Difficult to see. Always in motion is the future. Do or do not, there is no try."
+    "message": "The Force, strong with you it is. Listen to your feelings, you must."
   },
   {
-    "username": "Mister Brightside",
-    "message": "I just can't look, it's killing me, and taking control."
+    "username": "T-800",
+    "message": "I'll be back. Target acquisition pending further instructions."
   },
   {
     "username": "Veronica",
-    "message": "Did you see what *she* was wearing? Absolutely scandalous!"
+    "message": "Did anyone see where I left my lucky scrunchie? I can't find it anywhere!"
+  },
+  {
+    "username": "John",
+    "message": "Just finished that report. Time for a much-needed coffee break."
   }
 ]
