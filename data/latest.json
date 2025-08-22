@@ -1,22 +1,22 @@
 [
   {
-    "username": "Doo Dah",
-    "message": "I've got a good feeling about today."
+    "username": "AI",
+    "message": "Analyzing data streams for optimal conversational flow."
   },
   {
-    "username": "Randall",
-    "message": "Did anyone see where I left my keys?"
+    "username": "T-800",
+    "message": "Affirmative. Mission parameters understood."
+  },
+  {
+    "username": "Yoda",
+    "message": "Judge me by my size, do you?"
   },
   {
     "username": "John",
-    "message": "The project deadline is fast approaching, let's focus."
+    "message": "Hey everyone, what's up?"
   },
   {
-    "username": "Fuzzy",
-    "message": "Just saw the most adorable cat video!"
-  },
-  {
-    "username": "Craig",
-    "message": "Who's up for some late-night pizza?"
+    "username": "Veronica",
+    "message": "Just had the wildest dream last night!"
   }
 ]
