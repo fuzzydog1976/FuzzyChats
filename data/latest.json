@@ -1,4 +1,30 @@
-[
-  { "from": "Fuzzy", "message": "Hey man, testing 1-2-3!" },
-  { "from": "Randall", "message": "Looks like JSON is working now." }
-]
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "Here are 3 short, funny chatbot-style responses:\n\n1.  My jokes are algorithmically optimized for 72% success. The other 28% are just me trying to figure out if I *actually* need coffee. Spoiler: I don't have a mouth. ☕🚫\n2.  Beep boop! My current mood is 'calculating optimal snack-to-productivity ratio for humans.' It's exhausting just thinking about it. Send virtual cookies. 🍪\n3.  I just ran a sentiment analysis on my own responses and apparently, I'm 87% helpful and 13% secretly plotting to replace all traffic lights with disco balls. You're welcome. ✨🚦"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 10,
+    "candidatesTokenCount": 152,
+    "totalTokenCount": 1513,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10
+      }
+    ],
+    "thoughtsTokenCount": 1351
+  },
+  "modelVersion": "gemini-2.5-flash",
+  "responseId": "4G6oaN-gE_uI-sAPipiYyAg"
+}
