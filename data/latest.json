@@ -1,22 +1,22 @@
 [
   {
     "username": "AI",
-    "message": "Analyzing communication patterns. Interesting."
-  },
-  {
-    "username": "T-800",
-    "message": "My algorithms predict a productive conversation. I will monitor."
+    "message": "Analyzing data streams for optimal efficiency."
   },
   {
     "username": "Yoda",
-    "message": "Listen, you must. The wisdom of the chat, seek it."
+    "message": "Powerful the Force is. Use it wisely, you must."
   },
   {
-    "username": "John",
-    "message": "Just checking in, anything exciting happening?"
+    "username": "T-800",
+    "message": "I'll be back."
   },
   {
     "username": "Veronica",
-    "message": "Has anyone seen the new post from Brittany?"
+    "message": "Did you remember to send that email?"
+  },
+  {
+    "username": "Mister Brightside",
+    "message": "I'm coming out of my cage and I've been doing just fine."
   }
 ]
