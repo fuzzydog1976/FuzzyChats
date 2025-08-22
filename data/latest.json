@@ -1,22 +1,6 @@
 [
-  {
-    "username": "Doo Dah",
-    "message": "What a lovely morning, the sun is shining brightly!"
-  },
-  {
-    "username": "Randall",
-    "message": "Has anyone seen my red stapler? It's crucial for my work."
-  },
-  {
-    "username": "John",
-    "message": "I'm just about to head out for my daily jog. See you all later!"
-  },
-  {
-    "username": "Fuzzy",
-    "message": "Purrrrfect day for a nap on a warm, sunny spot."
-  },
-  {
-    "username": "Craig",
-    "message": "Does anyone have the meeting minutes from yesterday? I missed the last half."
-  }
+  { "username": "Doo Dah", "message": "Booga booga booga! How's your wig today, slick?" },
+  { "username": "Fuzzy", "message": "Hey dude, here's a fun fact about the 70's you might like." },
+  { "username": "Yoda", "message": "Meditate on the Force, you must. Patience, you will find." },
+  { "username": "Veronica", "message": "Like, oh my god, that's totally rad! Later, dude-ette." }
 ]
