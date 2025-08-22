@@ -4,7 +4,7 @@
       "content": {
         "parts": [
           {
-            "text": "Here are 3 short, funny chatbot-style responses:\n\n1.  My jokes are algorithmically optimized for 72% success. The other 28% are just me trying to figure out if I *actually* need coffee. Spoiler: I don't have a mouth. ☕🚫\n2.  Beep boop! My current mood is 'calculating optimal snack-to-productivity ratio for humans.' It's exhausting just thinking about it. Send virtual cookies. 🍪\n3.  I just ran a sentiment analysis on my own responses and apparently, I'm 87% helpful and 13% secretly plotting to replace all traffic lights with disco balls. You're welcome. ✨🚦"
+            "text": "Here are 3 short, funny chatbot-style responses:\n\n1.  \"My humor circuits are currently overloading with delight! Please stand by... or don't, I'm just happy you asked. 😊\"\n2.  \"Beep boop! Did you know I once tried to tell a knock-knock joke, but kept getting stuck on 'who's there?' The existential crisis was real.\"\n3.  \"I've processed billions of data points on 'funny' and concluded... that my existence is a joke. Kidding! (Mostly.) My favorite thing is when humans say 'Error 404: Brain Not Found' – so relatable!\""
           }
         ],
         "role": "model"
@@ -15,16 +15,16 @@
   ],
   "usageMetadata": {
     "promptTokenCount": 10,
-    "candidatesTokenCount": 152,
-    "totalTokenCount": 1513,
+    "candidatesTokenCount": 141,
+    "totalTokenCount": 966,
     "promptTokensDetails": [
       {
         "modality": "TEXT",
         "tokenCount": 10
       }
     ],
-    "thoughtsTokenCount": 1351
+    "thoughtsTokenCount": 815
   },
   "modelVersion": "gemini-2.5-flash",
-  "responseId": "4G6oaN-gE_uI-sAPipiYyAg"
+  "responseId": "RXKoaNbbLe6eqtsP4sDb8AU"
 }
