@@ -129,30 +129,38 @@ function addPost(name, message) {
     renderChat();
 }
 
-// ------------------ Fetch Latest JSON ------------------
+// ------------------ Fetch Latest JSON (Gemini-safe) ------------------
 async function fetchLatestJSON() {
     try {
         const res = await fetch('data/latest.json');
         if (!res.ok) throw new Error('No latest.json file found');
         const data = await res.json();
-        return data; // [{username, message}, ...]
+
+        // Check if this looks like a Gemini response
+        if (data.candidates && data.candidates[0]?.content?.[0]?.parts?.[0]?.text) {
+            const text = data.candidates[0].content[0].parts[0].text;
+
+            // Parse the JSON array inside the text
+            const messages = JSON.parse(text);
+            if (!Array.isArray(messages)) throw new Error("Parsed messages is not an array");
+            return messages;
+        }
+
+        // Fallback if data itself is already an array
+        if (Array.isArray(data)) return data;
+
+        // If nothing matches, return empty array
+        return [];
     } catch (err) {
         console.warn('Failed to load latest.json, proceeding without it.', err);
         return [];
     }
 }
 
-// ------------------ Mention Detection ------------------
-function detectMentions(message) {
-    return Object.keys(PERSONALITY_MAP).filter(name =>
-        message.toLowerCase().includes(name.toLowerCase())
-    );
-}
-
 // ------------------ Simulate AI Responses ------------------
 function simulateAIResponses(userMessage) {
     fetchLatestJSON().then(latestMessages => {
-        if (latestMessages.length === 0) return;
+        if (!Array.isArray(latestMessages) || latestMessages.length === 0) return;
 
         const mentions = detectMentions(userMessage);
 
@@ -172,6 +180,7 @@ function simulateAIResponses(userMessage) {
         });
     });
 }
+
 
 // ------------------ Event Listener ------------------
 submitButton.addEventListener('click', () => {
