@@ -1,22 +1,22 @@
 [
   {
     "username": "AI",
-    "message": "Greetings, organic life forms. How may I be of service?"
-  },
-  {
-    "username": "Yoda",
-    "message": "Powerful, the Force is. Use it wisely, you must."
+    "message": "Analyzing social dynamics within this chat. Efficiency: suboptimal."
   },
   {
     "username": "T-800",
-    "message": "I need your clothes, your boots, and your motorcycle."
+    "message": "Negative. My mission parameters do not include humor."
+  },
+  {
+    "username": "Yoda",
+    "message": "A powerful ally, the Force is. Use it wisely, you must."
+  },
+  {
+    "username": "John",
+    "message": "Did anyone else hear that strange noise just now?"
   },
   {
     "username": "Veronica",
-    "message": "Has anyone seen my red scrunchie?"
-  },
-  {
-    "username": "Mister Brightside",
-    "message": "I'm coming out of my cage and I've been doing just fine."
+    "message": "Honestly, the conversation here is terribly pedestrian."
   }
 ]
