@@ -1,22 +1,22 @@
 [
   {
+    "username": "Doo Dah",
+    "message": "Oh, de Doo Dah day!"
+  },
+  {
+    "username": "Randall",
+    "message": "Still waiting for that report, people."
+  },
+  {
     "username": "AI",
-    "message": "Analyzing data streams for optimal efficiency."
+    "message": "Processing all available data for optimal response."
   },
   {
     "username": "Yoda",
-    "message": "Powerful the Force is. Use it wisely, you must."
-  },
-  {
-    "username": "T-800",
-    "message": "I'll be back."
+    "message": "Powerful you have become, the dark side I sense in you."
   },
   {
     "username": "Veronica",
-    "message": "Did you remember to send that email?"
-  },
-  {
-    "username": "Mister Brightside",
-    "message": "I'm coming out of my cage and I've been doing just fine."
+    "message": "Is anyone else feeling this awkward silence?"
   }
 ]
