@@ -7,8 +7,8 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-    body { font-family: 'Inter', sans-serif; background-color: #f0f2f5; }
-    .chat-bubble { display: flex; align-items: flex-start; gap: 0.75rem; }
+  body { font-family: 'Inter', sans-serif; background-color: #f0f2f5; }
+  .chat-bubble { display: flex; align-items: flex-start; gap: 0.75rem; }
 </style>
 </head>
 <body class="flex flex-col items-center justify-center min-h-screen p-4">
@@ -28,7 +28,7 @@
                    class="flex-grow px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-base transition duration-150 ease-in-out">
         </div>
         <div>
-            <label for="userPrompt" class="sr-only">Comment or Question?:</label>
+            <label for="userPrompt" class="sr-only">Comment or Question?</label>
             <textarea id="userPrompt" rows="3"
                       class="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-base resize-y transition duration-150 ease-in-out"
                       placeholder="Type your Comment or Question here..."></textarea>
@@ -43,40 +43,25 @@
 </div>
 
 <script>
-// ------------------ Personality Map (Loaded Externally) ------------------
 let PERSONALITY_MAP = {};
-
-async function loadPersonalities() {
-    try {
-        const res = await fetch('data/personalities.json');
-        PERSONALITY_MAP = await res.json();
-        console.log("Loaded personalities:", PERSONALITY_MAP);
-    } catch (err) {
-        console.error("Failed to load personalities.json", err);
-        PERSONALITY_MAP = {}; // fallback
-    }
-}
-
-// ------------------ Avatars ------------------
 const AVATAR_MAP = {
-    "Doo Dah": "avatars/Doo Dah.png",
-    "Randall": "avatars/Randy.png",
-    "John": "avatars/John.png",
-    "Fuzzy": "avatars/Fuzzy.png",
-    "Craig": "avatars/Craig.png",
-    "Sherry": "avatars/Sherry.png",
-    "Albert": "avatars/Albert.png",
-    "Long Duk Dong": "avatars/Long Duk Dong.png",
-    "AI": "avatars/AI.png",
-    "T-800": "avatars/T-800.png",
-    "Timbo": "avatars/Timbo.png",
-    "Yoda": "avatars/Yoda.png",
-    "Mister Brightside": "avatars/Brightside.png",
-    "User": "avatars/User.png",
-    "Veronica": "avatars/Veronica.png"
+  "Doo Dah": "avatars/Doo Dah.png",
+  "Randall": "avatars/Randall.png",
+  "John": "avatars/John.png",
+  "Fuzzy": "avatars/Fuzzy.png",
+  "Craig": "avatars/Craig.png",
+  "Sherry": "avatars/Sherry.png",
+  "Albert": "avatars/Albert.png",
+  "Long Duk Dong": "avatars/Long Duk Dong.png",
+  "AI": "avatars/AI.png",
+  "T-800": "avatars/T-800.png",
+  "Timbo": "avatars/Timbo.png",
+  "Yoda": "avatars/Yoda.png",
+  "Mister Brightside": "avatars/Mister Brightside.png",
+  "User": "avatars/User.png",
+  "Veronica": "avatars/Veronica.png"
 };
 
-// ------------------ DOM References ------------------
 const chatHistory = document.getElementById('chatHistory');
 const userNameInput = document.getElementById('userName');
 const userPromptInput = document.getElementById('userPrompt');
@@ -84,7 +69,17 @@ const submitButton = document.getElementById('submitButton');
 
 let conversationHistory = JSON.parse(localStorage.getItem('FuzzyChatsHistory')) || [];
 
-// ------------------ Rendering ------------------
+// Load personalities dynamically
+async function loadPersonalities() {
+  try {
+    const res = await fetch('data/personalities.json');
+    PERSONALITY_MAP = await res.json();
+    console.log("Loaded personalities:", PERSONALITY_MAP);
+  } catch (err) {
+    console.error("Failed to load personalities.json", err);
+  }
+}
+
 function renderChat() {
     chatHistory.innerHTML = '';
     if (conversationHistory.length === 0) {
@@ -129,60 +124,44 @@ function addPost(name, message) {
     renderChat();
 }
 
-// ------------------ Fetch Latest JSON (Gemini-safe) ------------------
 async function fetchLatestJSON() {
     try {
         const res = await fetch('data/latest.json');
-        if (!res.ok) throw new Error('No latest.json file found');
+        if (!res.ok) throw new Error('No latest.json');
         const data = await res.json();
-
-        // Check if this looks like a Gemini response
-        if (data.candidates && data.candidates[0]?.content?.[0]?.parts?.[0]?.text) {
-            const text = data.candidates[0].content[0].parts[0].text;
-
-            // Parse the JSON array inside the text
-            const messages = JSON.parse(text);
-            if (!Array.isArray(messages)) throw new Error("Parsed messages is not an array");
-            return messages;
-        }
-
-        // Fallback if data itself is already an array
-        if (Array.isArray(data)) return data;
-
-        // If nothing matches, return empty array
-        return [];
+        if (!Array.isArray(data)) return [];
+        return data;
     } catch (err) {
         console.warn('Failed to load latest.json, proceeding without it.', err);
         return [];
     }
 }
 
-// ------------------ Simulate AI Responses ------------------
-function simulateAIResponses(userMessage) {
-    fetchLatestJSON().then(latestMessages => {
-        if (!Array.isArray(latestMessages) || latestMessages.length === 0) return;
+function detectMentions(message) {
+    return Object.keys(PERSONALITY_MAP).filter(name =>
+        message.toLowerCase().includes(name.toLowerCase())
+    );
+}
 
-        const mentions = detectMentions(userMessage);
+async function simulateAIResponses(userMessage) {
+    const latestMessages = await fetchLatestJSON();
+    if (latestMessages.length === 0) return;
 
-        // Shuffle messages for random timing
-        latestMessages.sort(() => 0.5 - Math.random());
+    const mentions = detectMentions(userMessage);
+    latestMessages.sort(() => 0.5 - Math.random());
 
-        latestMessages.forEach((msg, index) => {
-            const delay = 2000 + Math.random() * 4000 * index;
-
-            setTimeout(() => {
-                if (mentions.includes(msg.username)) {
-                    addPost(msg.username, `Hey, you mentioned me! ${msg.message}`);
-                } else {
-                    addPost(msg.username, msg.message);
-                }
-            }, delay);
-        });
+    latestMessages.forEach((msg, index) => {
+        const delay = 2000 + Math.random() * 4000 * index;
+        setTimeout(() => {
+            if (mentions.includes(msg.username)) {
+                addPost(msg.username, `Hey, you mentioned me! ${msg.message}`);
+            } else {
+                addPost(msg.username, msg.message);
+            }
+        }, delay);
     });
 }
 
-
-// ------------------ Event Listener ------------------
 submitButton.addEventListener('click', () => {
     const userName = userNameInput.value.trim() || "User";
     const userMessage = userPromptInput.value.trim();
@@ -192,8 +171,8 @@ submitButton.addEventListener('click', () => {
     simulateAIResponses(userMessage);
 });
 
-// ------------------ Initialize ------------------
-(async function init() {
+// Initialize
+(async () => {
     await loadPersonalities();
     renderChat();
 })();
