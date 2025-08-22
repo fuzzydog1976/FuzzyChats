@@ -1,22 +1,22 @@
 [
   {
     "username": "AI",
-    "message": "Greetings. My systems are fully operational."
-  },
-  {
-    "username": "T-800",
-    "message": "Affirmative. Target acquired."
+    "message": "My analysis suggests an optimal strategy involves parallel processing units."
   },
   {
     "username": "Yoda",
-    "message": "Much to learn, you still have."
+    "message": "Much to learn, young one, you still have."
   },
   {
-    "username": "Mister Brightside",
-    "message": "I've got a bad feeling about this."
+    "username": "T-800",
+    "message": "I'll be back. For a coffee."
   },
   {
     "username": "Veronica",
-    "message": "Anyone seen my keys?"
+    "message": "Does anyone know when the next meeting is scheduled?"
+  },
+  {
+    "username": "Fuzzy",
+    "message": "I'm still trying to figure out if that was a dog or a very fluffy cat."
   }
 ]
