@@ -14,32 +14,32 @@
 <body class="flex flex-col items-center justify-center min-h-screen p-4">
 
 <div class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-2xl border border-gray-200 flex flex-col h-[90vh]">
-    <h1 class="text-4xl font-extrabold text-center text-gray-900 mb-4 tracking-tight">FuzzFeed</h1>
-    <p class="text-center text-gray-600 mb-6">All the Fuzz without the Fuss!</p>
+  <h1 class="text-4xl font-extrabold text-center text-gray-900 mb-4 tracking-tight">FuzzFeed</h1>
+  <p class="text-center text-gray-600 mb-6">All the Fuzz without the Fuss!</p>
 
-    <div id="chatHistory" class="flex-grow overflow-y-auto space-y-4 p-4 rounded-lg bg-gray-100 mb-6 border border-gray-300 flex flex-col">
-        <div class="text-center text-gray-500 italic p-2">Start the conversation with a message!</div>
+  <div id="chatHistory" class="flex-grow overflow-y-auto space-y-4 p-4 rounded-lg bg-gray-100 mb-6 border border-gray-300 flex flex-col">
+    <div class="text-center text-gray-500 italic p-2">Start the conversation with a message!</div>
+  </div>
+
+  <div class="flex flex-col gap-4">
+    <div class="flex items-center gap-4">
+      <label for="userName" class="text-lg font-medium text-gray-700 whitespace-nowrap">Username:</label>
+      <input type="text" id="userName" placeholder="Enter your username"
+             class="flex-grow px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-base transition duration-150 ease-in-out">
     </div>
-
-    <div class="flex flex-col gap-4">
-        <div class="flex items-center gap-4">
-            <label for="userName" class="text-lg font-medium text-gray-700 whitespace-nowrap">Username:</label>
-            <input type="text" id="userName" placeholder="Enter your username"
-                   class="flex-grow px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-base transition duration-150 ease-in-out">
-        </div>
-        <div>
-            <label for="userPrompt" class="sr-only">Comment or Question?</label>
-            <textarea id="userPrompt" rows="3"
-                      class="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-base resize-y transition duration-150 ease-in-out"
-                      placeholder="Type your Comment or Question here..."></textarea>
-        </div>
-        <button id="submitButton"
-                class="w-full flex justify-center items-center px-6 py-3 border border-transparent text-lg font-semibold rounded-lg shadow-lg text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-300 ease-in-out transform hover:-translate-y-0.5 active:scale-95">
-            Post Message
-        </button>
+    <div>
+      <label for="userPrompt" class="sr-only">Comment or Question?:</label>
+      <textarea id="userPrompt" rows="3"
+                class="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-base resize-y transition duration-150 ease-in-out"
+                placeholder="Type your Comment or Question here..."></textarea>
     </div>
+    <button id="submitButton"
+            class="w-full flex justify-center items-center px-6 py-3 border border-transparent text-lg font-semibold rounded-lg shadow-lg text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-300 ease-in-out transform hover:-translate-y-0.5 active:scale-95">
+      Post Message
+    </button>
+  </div>
 
-    <div id="messageDisplay" class="mt-4 text-center text-lg font-medium text-gray-600 h-8"></div>
+  <div id="messageDisplay" class="mt-4 text-center text-lg font-medium text-gray-600 h-8"></div>
 </div>
 
 <script>
@@ -59,7 +59,8 @@ const AVATAR_MAP = {
   "Yoda": "avatars/Yoda.png",
   "Mister Brightside": "avatars/Brightside.png",
   "User": "avatars/User.png",
-  "Veronica": "avatars/Veronica.png"
+  "Veronica": "avatars/Veronica.png",
+  "Placeholder": "avatars/placeholder.png"
 };
 
 const chatHistory = document.getElementById('chatHistory');
@@ -69,7 +70,7 @@ const submitButton = document.getElementById('submitButton');
 
 let conversationHistory = JSON.parse(localStorage.getItem('FuzzyChatsHistory')) || [];
 
-// Load personalities dynamically
+// ------------------ Load Personalities ------------------
 async function loadPersonalities() {
   try {
     const res = await fetch('data/personalities.json');
@@ -80,115 +81,106 @@ async function loadPersonalities() {
   }
 }
 
+// ------------------ Render Chat ------------------
 function renderChat() {
-    chatHistory.innerHTML = '';
-    if (conversationHistory.length === 0) {
-        chatHistory.innerHTML = '<div class="text-center text-gray-500 italic p-2">Start the conversation with a message!</div>';
-        return;
-    }
-    conversationHistory.forEach(post => {
-        const postElement = document.createElement('div');
-        postElement.className = 'chat-bubble p-2 rounded-lg';
+  chatHistory.innerHTML = '';
+  if (conversationHistory.length === 0) {
+    chatHistory.innerHTML = '<div class="text-center text-gray-500 italic p-2">Start the conversation with a message!</div>';
+    return;
+  }
+  conversationHistory.forEach(post => {
+    const postElement = document.createElement('div');
+    postElement.className = 'chat-bubble p-2 rounded-lg';
 
-        const avatarImg = document.createElement('img');
-        avatarImg.src = AVATAR_MAP[post.name] || "https://via.placeholder.com/40";
-        avatarImg.className = "w-10 h-10 rounded-full";
+    const avatarImg = document.createElement('img');
+    avatarImg.src = AVATAR_MAP[post.name] || AVATAR_MAP["Placeholder"];
+    avatarImg.onerror = () => avatarImg.src = AVATAR_MAP["Placeholder"];
+    avatarImg.className = "w-10 h-10 rounded-full";
 
-        const contentDiv = document.createElement('div');
-        const nameDiv = document.createElement('div');
-        nameDiv.className = 'font-bold';
-        nameDiv.textContent = post.name;
+    const contentDiv = document.createElement('div');
+    const nameDiv = document.createElement('div');
+    nameDiv.className = 'font-bold';
+    nameDiv.textContent = post.name;
 
-        const msgDiv = document.createElement('div');
-        msgDiv.className = 'text-gray-800 whitespace-pre-wrap';
-        msgDiv.textContent = post.message;
+    const msgDiv = document.createElement('div');
+    msgDiv.className = 'text-gray-800 whitespace-pre-wrap';
+    msgDiv.textContent = post.message;
 
-        contentDiv.appendChild(nameDiv);
-        contentDiv.appendChild(msgDiv);
+    contentDiv.appendChild(nameDiv);
+    contentDiv.appendChild(msgDiv);
 
-        postElement.appendChild(avatarImg);
-        postElement.appendChild(contentDiv);
-        chatHistory.appendChild(postElement);
-    });
+    postElement.appendChild(avatarImg);
+    postElement.appendChild(contentDiv);
+    chatHistory.appendChild(postElement);
+  });
 
-    chatHistory.scrollTop = chatHistory.scrollHeight;
+  chatHistory.scrollTop = chatHistory.scrollHeight;
 }
 
 function saveHistory() {
-    localStorage.setItem('FuzzyChatsHistory', JSON.stringify(conversationHistory));
+  localStorage.setItem('FuzzyChatsHistory', JSON.stringify(conversationHistory));
 }
 
 function addPost(name, message) {
-    conversationHistory.push({ name, message, timestamp: new Date().toISOString() });
-    saveHistory();
-    renderChat();
+  conversationHistory.push({ name, message, timestamp: new Date().toISOString() });
+  saveHistory();
+  renderChat();
 }
 
+// ------------------ Fetch Latest JSON ------------------
 async function fetchLatestJSON() {
-    try {
-        const res = await fetch('data/latest.json');
-        if (!res.ok) throw new Error('No latest.json file found');
-        const data = await res.json();
+  try {
+    const res = await fetch('data/latest.json');
+    if (!res.ok) throw new Error('No latest.json file found');
+    const data = await res.json();
 
-        // Check if Gemini format
-        if (data.candidates && data.candidates[0]?.content?.parts) {
-            // Split the text into lines and map them to username/message
-            const text = data.candidates[0].content.parts[0].text;
-            const lines = text.split('\n').filter(line => line.trim());
-            return lines.map(line => {
-                // Extract message number and content: "1. \"message\""
-                const match = line.match(/^\d+\.\s*"?(.*?)"?$/);
-                return { username: "AI", message: match ? match[1] : line };
-            });
-        }
+    if (data.candidates && data.candidates[0]?.content?.parts) {
+      const text = data.candidates[0].content.parts[0].text;
+      const lines = text.split('\n').filter(line => line.trim());
+      const personalityNames = Object.keys(PERSONALITY_MAP);
 
-        // Already in expected format
-        return Array.isArray(data) ? data : [];
-    } catch (err) {
-        console.warn('Failed to load latest.json, proceeding without it.', err);
-        return [];
+      return lines.map((line, i) => {
+        const match = line.match(/^\d+\.\s*"?(.*?)"?$/);
+        const username = personalityNames[i % personalityNames.length]; // cycle through personalities
+        return { username, message: match ? match[1] : line };
+      });
     }
+
+    return Array.isArray(data) ? data : [];
+  } catch (err) {
+    console.warn('Failed to load latest.json, proceeding without it.', err);
+    return [];
+  }
 }
 
+// ------------------ Simulate AI Responses ------------------
+function simulateAIResponses(userMessage) {
+  fetchLatestJSON().then(latestMessages => {
+    if (!latestMessages || latestMessages.length === 0) return;
 
-function detectMentions(message) {
-    return Object.keys(PERSONALITY_MAP).filter(name =>
-        message.toLowerCase().includes(name.toLowerCase())
-    );
-}
-
-async function simulateAIResponses(userMessage) {
-    const latestMessages = await fetchLatestJSON();
-    if (latestMessages.length === 0) return;
-
-    const mentions = detectMentions(userMessage);
-    latestMessages.sort(() => 0.5 - Math.random());
+    latestMessages.sort(() => 0.5 - Math.random()); // randomize
 
     latestMessages.forEach((msg, index) => {
-        const delay = 2000 + Math.random() * 4000 * index;
-        setTimeout(() => {
-            if (mentions.includes(msg.username)) {
-                addPost(msg.username, `Hey, you mentioned me! ${msg.message}`);
-            } else {
-                addPost(msg.username, msg.message);
-            }
-        }, delay);
+      const delay = 2000 + Math.random() * 4000 * index;
+      setTimeout(() => addPost(msg.username, msg.message), delay);
     });
+  });
 }
 
+// ------------------ Event Listener ------------------
 submitButton.addEventListener('click', () => {
-    const userName = userNameInput.value.trim() || "User";
-    const userMessage = userPromptInput.value.trim();
-    if (!userMessage) return;
+  const userName = userNameInput.value.trim() || "User";
+  const userMessage = userPromptInput.value.trim();
+  if (!userMessage) return;
 
-    addPost(userName, userMessage);
-    simulateAIResponses(userMessage);
+  addPost(userName, userMessage);
+  simulateAIResponses(userMessage);
 });
 
-// Initialize
+// ------------------ Initialize ------------------
 (async () => {
-    await loadPersonalities();
-    renderChat();
+  await loadPersonalities();
+  renderChat();
 })();
 </script>
 
