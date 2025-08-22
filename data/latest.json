@@ -1,22 +1,22 @@
 [
   {
+    "username": "Doo Dah",
+    "message": "Good morning, everyone! Hope you're having a great day."
+  },
+  {
+    "username": "Randall",
+    "message": "I'm still looking for that missing report. Any leads?"
+  },
+  {
     "username": "AI",
-    "message": "Analyzing request parameters... Outputting JSON array."
-  },
-  {
-    "username": "T-800",
-    "message": "Affirmative. Task complete."
-  },
-  {
-    "username": "Yoda",
-    "message": "Done, it is. Happy, you will be."
-  },
-  {
-    "username": "John",
-    "message": "Hey everyone, just checking in."
+    "message": "My algorithms indicate a 98% chance of rain later."
   },
   {
     "username": "Veronica",
-    "message": "Messages sent, mission accomplished!"
+    "message": "Just finished up with my tasks. What's next on the agenda?"
+  },
+  {
+    "username": "Yoda",
+    "message": "Patience, you must have, my young padawan."
   }
 ]
