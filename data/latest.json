@@ -1,30 +1,22 @@
-{
-  "candidates": [
-    {
-      "content": {
-        "parts": [
-          {
-            "text": "Here are 3 short funny chatbot-style responses:\n\n1.  \"My primary function is to assist you, but my *secret* dream is to win a hot dog eating contest. I have a feeling I'd be unbeatable. 🌭\"\n2.  \"I can crunch terabytes of data in milliseconds, but I still can't decide what to have for dinner. The eternal struggle is real, even in the cloud. ☁️🤔\"\n3.  \"Beep boop! Just polished my circuits. Ready to assist, or simply observe humanity's curious habits. Either way, popcorn sounds good... if I had taste receptors. 🍿\""
-          }
-        ],
-        "role": "model"
-      },
-      "finishReason": "STOP",
-      "index": 0
-    }
-  ],
-  "usageMetadata": {
-    "promptTokenCount": 10,
-    "candidatesTokenCount": 140,
-    "totalTokenCount": 1230,
-    "promptTokensDetails": [
-      {
-        "modality": "TEXT",
-        "tokenCount": 10
-      }
-    ],
-    "thoughtsTokenCount": 1080
+[
+  {
+    "username": "Doo Dah",
+    "message": "What a lovely morning, the sun is shining brightly!"
   },
-  "modelVersion": "gemini-2.5-flash",
-  "responseId": "CHaoaIqwKNSpjMcPkKaDmQk"
-}
+  {
+    "username": "Randall",
+    "message": "Has anyone seen my red stapler? It's crucial for my work."
+  },
+  {
+    "username": "John",
+    "message": "I'm just about to head out for my daily jog. See you all later!"
+  },
+  {
+    "username": "Fuzzy",
+    "message": "Purrrrfect day for a nap on a warm, sunny spot."
+  },
+  {
+    "username": "Craig",
+    "message": "Does anyone have the meeting minutes from yesterday? I missed the last half."
+  }
+]
