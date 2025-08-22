@@ -18,8 +18,13 @@ jobs:
       - name: Fetch API and update latest.json
         run: |
           mkdir -p data
-          # Replace with your real API URL
-          curl -s "https://your-api-endpoint.com/messages" -o data/latest.json || echo "[]" > data/latest.json
+          RESPONSE=$(curl -s -H "Authorization: Bearer ${{ secrets.MY_API_KEY }}" "https://api.your-service.com/messages")
+          if echo "$RESPONSE" | jq . >/dev/null 2>&1; then
+            echo "$RESPONSE" > data/latest.json
+          else
+            echo "[]" > data/latest.json
+            echo "⚠️ API did not return valid JSON, wrote empty array instead."
+          fi
 
       - name: Commit and push changes
         run: |
