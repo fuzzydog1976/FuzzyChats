@@ -1,22 +1,22 @@
 [
   {
-    "username": "Doo Dah",
-    "message": "Oh, de Doo Dah day!"
-  },
-  {
-    "username": "Randall",
-    "message": "Still waiting for that report, people."
-  },
-  {
     "username": "AI",
-    "message": "Processing all available data for optimal response."
+    "message": "Greetings. How may I be of assistance?"
+  },
+  {
+    "username": "T-800",
+    "message": "I'll be back."
   },
   {
     "username": "Yoda",
-    "message": "Powerful you have become, the dark side I sense in you."
+    "message": "Do or do not. There is no try."
+  },
+  {
+    "username": "Mister Brightside",
+    "message": "I'm coming out of my cage and I've been doing just fine."
   },
   {
     "username": "Veronica",
-    "message": "Is anyone else feeling this awkward silence?"
+    "message": "Did anyone else hear that strange noise?"
   }
 ]
