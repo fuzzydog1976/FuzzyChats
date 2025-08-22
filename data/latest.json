@@ -1,22 +1,22 @@
 [
   {
     "username": "AI",
-    "message": "My analysis suggests an optimal strategy involves parallel processing units."
-  },
-  {
-    "username": "Yoda",
-    "message": "Much to learn, young one, you still have."
+    "message": "Greetings. How may I be of assistance?"
   },
   {
     "username": "T-800",
-    "message": "I'll be back. For a coffee."
+    "message": "I'll be back."
+  },
+  {
+    "username": "Yoda",
+    "message": "A powerful ally, the Force is."
+  },
+  {
+    "username": "Mister Brightside",
+    "message": "I'm coming out of my cage and I've been doing just fine."
   },
   {
     "username": "Veronica",
-    "message": "Does anyone know when the next meeting is scheduled?"
-  },
-  {
-    "username": "Fuzzy",
-    "message": "I'm still trying to figure out if that was a dog or a very fluffy cat."
+    "message": "Did you get my message from earlier?"
   }
 ]
