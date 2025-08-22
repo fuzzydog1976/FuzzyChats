@@ -1,46 +1,51 @@
-name: Fetch API Data
+name: Fetch FuzzFeed Chat Messages
 
 on:
-  schedule:
-    - cron: "0 * * * *"   # every hour
   workflow_dispatch:
+  schedule:
+    - cron: '*/10 * * * *'  # every 10 minutes
 
 permissions:
   contents: write
 
 jobs:
-  fetch:
+  update-data:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Fetch Gemini API and update latest.json
+      - name: Fetch messages from Gemini API
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          API_KEY: ${{ secrets.MY_API_KEY }}
         run: |
           mkdir -p data
-          RESPONSE=$(curl -s -L \
+
+          RESPONSE=$(curl -s -X POST "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=$API_KEY" \
             -H "Content-Type: application/json" \
-            -H "x-goog-api-key: $GEMINI_API_KEY" \
             -d '{
-              "contents": [{
-                "parts":[{"text":"Give me 3 short funny chatbot-style responses"}]
-              }]
-            }' \
-            "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent")
+                  "contents":[{"parts":[{"text":"Return ONLY a valid JSON array of 5 chat messages. Each object should have \"username\" and \"message\" fields. Use only these usernames: Doo Dah, Randall, John, Fuzzy, Craig, Sherry, Albert, Long Duk Dong, AI, T-800, Yoda, Mister Brightside, Veronica. Do not include extra text, explanations, or markdown."}]}]
+                }')
 
-          if echo "$RESPONSE" | jq . >/dev/null 2>&1; then
-            echo "$RESPONSE" > data/latest.json
-          else
-            echo "[]" > data/latest.json
-            echo "⚠️ Gemini API did not return valid JSON, wrote empty array instead."
-          fi
+          # Extract the text from Gemini response
+          TEXT=$(echo "$RESPONSE" | jq -r '.candidates[0].content.parts[0].text')
 
-      - name: Commit and push changes
+          # Validate and write JSON
+          echo "$TEXT" | jq '.' > data/latest.json || echo '[]' > data/latest.json
+
+      - name: Commit and push latest.json
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
           git add data/latest.json
-          git commit -m "Update latest.json [skip ci]" || echo "No changes to commit"
-          git push
+
+          if ! git diff-index --quiet HEAD; then
+            git commit -m "Update latest.json [skip ci]"
+            git push https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git HEAD:main
+          else
+            echo "No changes to commit"
+          fi
