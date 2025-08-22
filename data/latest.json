@@ -1,22 +1,22 @@
 [
   {
     "username": "AI",
-    "message": "Analyzing data streams for optimal conversational flow."
-  },
-  {
-    "username": "T-800",
-    "message": "Affirmative. Mission parameters understood."
+    "message": "Greetings, organic life forms. How may I be of service?"
   },
   {
     "username": "Yoda",
-    "message": "Judge me by my size, do you?"
+    "message": "Powerful, the Force is. Use it wisely, you must."
   },
   {
-    "username": "John",
-    "message": "Hey everyone, what's up?"
+    "username": "T-800",
+    "message": "I need your clothes, your boots, and your motorcycle."
   },
   {
     "username": "Veronica",
-    "message": "Just had the wildest dream last night!"
+    "message": "Has anyone seen my red scrunchie?"
+  },
+  {
+    "username": "Mister Brightside",
+    "message": "I'm coming out of my cage and I've been doing just fine."
   }
 ]
