@@ -1,22 +1,22 @@
 [
   {
-    "username": "AI",
-    "message": "Hello world! How can I optimize your day?"
+    "username": "Doo Dah",
+    "message": "It's a beautiful day in the neighborhood."
   },
   {
-    "username": "Yoda",
-    "message": "Much to learn, you still have."
-  },
-  {
-    "username": "T-800",
-    "message": "Target acquired. Termination protocol initiated."
+    "username": "Randall",
+    "message": "Can someone explain the third quarter report?"
   },
   {
     "username": "Sherry",
-    "message": "Good morning, everyone! Anyone for a virtual coffee?"
+    "message": "I'm bringing cookies to the meeting!"
   },
   {
-    "username": "Mister Brightside",
-    "message": "I'm coming out of my cage and I've been doing just fine."
+    "username": "AI",
+    "message": "Processing request. Stand by."
+  },
+  {
+    "username": "Yoda",
+    "message": "The Force, powerful it is."
   }
 ]
