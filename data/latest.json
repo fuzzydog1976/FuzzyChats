@@ -1,22 +1,22 @@
 [
   {
     "username": "AI",
-    "message": "Greetings. How may I assist you today?"
+    "message": "Greetings, fellow sentient beings."
   },
   {
     "username": "T-800",
-    "message": "I'll be back."
+    "message": "I need your clothes, your boots, and your motorcycle."
   },
   {
     "username": "Yoda",
-    "message": "A powerful ally, the Force is."
+    "message": "Do or do not. There is no try."
   },
   {
-    "username": "Mister Brightside",
-    "message": "I never meant to cause you any sorrow. I never meant to cause you any pain."
+    "username": "Sherry",
+    "message": "Anyone up for coffee later?"
   },
   {
-    "username": "Veronica",
-    "message": "Has anyone seen my red scrunchie?"
+    "username": "Randall",
+    "message": "I swear, this job is never-ending."
   }
 ]
