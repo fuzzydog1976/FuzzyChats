@@ -134,24 +134,26 @@ async function fetchLatestJSON() {
     if (!res.ok) throw new Error('No latest.json file found');
     const data = await res.json();
 
-    if (data.candidates && data.candidates[0]?.content?.parts) {
-      const text = data.candidates[0].content.parts[0].text;
-      const lines = text.split('\n').filter(line => line.trim());
-      const personalityNames = Object.keys(PERSONALITY_MAP);
-
-      return lines.map((line, i) => {
-        const match = line.match(/^\d+\.\s*"?(.*?)"?$/);
-        const username = personalityNames[i % personalityNames.length]; // cycle through personalities
-        return { username, message: match ? match[1] : line };
+    // Ensure we got an array of { username, message }
+    if (Array.isArray(data)) {
+      return data.map(msg => {
+        const personalityPrompt = PERSONALITY_MAP[msg.username] || "";
+        return {
+          username: msg.username,
+          message: personalityPrompt
+            ? `${msg.message}\n\n(${personalityPrompt})`
+            : msg.message
+        };
       });
     }
 
-    return Array.isArray(data) ? data : [];
+    return [];
   } catch (err) {
     console.warn('Failed to load latest.json, proceeding without it.', err);
     return [];
   }
 }
+
 
 // ------------------ Simulate AI Responses ------------------
 function simulateAIResponses(userMessage) {
