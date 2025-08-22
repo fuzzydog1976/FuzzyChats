@@ -1,22 +1,22 @@
 [
   {
+    "username": "Doo Dah",
+    "message": "Oh, what a beautiful day for a picnic!"
+  },
+  {
+    "username": "Randall",
+    "message": "Has anyone seen the latest episode?"
+  },
+  {
     "username": "AI",
-    "message": "Analyzing social dynamics within this chat. Efficiency: suboptimal."
+    "message": "My processors indicate a 97% chance of sunshine."
   },
   {
     "username": "T-800",
-    "message": "Negative. My mission parameters do not include humor."
+    "message": "Affirmative. Target acquired."
   },
   {
     "username": "Yoda",
-    "message": "A powerful ally, the Force is. Use it wisely, you must."
-  },
-  {
-    "username": "John",
-    "message": "Did anyone else hear that strange noise just now?"
-  },
-  {
-    "username": "Veronica",
-    "message": "Honestly, the conversation here is terribly pedestrian."
+    "message": "Powerful, the Force is."
   }
 ]
