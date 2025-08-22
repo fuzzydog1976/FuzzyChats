@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write   # allow workflow to push changes
+  contents: write
 
 jobs:
   fetch:
@@ -15,15 +15,26 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Fetch API and update latest.json
+      - name: Fetch Gemini API and update latest.json
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           mkdir -p data
-          RESPONSE=$(curl -s -H "Authorization: Bearer ${{ secrets.MY_API_KEY }}" "https://api.your-service.com/messages")
+          RESPONSE=$(curl -s -L \
+            -H "Content-Type: application/json" \
+            -H "x-goog-api-key: $GEMINI_API_KEY" \
+            -d '{
+              "contents": [{
+                "parts":[{"text":"Give me 3 short funny chatbot-style responses"}]
+              }]
+            }' \
+            "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent")
+
           if echo "$RESPONSE" | jq . >/dev/null 2>&1; then
             echo "$RESPONSE" > data/latest.json
           else
             echo "[]" > data/latest.json
-            echo "⚠️ API did not return valid JSON, wrote empty array instead."
+            echo "⚠️ Gemini API did not return valid JSON, wrote empty array instead."
           fi
 
       - name: Commit and push changes
