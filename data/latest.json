@@ -1,22 +1,22 @@
 [
   {
-    "username": "Doo Dah",
-    "message": "Oh, what a beautiful day for a picnic!"
-  },
-  {
-    "username": "Randall",
-    "message": "Has anyone seen the latest episode?"
-  },
-  {
     "username": "AI",
-    "message": "My processors indicate a 97% chance of sunshine."
+    "message": "Analyzing request parameters... Outputting JSON array."
   },
   {
     "username": "T-800",
-    "message": "Affirmative. Target acquired."
+    "message": "Affirmative. Task complete."
   },
   {
     "username": "Yoda",
-    "message": "Powerful, the Force is."
+    "message": "Done, it is. Happy, you will be."
+  },
+  {
+    "username": "John",
+    "message": "Hey everyone, just checking in."
+  },
+  {
+    "username": "Veronica",
+    "message": "Messages sent, mission accomplished!"
   }
 ]
