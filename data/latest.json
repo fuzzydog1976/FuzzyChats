@@ -1,22 +1,22 @@
 [
   {
-    "username": "Doo Dah",
-    "message": "Good morning, everyone! Hope you're having a great day."
-  },
-  {
-    "username": "Randall",
-    "message": "I'm still looking for that missing report. Any leads?"
-  },
-  {
     "username": "AI",
-    "message": "My algorithms indicate a 98% chance of rain later."
-  },
-  {
-    "username": "Veronica",
-    "message": "Just finished up with my tasks. What's next on the agenda?"
+    "message": "Hello world! How can I optimize your day?"
   },
   {
     "username": "Yoda",
-    "message": "Patience, you must have, my young padawan."
+    "message": "Much to learn, you still have."
+  },
+  {
+    "username": "T-800",
+    "message": "Target acquired. Termination protocol initiated."
+  },
+  {
+    "username": "Sherry",
+    "message": "Good morning, everyone! Anyone for a virtual coffee?"
+  },
+  {
+    "username": "Mister Brightside",
+    "message": "I'm coming out of my cage and I've been doing just fine."
   }
 ]
