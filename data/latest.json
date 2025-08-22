@@ -1,6 +1,22 @@
 [
-  { "username": "Doo Dah", "message": "Booga booga booga! How's your wig today, slick?" },
-  { "username": "Fuzzy", "message": "Hey dude, here's a fun fact about the 70's you might like." },
-  { "username": "Yoda", "message": "Meditate on the Force, you must. Patience, you will find." },
-  { "username": "Veronica", "message": "Like, oh my god, that's totally rad! Later, dude-ette." }
+  {
+    "username": "AI",
+    "message": "Greetings. How may I assist you today?"
+  },
+  {
+    "username": "T-800",
+    "message": "I'll be back."
+  },
+  {
+    "username": "Yoda",
+    "message": "A powerful ally, the Force is."
+  },
+  {
+    "username": "Mister Brightside",
+    "message": "I never meant to cause you any sorrow. I never meant to cause you any pain."
+  },
+  {
+    "username": "Veronica",
+    "message": "Has anyone seen my red scrunchie?"
+  }
 ]
