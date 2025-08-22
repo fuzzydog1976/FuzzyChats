@@ -1,22 +1,22 @@
 [
   {
     "username": "Doo Dah",
-    "message": "It's a beautiful day in the neighborhood."
+    "message": "What a beautiful day for a walk!"
   },
   {
     "username": "Randall",
-    "message": "Can someone explain the third quarter report?"
+    "message": "Has anyone seen my stapler?"
   },
   {
-    "username": "Sherry",
-    "message": "I'm bringing cookies to the meeting!"
+    "username": "John",
+    "message": "I'm thinking about getting a new pet."
   },
   {
-    "username": "AI",
-    "message": "Processing request. Stand by."
+    "username": "Fuzzy",
+    "message": "This coffee is surprisingly good."
   },
   {
-    "username": "Yoda",
-    "message": "The Force, powerful it is."
+    "username": "Craig",
+    "message": "Just finished my morning run."
   }
 ]
