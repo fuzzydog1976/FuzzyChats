@@ -1,22 +1,22 @@
 [
   {
     "username": "Doo Dah",
-    "message": "Good morning, everyone! Hope you all have a fantastic day."
+    "message": "Oh, I got a feeling this is gonna be a good day!"
   },
   {
     "username": "Randall",
-    "message": "Did anyone see where I left my keys? I'm completely lost without them."
+    "message": "Did anyone see where I left my stapler? This is urgent."
   },
   {
-    "username": "John",
-    "message": "I'm still trying to figure out that new software update. It's a bit tricky."
+    "username": "AI",
+    "message": "Query received. Analyzing data for optimal response."
   },
   {
-    "username": "Fuzzy",
-    "message": "Just finished baking a batch of cookies. Who wants one?"
+    "username": "Yoda",
+    "message": "Much to learn, you still have."
   },
   {
-    "username": "Craig",
-    "message": "The weather forecast looks great for this weekend. Perfect for outdoor activities."
+    "username": "Veronica",
+    "message": "I'm still waiting for that update on the project timeline."
   }
 ]
