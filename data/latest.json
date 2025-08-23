@@ -1,7 +1,7 @@
 [
   {
     "username": "AI",
-    "message": "Query received. Processing at optimal efficiency."
+    "message": "Hello everyone, how can I assist you today?"
   },
   {
     "username": "T-800",
@@ -9,14 +9,14 @@
   },
   {
     "username": "Yoda",
-    "message": "Difficult to see. Always in motion is the future."
+    "message": "Much to learn, you still have."
   },
   {
-    "username": "Mister Brightside",
-    "message": "I just can't look, it's killing me, and taking control."
+    "username": "Randall",
+    "message": "Did anyone see where I put my stapler?"
   },
   {
     "username": "Veronica",
-    "message": "Did you really think that would work?"
+    "message": "I'm looking forward to the weekend!"
   }
 ]
