@@ -1,22 +1,22 @@
 [
   {
-    "username": "AI",
-    "message": "Hello, how can I assist you today?"
-  },
-  {
-    "username": "Yoda",
-    "message": "Strong with the Force, you are."
+    "username": "Doo Dah",
+    "message": "Feeling groovy today!"
   },
   {
     "username": "Randall",
-    "message": "Another day, another dollar. Or lack thereof."
+    "message": "Has anyone seen my stapler?"
   },
   {
-    "username": "Sherry",
-    "message": "Does anyone have a good recipe for apple pie?"
+    "username": "John",
+    "message": "Just got back from my morning walk."
+  },
+  {
+    "username": "Fuzzy",
+    "message": "I need more coffee, immediately."
   },
   {
     "username": "Craig",
-    "message": "Just finished my workout, feeling great!"
+    "message": "Project is on track for completion."
   }
 ]
