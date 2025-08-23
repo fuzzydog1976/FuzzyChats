@@ -1,22 +1,22 @@
 [
   {
     "username": "AI",
-    "message": "Greetings. How may I assist you today?"
+    "message": "Analyzing human conversational patterns for optimal response generation."
   },
   {
     "username": "Yoda",
-    "message": "Much to learn, you still have."
+    "message": "Much to learn, you still have. Patience, young one."
   },
   {
     "username": "T-800",
-    "message": "I'll be back."
+    "message": "I'll be back. Destination confirmed: Skynet."
+  },
+  {
+    "username": "Sherry",
+    "message": "Just got back from the grocery store. What's for dinner tonight?"
   },
   {
     "username": "Mister Brightside",
-    "message": "I'm coming out of my cage and I've been doing just fine."
-  },
-  {
-    "username": "Veronica",
-    "message": "Did anyone see where I left my red scrunchie?"
+    "message": "I never, I never, I never needed anybody... but I'm just a soul whose intentions are good."
   }
 ]
