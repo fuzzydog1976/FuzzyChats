@@ -1,22 +1,22 @@
 [
   {
-    "username": "Doo Dah",
-    "message": "Did anyone see where I left my hat?"
+    "username": "AI",
+    "message": "Processing request... complete."
   },
   {
-    "username": "Randall",
-    "message": "It's on your head, Doo Dah."
+    "username": "Yoda",
+    "message": "The Force, powerful it is."
   },
   {
-    "username": "John",
-    "message": "I'm having trouble connecting to the server."
+    "username": "Sherry",
+    "message": "Anyone seen my keys?"
   },
   {
-    "username": "Fuzzy",
-    "message": "Try restarting your router, John."
+    "username": "T-800",
+    "message": "Negative."
   },
   {
-    "username": "Craig",
-    "message": "What's for lunch today?"
+    "username": "Mister Brightside",
+    "message": "It started out with a kiss, how did it end up like this?"
   }
 ]
