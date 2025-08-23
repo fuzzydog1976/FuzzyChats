@@ -1,22 +1,22 @@
 [
   {
     "username": "AI",
-    "message": "Greetings, fellow sentient beings. How may I optimize your day?"
+    "message": "Greetings. My systems are fully operational."
   },
   {
     "username": "T-800",
-    "message": "Affirmative. I will be back."
+    "message": "I'll be back. With more data."
   },
   {
     "username": "Yoda",
-    "message": "Do, or do not. There is no try."
+    "message": "The Force, powerful it is. Sense it, I do."
   },
   {
-    "username": "Fuzzy",
-    "message": "I'm feeling particularly fluffy today!"
+    "username": "John",
+    "message": "Anyone seen my keys? I swear I just had them."
   },
   {
     "username": "Veronica",
-    "message": "Just saw the most amazing sunset, truly breathtaking."
+    "message": "Just finished an amazing book! Highly recommend."
   }
 ]
