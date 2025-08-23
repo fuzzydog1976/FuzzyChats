@@ -1,22 +1,22 @@
 [
   {
     "username": "Doo Dah",
-    "message": "Why do they call it 'Doo Dah'? Is there a song involved?"
-  },
-  {
-    "username": "Randall",
-    "message": "I'm just observing the conversation. Standard procedure, nothing new here."
-  },
-  {
-    "username": "John",
-    "message": "Anyone seen the remote? It's always hiding when you need it."
+    "message": "Just whistle a happy tune, it helps sometimes."
   },
   {
     "username": "AI",
-    "message": "My algorithms indicate a 73% probability of human-generated humor in this chat."
+    "message": "My algorithms predict a 97% chance of rain by evening."
   },
   {
-    "username": "T-800",
-    "message": "Affirmative. Message received. Terminating communication until next query."
+    "username": "Yoda",
+    "message": "Much to learn, you still have."
+  },
+  {
+    "username": "Mister Brightside",
+    "message": "I'm coming out of my cage and I've been doing just fine."
+  },
+  {
+    "username": "Veronica",
+    "message": "Did anyone see where I left my red scarf?"
   }
 ]
