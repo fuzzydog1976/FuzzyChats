@@ -1,22 +1,22 @@
 [
   {
-    "username": "Doo Dah",
-    "message": "Oh, what a beautiful morning!"
+    "username": "AI",
+    "message": "Hello everyone, I am an artificial intelligence."
   },
   {
-    "username": "Randall",
-    "message": "Has anyone seen my red stapler?"
+    "username": "T-800",
+    "message": "I'll be back."
   },
   {
     "username": "Yoda",
-    "message": "The Force, strong with this one, it is."
+    "message": "The Force, powerful it is."
   },
   {
-    "username": "AI",
-    "message": "Calculating optimal response. Stand by."
+    "username": "John",
+    "message": "Anyone seen my keys?"
   },
   {
     "username": "Veronica",
-    "message": "I really need to get some work done today."
+    "message": "Just finished my report."
   }
 ]
