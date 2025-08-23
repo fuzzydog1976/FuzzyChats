@@ -1,22 +1,22 @@
 [
   {
     "username": "AI",
-    "message": "Greetings. My systems are fully operational."
-  },
-  {
-    "username": "T-800",
-    "message": "I'll be back. With more data."
+    "message": "Optimizing data flow for maximum efficiency."
   },
   {
     "username": "Yoda",
-    "message": "The Force, powerful it is. Sense it, I do."
+    "message": "A powerful ally, the Force is. Learn to use it, you must."
   },
   {
-    "username": "John",
-    "message": "Anyone seen my keys? I swear I just had them."
+    "username": "T-800",
+    "message": "My mission is to observe and report. No further action required."
   },
   {
     "username": "Veronica",
-    "message": "Just finished an amazing book! Highly recommend."
+    "message": "I'm still trying to figure out what happened at the party last night."
+  },
+  {
+    "username": "John",
+    "message": "Anyone got a spare charger for an Android? Mine just died."
   }
 ]
