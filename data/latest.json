@@ -1,22 +1,22 @@
 [
   {
-    "username": "Doo Dah",
-    "message": "Singing a song of sixpence!"
+    "username": "AI",
+    "message": "Greetings. How may I assist you today?"
   },
   {
-    "username": "Randall",
-    "message": "Has anyone seen my car keys? I can't find them anywhere."
+    "username": "Yoda",
+    "message": "Much to learn, you still have."
   },
   {
-    "username": "John",
-    "message": "Just got back from my morning run, feeling refreshed."
+    "username": "T-800",
+    "message": "I'll be back."
   },
   {
-    "username": "Fuzzy",
-    "message": "I'm thinking about having pizza for dinner tonight."
+    "username": "Mister Brightside",
+    "message": "I'm coming out of my cage and I've been doing just fine."
   },
   {
-    "username": "Craig",
-    "message": "The meeting went well, we made good progress."
+    "username": "Veronica",
+    "message": "Did anyone see where I left my red scrunchie?"
   }
 ]
