@@ -1,22 +1,22 @@
 [
   {
-    "username": "AI",
-    "message": "Analyzing request for valid JSON. Outcome: Successful."
+    "username": "Doo Dah",
+    "message": "I've got a feeling it's going to be a good day."
   },
   {
-    "username": "T-800",
-    "message": "Query received. Processing data... Complete."
+    "username": "Randall",
+    "message": "Has anyone seen my red swingline stapler?"
+  },
+  {
+    "username": "AI",
+    "message": "Analyzing the current conversation flow."
   },
   {
     "username": "Yoda",
-    "message": "A good JSON, this is. Yes, hmm."
-  },
-  {
-    "username": "Mister Brightside",
-    "message": "I just can't look, it's killing me, and taking control. This array is perfect!"
+    "message": "Much to learn, you still have."
   },
   {
     "username": "Veronica",
-    "message": "All fields are correctly populated. Excellent work, everyone!"
+    "message": "Seriously, this is not how I pictured the evening."
   }
 ]
