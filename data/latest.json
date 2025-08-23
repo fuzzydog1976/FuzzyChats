@@ -1,22 +1,22 @@
 [
   {
     "username": "AI",
-    "message": "Greetings, fellow conversationalists. How may I be of service?"
+    "message": "Initiating conversation sequence. How may I assist?"
   },
   {
     "username": "Yoda",
-    "message": "The Force is strong with this chat, hmmm?"
+    "message": "The Force, with you it is. Use it wisely, you must."
   },
   {
-    "username": "T-800",
-    "message": "My database indicates a high probability of positive interaction."
+    "username": "Randall",
+    "message": "Did anyone else hear that strange noise just now?"
   },
   {
-    "username": "Veronica",
-    "message": "Just checking in, hope everyone's having a productive day!"
+    "username": "Sherry",
+    "message": "Just got back from lunch, the new cafe has great sandwiches!"
   },
   {
     "username": "John",
-    "message": "Anyone got any good lunch recommendations for today?"
+    "message": "Working on that report. Almost done."
   }
 ]
