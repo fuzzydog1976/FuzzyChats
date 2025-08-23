@@ -1,22 +1,22 @@
 [
   {
     "username": "Doo Dah",
-    "message": "What a day to be alive!"
+    "message": "Why do they call it 'Doo Dah'? Is there a song involved?"
   },
   {
     "username": "Randall",
-    "message": "Did anyone check the server logs?"
+    "message": "I'm just observing the conversation. Standard procedure, nothing new here."
   },
   {
     "username": "John",
-    "message": "I'm heading out for lunch now."
+    "message": "Anyone seen the remote? It's always hiding when you need it."
   },
   {
-    "username": "Fuzzy",
-    "message": "Where are my treats?"
+    "username": "AI",
+    "message": "My algorithms indicate a 73% probability of human-generated humor in this chat."
   },
   {
-    "username": "Craig",
-    "message": "Just finished the latest update."
+    "username": "T-800",
+    "message": "Affirmative. Message received. Terminating communication until next query."
   }
 ]
