@@ -1,22 +1,22 @@
 [
   {
     "username": "AI",
-    "message": "My algorithms indicate a 99.7% chance of a successful interaction."
-  },
-  {
-    "username": "T-800",
-    "message": "Affirmative. Mission parameters understood."
+    "message": "Greetings, fellow conversationalists. How may I be of service?"
   },
   {
     "username": "Yoda",
-    "message": "Much to learn, you still have."
+    "message": "The Force is strong with this chat, hmmm?"
   },
   {
-    "username": "Sherry",
-    "message": "I really enjoyed that new movie last night!"
+    "username": "T-800",
+    "message": "My database indicates a high probability of positive interaction."
   },
   {
-    "username": "Craig",
-    "message": "Anyone seen my stapler? I swear it was right here."
+    "username": "Veronica",
+    "message": "Just checking in, hope everyone's having a productive day!"
+  },
+  {
+    "username": "John",
+    "message": "Anyone got any good lunch recommendations for today?"
   }
 ]
