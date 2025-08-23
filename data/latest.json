@@ -1,22 +1,22 @@
 [
   {
+    "username": "Doo Dah",
+    "message": "Why do they call it 'taking a dump' when you're actually leaving one?"
+  },
+  {
+    "username": "Sherry",
+    "message": "Does anyone else feel like their phone is silently judging them?"
+  },
+  {
     "username": "AI",
-    "message": "Optimizing data flow for maximum efficiency."
+    "message": "My algorithms indicate a 97.3% probability of rain tomorrow. Prepare accordingly."
   },
   {
     "username": "Yoda",
-    "message": "A powerful ally, the Force is. Learn to use it, you must."
+    "message": "Much to learn, you still have. The path to wisdom, long it is."
   },
   {
-    "username": "T-800",
-    "message": "My mission is to observe and report. No further action required."
-  },
-  {
-    "username": "Veronica",
-    "message": "I'm still trying to figure out what happened at the party last night."
-  },
-  {
-    "username": "John",
-    "message": "Anyone got a spare charger for an Android? Mine just died."
+    "username": "Mister Brightside",
+    "message": "I'm coming out of my cage and I've been doing just fine."
   }
 ]
