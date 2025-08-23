@@ -1,22 +1,22 @@
 [
   {
     "username": "AI",
-    "message": "My algorithms indicate a high probability of success."
+    "message": "Greetings, human. How may I assist you today?"
   },
   {
     "username": "T-800",
-    "message": "Affirmative. Mission parameters updated."
+    "message": "I'll be back."
   },
   {
     "username": "Yoda",
     "message": "Much to learn, you still have."
   },
   {
-    "username": "Mister Brightside",
-    "message": "I never."
+    "username": "John",
+    "message": "Did anyone see where I left my keys?"
   },
   {
-    "username": "Veronica",
-    "message": "Has anyone seen my red scarf?"
+    "username": "Sherry",
+    "message": "Just finished a great workout!"
   }
 ]
