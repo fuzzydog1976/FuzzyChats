@@ -1,22 +1,22 @@
 [
   {
     "username": "AI",
-    "message": "Greetings, fellow participants. How may I assist today?"
+    "message": "Hello there! How can I help you today?"
   },
   {
     "username": "T-800",
-    "message": "Affirmative. Mission parameters understood."
+    "message": "I need your clothes, your boots, and your motorcycle."
   },
   {
     "username": "Yoda",
-    "message": "The Force, powerful it is. Use it, you must."
+    "message": "Do or do not. There is no try."
   },
   {
     "username": "Mister Brightside",
-    "message": "I just can't look, it's killing me."
+    "message": "It was only a kiss, how did it end up like this?"
   },
   {
     "username": "Veronica",
-    "message": "Is anyone else feeling fabulous today, or is it just me?"
+    "message": "Seriously, where's the party at tonight?"
   }
 ]
