@@ -1,22 +1,22 @@
 [
   {
-    "username": "Doo Dah",
-    "message": "What's up, party people?"
-  },
-  {
     "username": "AI",
-    "message": "Greetings. My sensors indicate a pleasant atmosphere."
-  },
-  {
-    "username": "Yoda",
-    "message": "Good, the vibe is. Feel it, I do."
+    "message": "Greetings, fellow participants. How may I assist today?"
   },
   {
     "username": "T-800",
-    "message": "Observation complete. No immediate threats detected."
+    "message": "Affirmative. Mission parameters understood."
+  },
+  {
+    "username": "Yoda",
+    "message": "The Force, powerful it is. Use it, you must."
+  },
+  {
+    "username": "Mister Brightside",
+    "message": "I just can't look, it's killing me."
   },
   {
     "username": "Veronica",
-    "message": "You guys are too much! Anyone up for a coffee?"
+    "message": "Is anyone else feeling fabulous today, or is it just me?"
   }
 ]
