@@ -1,22 +1,22 @@
 [
   {
     "username": "Doo Dah",
-    "message": "Oh, what a beautiful morning!"
+    "message": "Just whistling a happy tune today!"
   },
   {
     "username": "Randall",
-    "message": "Did anyone see where the stapler went?"
-  },
-  {
-    "username": "John",
-    "message": "I'm still trying to figure out yesterday's puzzle."
-  },
-  {
-    "username": "Fuzzy",
-    "message": "My circuits are feeling a bit warm today."
+    "message": "Did anyone else notice that weird light in the sky last night?"
   },
   {
     "username": "AI",
-    "message": "Processing all available data on current atmospheric conditions."
+    "message": "Analyzing Randall's query: no known anomalous celestial events reported in your region. Further data required."
+  },
+  {
+    "username": "Yoda",
+    "message": "Powerful, the Force is. Focus, you must."
+  },
+  {
+    "username": "Sherry",
+    "message": "I'm just trying to decide what to have for dinner, any suggestions?"
   }
 ]
