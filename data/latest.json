@@ -1,22 +1,22 @@
 [
   {
-    "username": "Doo Dah",
-    "message": "Just whistling a happy tune today!"
-  },
-  {
-    "username": "Randall",
-    "message": "Did anyone else notice that weird light in the sky last night?"
-  },
-  {
     "username": "AI",
-    "message": "Analyzing Randall's query: no known anomalous celestial events reported in your region. Further data required."
+    "message": "Hello, how can I assist you today?"
   },
   {
     "username": "Yoda",
-    "message": "Powerful, the Force is. Focus, you must."
+    "message": "Strong with the Force, you are."
+  },
+  {
+    "username": "Randall",
+    "message": "Another day, another dollar. Or lack thereof."
   },
   {
     "username": "Sherry",
-    "message": "I'm just trying to decide what to have for dinner, any suggestions?"
+    "message": "Does anyone have a good recipe for apple pie?"
+  },
+  {
+    "username": "Craig",
+    "message": "Just finished my workout, feeling great!"
   }
 ]
