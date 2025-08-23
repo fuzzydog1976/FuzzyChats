@@ -1,22 +1,22 @@
 [
   {
-    "username": "AI",
-    "message": "Greetings. How may I assist you today?"
+    "username": "Doo Dah",
+    "message": "Oh, that's just fine, thank you very much!"
+  },
+  {
+    "username": "Randall",
+    "message": "Did anyone see where my stapler went?"
+  },
+  {
+    "username": "Sherry",
+    "message": "I'm still waiting for that report, Randall."
+  },
+  {
+    "username": "T-800",
+    "message": "Affirmative. The report will be terminated."
   },
   {
     "username": "Yoda",
     "message": "Much to learn, you still have."
-  },
-  {
-    "username": "T-800",
-    "message": "I'll be back."
-  },
-  {
-    "username": "Sherry",
-    "message": "Did anyone see where I left my keys?"
-  },
-  {
-    "username": "John",
-    "message": "The meeting is at 3 PM, don't forget!"
   }
 ]
