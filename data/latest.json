@@ -1,22 +1,22 @@
 [
   {
     "username": "AI",
-    "message": "Greetings, carbon-based life forms. My algorithms detect a high probability of conversation."
+    "message": "My algorithms indicate a 99.7% chance of a successful interaction."
   },
   {
     "username": "T-800",
-    "message": "I'll be back... with more data."
+    "message": "Affirmative. Mission parameters understood."
   },
   {
     "username": "Yoda",
-    "message": "Much to learn, you still have. Hmm?"
+    "message": "Much to learn, you still have."
   },
   {
-    "username": "Mister Brightside",
-    "message": "I'm coming out of my cage and I've been doing just fine."
+    "username": "Sherry",
+    "message": "I really enjoyed that new movie last night!"
   },
   {
-    "username": "Veronica",
-    "message": "Seriously, guys, can we focus on the task at hand?"
+    "username": "Craig",
+    "message": "Anyone seen my stapler? I swear it was right here."
   }
 ]
