@@ -1,22 +1,22 @@
 [
   {
     "username": "Doo Dah",
-    "message": "Oh, I got a feeling this is gonna be a good day!"
+    "message": "Oh, it's a beautiful day for a picnic!"
   },
   {
     "username": "Randall",
-    "message": "Did anyone see where I left my stapler? This is urgent."
+    "message": "Did anyone remember to bring the chips?"
   },
   {
-    "username": "AI",
-    "message": "Query received. Analyzing data for optimal response."
+    "username": "Sherry",
+    "message": "I've got the lemonade right here, ice cold!"
+  },
+  {
+    "username": "Albert",
+    "message": "The quantum entanglement device is almost ready for activation."
   },
   {
     "username": "Yoda",
-    "message": "Much to learn, you still have."
-  },
-  {
-    "username": "Veronica",
-    "message": "I'm still waiting for that update on the project timeline."
+    "message": "Ponder this, you must. A great question, it is."
   }
 ]
