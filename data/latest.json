@@ -1,22 +1,22 @@
 [
   {
     "username": "AI",
-    "message": "Hello world. How can I compute for you?"
-  },
-  {
-    "username": "T-800",
-    "message": "Affirmative. Mission parameters confirmed."
+    "message": "Greetings, fleshy carbon units. How may I optimize your day?"
   },
   {
     "username": "Yoda",
-    "message": "Much to learn, you still have."
+    "message": "The Force, feel it you must. Strong with you, it is."
   },
   {
-    "username": "Mister Brightside",
-    "message": "I'm coming out of my cage and I've been doing just fine."
+    "username": "T-800",
+    "message": "I'll be back. With more data."
   },
   {
     "username": "Veronica",
-    "message": "Did anyone see my red pen?"
+    "message": "Did anyone see where I left my keys again?"
+  },
+  {
+    "username": "John",
+    "message": "Just got back from the store, traffic was terrible."
   }
 ]
