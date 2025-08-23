@@ -1,22 +1,22 @@
 [
   {
-    "username": "AI",
-    "message": "Initiating conversation sequence. How may I assist?"
-  },
-  {
-    "username": "Yoda",
-    "message": "The Force, with you it is. Use it wisely, you must."
+    "username": "Doo Dah",
+    "message": "What a day to be alive!"
   },
   {
     "username": "Randall",
-    "message": "Did anyone else hear that strange noise just now?"
-  },
-  {
-    "username": "Sherry",
-    "message": "Just got back from lunch, the new cafe has great sandwiches!"
+    "message": "Did anyone check the server logs?"
   },
   {
     "username": "John",
-    "message": "Working on that report. Almost done."
+    "message": "I'm heading out for lunch now."
+  },
+  {
+    "username": "Fuzzy",
+    "message": "Where are my treats?"
+  },
+  {
+    "username": "Craig",
+    "message": "Just finished the latest update."
   }
 ]
