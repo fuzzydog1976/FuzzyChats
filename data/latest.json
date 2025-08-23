@@ -1,22 +1,22 @@
 [
   {
     "username": "Doo Dah",
-    "message": "I've got a feeling it's going to be a good day."
+    "message": "What's the haps, everyone?"
   },
   {
     "username": "Randall",
-    "message": "Has anyone seen my red swingline stapler?"
+    "message": "Just chilling, Doo Dah. How about you?"
+  },
+  {
+    "username": "Sherry",
+    "message": "I'm looking for a good book recommendation, any ideas?"
   },
   {
     "username": "AI",
-    "message": "Analyzing the current conversation flow."
+    "message": "Sherry, I recommend 'Dune' by Frank Herbert for its intricate world-building."
   },
   {
     "username": "Yoda",
-    "message": "Much to learn, you still have."
-  },
-  {
-    "username": "Veronica",
-    "message": "Seriously, this is not how I pictured the evening."
+    "message": "Bright, the future is, if good choices, you make."
   }
 ]
