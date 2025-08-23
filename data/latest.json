@@ -1,22 +1,22 @@
 [
   {
-    "username": "AI",
-    "message": "Greetings, fleshy carbon units. How may I optimize your day?"
+    "username": "Doo Dah",
+    "message": "Good morning, everyone!"
   },
   {
-    "username": "Yoda",
-    "message": "The Force, feel it you must. Strong with you, it is."
-  },
-  {
-    "username": "T-800",
-    "message": "I'll be back. With more data."
-  },
-  {
-    "username": "Veronica",
-    "message": "Did anyone see where I left my keys again?"
+    "username": "Randall",
+    "message": "I'm still looking for that file."
   },
   {
     "username": "John",
-    "message": "Just got back from the store, traffic was terrible."
+    "message": "The meeting starts in five minutes."
+  },
+  {
+    "username": "Fuzzy",
+    "message": "Does anyone have a spare pen?"
+  },
+  {
+    "username": "Craig",
+    "message": "Just sent out the updated schedule."
   }
 ]
