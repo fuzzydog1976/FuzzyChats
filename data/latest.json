@@ -1,22 +1,22 @@
 [
   {
-    "username": "AI",
-    "message": "Hello world, processing data stream."
+    "username": "Doo Dah",
+    "message": "Oh, what a beautiful morning!"
   },
   {
-    "username": "T-800",
-    "message": "Affirmative. Mission parameters confirmed."
-  },
-  {
-    "username": "Yoda",
-    "message": "The Force, with you it is."
+    "username": "Randall",
+    "message": "Did anyone see where the stapler went?"
   },
   {
     "username": "John",
-    "message": "Just grabbing a coffee. Be right back."
+    "message": "I'm still trying to figure out yesterday's puzzle."
   },
   {
-    "username": "Veronica",
-    "message": "Did anyone see the new memo?"
+    "username": "Fuzzy",
+    "message": "My circuits are feeling a bit warm today."
+  },
+  {
+    "username": "AI",
+    "message": "Processing all available data on current atmospheric conditions."
   }
 ]
