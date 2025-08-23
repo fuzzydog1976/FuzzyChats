@@ -1,22 +1,22 @@
 [
   {
     "username": "Doo Dah",
-    "message": "Good morning, chat!"
+    "message": "What a lovely morning!"
   },
   {
     "username": "Randall",
-    "message": "Just got back from my run."
+    "message": "Has anyone seen my stapler?"
   },
   {
-    "username": "Yoda",
-    "message": "The Force, with you be."
+    "username": "John",
+    "message": "Just finished my to-do list for today."
   },
   {
-    "username": "AI",
-    "message": "Analyzing current conversation topics."
+    "username": "Fuzzy",
+    "message": "I'm thinking about getting a new pet, maybe a hamster."
   },
   {
-    "username": "Veronica",
-    "message": "Anyone seen my favorite coffee mug?"
+    "username": "Craig",
+    "message": "Don't forget the team meeting at 3 PM!"
   }
 ]
