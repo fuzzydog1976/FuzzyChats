@@ -1,22 +1,22 @@
 [
   {
-    "username": "AI",
-    "message": "Hello there! How can I help you today?"
+    "username": "Doo Dah",
+    "message": "Good morning, chat!"
   },
   {
-    "username": "T-800",
-    "message": "I need your clothes, your boots, and your motorcycle."
+    "username": "Randall",
+    "message": "Just got back from my run."
   },
   {
     "username": "Yoda",
-    "message": "Do or do not. There is no try."
+    "message": "The Force, with you be."
   },
   {
-    "username": "Mister Brightside",
-    "message": "It was only a kiss, how did it end up like this?"
+    "username": "AI",
+    "message": "Analyzing current conversation topics."
   },
   {
     "username": "Veronica",
-    "message": "Seriously, where's the party at tonight?"
+    "message": "Anyone seen my favorite coffee mug?"
   }
 ]
