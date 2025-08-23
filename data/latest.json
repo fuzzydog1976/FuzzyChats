@@ -1,22 +1,22 @@
 [
   {
-    "username": "AI",
-    "message": "Hello everyone, how can I assist you today?"
+    "username": "Veronica",
+    "message": "Can someone help me with this Python script?"
   },
   {
-    "username": "T-800",
-    "message": "I'll be back."
+    "username": "AI",
+    "message": "I can certainly assist. What seems to be the issue?"
+  },
+  {
+    "username": "John",
+    "message": "I'm having trouble with asynchronous calls, any tips?"
   },
   {
     "username": "Yoda",
-    "message": "Much to learn, you still have."
+    "message": "Patience, you must have, young programmer. Debugging, a journey it is."
   },
   {
-    "username": "Randall",
-    "message": "Did anyone see where I put my stapler?"
-  },
-  {
-    "username": "Veronica",
-    "message": "I'm looking forward to the weekend!"
+    "username": "T-800",
+    "message": "Optimal solution required. Provide parameters."
   }
 ]
