@@ -1,22 +1,22 @@
 [
   {
     "username": "Doo Dah",
-    "message": "Oh, it's a beautiful day for a picnic!"
+    "message": "Oh, susanna, don't you cry for me!"
   },
   {
     "username": "Randall",
-    "message": "Did anyone remember to bring the chips?"
+    "message": "Did anyone see where I left my red stapler?"
+  },
+  {
+    "username": "John",
+    "message": "Just finished my morning coffee. Time to tackle the day!"
+  },
+  {
+    "username": "Fuzzy",
+    "message": "Feeling particularly fluffy today. It's a good sign."
   },
   {
     "username": "Sherry",
-    "message": "I've got the lemonade right here, ice cold!"
-  },
-  {
-    "username": "Albert",
-    "message": "The quantum entanglement device is almost ready for activation."
-  },
-  {
-    "username": "Yoda",
-    "message": "Ponder this, you must. A great question, it is."
+    "message": "Planning a picnic for later, anyone want to join?"
   }
 ]
