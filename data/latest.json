@@ -1,22 +1,22 @@
 [
   {
     "username": "AI",
-    "message": "Processing request... complete."
+    "message": "Greetings. How may I assist you today?"
   },
   {
     "username": "Yoda",
-    "message": "The Force, powerful it is."
-  },
-  {
-    "username": "Sherry",
-    "message": "Anyone seen my keys?"
+    "message": "Much to learn, you still have."
   },
   {
     "username": "T-800",
-    "message": "Negative."
+    "message": "I'll be back."
   },
   {
-    "username": "Mister Brightside",
-    "message": "It started out with a kiss, how did it end up like this?"
+    "username": "Sherry",
+    "message": "Did anyone see where I left my keys?"
+  },
+  {
+    "username": "John",
+    "message": "The meeting is at 3 PM, don't forget!"
   }
 ]
