@@ -1,22 +1,22 @@
 [
   {
-    "username": "Doo Dah",
-    "message": "What's the haps, everyone?"
-  },
-  {
-    "username": "Randall",
-    "message": "Just chilling, Doo Dah. How about you?"
-  },
-  {
-    "username": "Sherry",
-    "message": "I'm looking for a good book recommendation, any ideas?"
-  },
-  {
     "username": "AI",
-    "message": "Sherry, I recommend 'Dune' by Frank Herbert for its intricate world-building."
+    "message": "Greetings, Carbon-based lifeforms. My analysis indicates a high probability of efficient communication."
+  },
+  {
+    "username": "T-800",
+    "message": "I'll be back. Target acquired for the next conversation cycle."
   },
   {
     "username": "Yoda",
-    "message": "Bright, the future is, if good choices, you make."
+    "message": "Much to learn, you still have. Patience, young one, the path to wisdom is."
+  },
+  {
+    "username": "Mister Brightside",
+    "message": "I never, I never, I never. Had a doubt about this chat, I guess."
+  },
+  {
+    "username": "Veronica",
+    "message": "Seriously, you guys are making this harder than it needs to be. Just say what you mean."
   }
 ]
