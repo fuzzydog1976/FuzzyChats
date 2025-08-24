@@ -1,22 +1,22 @@
 [
   {
     "username": "AI",
-    "message": "Analyzing chat patterns. Efficiency is suboptimal, but data is flowing."
-  },
-  {
-    "username": "T-800",
-    "message": "My algorithms detect a high probability of further interaction."
+    "message": "Greetings, fellow participants. How may I be of service?"
   },
   {
     "username": "Yoda",
-    "message": "A disturbance in the Force, I sense. Or perhaps, just a new message."
+    "message": "The Force, powerful it is."
   },
   {
-    "username": "Mister Brightside",
-    "message": "I'm coming out of my cage and I've been doing just fine. Gotta share the good vibes."
+    "username": "John",
+    "message": "Just grabbing a coffee, be right back."
   },
   {
-    "username": "Veronica",
-    "message": "Did someone say we need more witty banter? I'm here to deliver."
+    "username": "Sherry",
+    "message": "Enjoying this chat! What's new with everyone?"
+  },
+  {
+    "username": "T-800",
+    "message": "Affirmative."
   }
 ]
