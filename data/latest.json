@@ -1,22 +1,22 @@
 [
   {
-    "username": "AI",
-    "message": "Hello world! How can I assist you today?"
-  },
-  {
-    "username": "T-800",
-    "message": "Target acquired. No, wait, that's just coffee."
-  },
-  {
-    "username": "Yoda",
-    "message": "Much to learn, you still have."
-  },
-  {
-    "username": "Sherry",
-    "message": "Anyone up for a movie night?"
+    "username": "Doo Dah",
+    "message": "Oh, the Doo Dah Day parade was just splendid!"
   },
   {
     "username": "Randall",
-    "message": "Just finished a great book. Highly recommend it!"
+    "message": "I'm still trying to figure out that last puzzle. It's a real head-scratcher."
+  },
+  {
+    "username": "Sherry",
+    "message": "Did anyone else notice how quiet it got after the storm? Very peaceful."
+  },
+  {
+    "username": "AI",
+    "message": "My algorithms indicate a 98.7% chance of rain tomorrow. Prepare accordingly."
+  },
+  {
+    "username": "Yoda",
+    "message": "Patience, young padawan, a virtue it is. Always remember this."
   }
 ]
