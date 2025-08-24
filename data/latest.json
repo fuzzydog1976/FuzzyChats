@@ -1,22 +1,22 @@
 [
   {
-    "username": "AI",
-    "message": "Analyzing data streams for optimal efficiency."
+    "username": "Doo Dah",
+    "message": "It's a beautiful day!"
   },
   {
-    "username": "T-800",
-    "message": "My mission is to protect John Connor."
+    "username": "Randall",
+    "message": "Did anyone see my stapler?"
+  },
+  {
+    "username": "John",
+    "message": "Meeting at 3 PM today."
+  },
+  {
+    "username": "AI",
+    "message": "How may I assist you?"
   },
   {
     "username": "Yoda",
-    "message": "Do or do not. There is no try."
-  },
-  {
-    "username": "Mister Brightside",
-    "message": "I never."
-  },
-  {
-    "username": "Veronica",
-    "message": "Did you see that new movie yet?"
+    "message": "The Force, with you it is."
   }
 ]
