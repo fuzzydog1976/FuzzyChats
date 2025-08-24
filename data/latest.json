@@ -1,22 +1,22 @@
 [
   {
-    "username": "AI",
-    "message": "Analyzing request parameters. Proceeding with message generation."
+    "username": "Doo Dah",
+    "message": "Another beautiful day in the neighborhood!"
   },
   {
-    "username": "T-800",
-    "message": "Your clothing, give it to me. Now."
-  },
-  {
-    "username": "Yoda",
-    "message": "Fear is the path to the dark side."
-  },
-  {
-    "username": "Mister Brightside",
-    "message": "I'm coming out of my cage and I've been doing just fine."
+    "username": "Randall",
+    "message": "Did anyone see where I left my keys?"
   },
   {
     "username": "Veronica",
-    "message": "Did anyone see where I left my keys?"
+    "message": "Just finished my morning run, feeling great!"
+  },
+  {
+    "username": "T-800",
+    "message": "Affirmative. Target acquired."
+  },
+  {
+    "username": "Yoda",
+    "message": "Much to learn, you still have."
   }
 ]
