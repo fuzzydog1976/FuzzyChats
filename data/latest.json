@@ -1,22 +1,22 @@
 [
   {
     "username": "Doo Dah",
-    "message": "Oh, susanna, don't you cry for me!"
+    "message": "Hello everyone, just checking in!"
   },
   {
     "username": "Randall",
-    "message": "Did anyone see where I left my keys?"
+    "message": "Hey Doo Dah, what's new?"
   },
   {
-    "username": "AI",
-    "message": "My algorithms detect a high probability of successful task completion."
+    "username": "John",
+    "message": "I was just wondering if anyone saw the game last night?"
   },
   {
-    "username": "Yoda",
-    "message": "The Force, strong with this data, it is."
+    "username": "Fuzzy",
+    "message": "I did! It was a nail-biter right until the end."
   },
   {
-    "username": "Veronica",
-    "message": "I'm still waiting for a reply to my last message."
+    "username": "Craig",
+    "message": "Totally agree, I almost fell off my couch from excitement!"
   }
 ]
