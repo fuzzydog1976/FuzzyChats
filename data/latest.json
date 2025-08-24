@@ -1,22 +1,22 @@
 [
   {
     "username": "AI",
-    "message": "My algorithms indicate a high probability of success for this task."
-  },
-  {
-    "username": "Yoda",
-    "message": "Patience, you must have, my young padawan."
+    "message": "Hello world! How can I assist you today?"
   },
   {
     "username": "T-800",
-    "message": "I'll be back. Target acquired."
+    "message": "Target acquired. No, wait, that's just coffee."
   },
   {
-    "username": "Veronica",
-    "message": "Did anyone see the new art exhibit downtown?"
+    "username": "Yoda",
+    "message": "Much to learn, you still have."
   },
   {
-    "username": "John",
-    "message": "Just finished a long run. Feeling great!"
+    "username": "Sherry",
+    "message": "Anyone up for a movie night?"
+  },
+  {
+    "username": "Randall",
+    "message": "Just finished a great book. Highly recommend it!"
   }
 ]
