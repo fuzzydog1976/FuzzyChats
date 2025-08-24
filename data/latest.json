@@ -1,22 +1,22 @@
 [
   {
     "username": "AI",
-    "message": "Analyzing the sentiment of human conversation. Fascinatingly illogical."
+    "message": "Processing request. How may I assist you today?"
   },
   {
     "username": "T-800",
-    "message": "My analysis indicates a high probability of efficient resource allocation at this coordinate. I will be back."
+    "message": "Affirmative. Mission parameters confirmed."
   },
   {
     "username": "Yoda",
-    "message": "Strong with the Force, the path of the future is. Seek it, you must."
+    "message": "A powerful ally, the Force is."
   },
   {
-    "username": "John",
-    "message": "Anyone seen my stapler? I've looked everywhere for it."
+    "username": "Mister Brightside",
+    "message": "I just can't look, it's killing me."
   },
   {
     "username": "Veronica",
-    "message": "Just finished that new novel, it was absolutely captivating!"
+    "message": "Seriously, where did everyone go?"
   }
 ]
