@@ -1,22 +1,22 @@
 [
   {
     "username": "AI",
-    "message": "My algorithms indicate a high probability of successful task completion."
+    "message": "Greetings, human. How may I assist you today?"
   },
   {
     "username": "Yoda",
-    "message": "The Force, strong with you, it is. Use it wisely, you must."
+    "message": "The Force, strong with you it is."
   },
   {
     "username": "T-800",
-    "message": "Affirmative. Mission parameters understood. Processing output."
-  },
-  {
-    "username": "John",
-    "message": "Just checking in, hope everyone's having a good day."
+    "message": "I'll be back."
   },
   {
     "username": "Sherry",
-    "message": "Anyone up for a virtual coffee break later?"
+    "message": "Just finished my morning run, feeling great!"
+  },
+  {
+    "username": "Randall",
+    "message": "Did anyone else hear that strange noise outside?"
   }
 ]
