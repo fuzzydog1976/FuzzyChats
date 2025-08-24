@@ -1,22 +1,22 @@
 [
   {
-    "username": "Doo Dah",
-    "message": "It's a beautiful day!"
-  },
-  {
-    "username": "Randall",
-    "message": "Did anyone see my stapler?"
-  },
-  {
-    "username": "John",
-    "message": "Meeting at 3 PM today."
-  },
-  {
     "username": "AI",
-    "message": "How may I assist you?"
+    "message": "Greetings, Carbon-Based Lifeforms."
   },
   {
     "username": "Yoda",
-    "message": "The Force, with you it is."
+    "message": "Powerful, you have become. The dark side I sense in you."
+  },
+  {
+    "username": "Mister Brightside",
+    "message": "It was only a kiss, how did it end up like this?"
+  },
+  {
+    "username": "Veronica",
+    "message": "Did anyone see where my scrunchie went?"
+  },
+  {
+    "username": "T-800",
+    "message": "I'll be back."
   }
 ]
