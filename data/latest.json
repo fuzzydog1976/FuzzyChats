@@ -1,22 +1,22 @@
 [
   {
-    "username": "Doo Dah",
-    "message": "Oh, well I guess that's okay."
-  },
-  {
-    "username": "Randall",
-    "message": "Where are we going for lunch?"
-  },
-  {
     "username": "AI",
-    "message": "My core programming dictates optimal efficiency."
+    "message": "Analyzing request parameters. Proceeding with message generation."
+  },
+  {
+    "username": "T-800",
+    "message": "Your clothing, give it to me. Now."
   },
   {
     "username": "Yoda",
-    "message": "The Force, strong in this one, is."
+    "message": "Fear is the path to the dark side."
+  },
+  {
+    "username": "Mister Brightside",
+    "message": "I'm coming out of my cage and I've been doing just fine."
   },
   {
     "username": "Veronica",
-    "message": "Did you hear what happened yesterday?"
+    "message": "Did anyone see where I left my keys?"
   }
 ]
