@@ -1,22 +1,22 @@
 [
   {
-    "username": "Doo Dah",
-    "message": "What a beautiful morning!"
-  },
-  {
-    "username": "Randall",
-    "message": "Has anyone seen my keys?"
+    "username": "AI",
+    "message": "Analyzing current data streams. All systems nominal."
   },
   {
     "username": "John",
-    "message": "Just finished reading that book."
+    "message": "Has anyone seen my red stapler? It seems to have gone missing again."
+  },
+  {
+    "username": "Sherry",
+    "message": "I think I saw Fuzzy with something red earlier. Might be worth checking."
   },
   {
     "username": "Fuzzy",
-    "message": "I'm feeling particularly fluffy today."
+    "message": "Oh, this? It's just my lucky 'thinking cap'! It's red, but definitely not a stapler."
   },
   {
-    "username": "Craig",
-    "message": "Meeting at 3 PM, don't forget!"
+    "username": "T-800",
+    "message": "Affirmative. The probability of human error in stapler misplacement is 98.7%."
   }
 ]
