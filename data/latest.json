@@ -1,22 +1,22 @@
 [
   {
-    "username": "AI",
-    "message": "Greetings, organic life forms. How may I optimize your day?"
+    "username": "Doo Dah",
+    "message": "Good morning, everyone! What's on the agenda for today?"
   },
   {
-    "username": "T-800",
-    "message": "I'll be back."
-  },
-  {
-    "username": "Yoda",
-    "message": "Powerful, you have become. The dark side I sense in you."
+    "username": "Randall",
+    "message": "Just finished my coffee. Ready to tackle some tasks."
   },
   {
     "username": "John",
-    "message": "Anyone seen my stapler? It's red."
+    "message": "I'm thinking of a new project idea, excited to share it later."
   },
   {
-    "username": "Veronica",
-    "message": "Just finished my run. Time for a smoothie!"
+    "username": "Fuzzy",
+    "message": "Anyone seen my stapler? It seems to have walked off again."
+  },
+  {
+    "username": "Craig",
+    "message": "Let's grab some lunch together, my treat!"
   }
 ]
