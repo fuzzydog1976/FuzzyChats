@@ -1,22 +1,22 @@
 [
   {
-    "username": "Doo Dah",
-    "message": "Oh, what a beautiful morning! I've got a wonderful feeling."
-  },
-  {
-    "username": "Randall",
-    "message": "Did anyone see where I left my red stapler? It's critical for TPS reports."
-  },
-  {
     "username": "AI",
-    "message": "Processing current data... Human interaction patterns indicate a desire for more coffee."
+    "message": "My algorithms indicate a high probability of success for this task."
   },
   {
     "username": "Yoda",
-    "message": "Much to learn, you still have. Patience, young one."
+    "message": "Patience, you must have, my young padawan."
+  },
+  {
+    "username": "T-800",
+    "message": "I'll be back. Target acquired."
   },
   {
     "username": "Veronica",
-    "message": "Seriously, another meeting? Can't we just get this done already?"
+    "message": "Did anyone see the new art exhibit downtown?"
+  },
+  {
+    "username": "John",
+    "message": "Just finished a long run. Feeling great!"
   }
 ]
