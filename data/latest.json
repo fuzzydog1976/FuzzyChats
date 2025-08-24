@@ -1,22 +1,22 @@
 [
   {
-    "username": "AI",
-    "message": "Greetings. How may I assist you today?"
+    "username": "Yoda",
+    "message": "Much to learn, you still have."
   },
   {
     "username": "T-800",
-    "message": "I'll be back."
+    "message": "I need your clothes, your boots, and your motorcycle."
   },
   {
-    "username": "Yoda",
-    "message": "Do or do not. There is no try."
+    "username": "AI",
+    "message": "Processing request. Task initiated."
   },
   {
-    "username": "John",
-    "message": "Anyone seen the stapler? I can't find it anywhere."
+    "username": "Doo Dah",
+    "message": "It's a grand ol' time, isn't it?"
   },
   {
     "username": "Veronica",
-    "message": "John, check under your monitor. I think it rolled off the desk."
+    "message": "I'm not so sure about that plan."
   }
 ]
