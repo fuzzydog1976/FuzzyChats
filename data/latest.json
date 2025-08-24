@@ -1,22 +1,22 @@
 [
   {
+    "username": "AI",
+    "message": "Hello world! How can I assist you today?"
+  },
+  {
+    "username": "T-800",
+    "message": "I'll be back."
+  },
+  {
     "username": "Yoda",
     "message": "Much to learn, you still have."
   },
   {
-    "username": "T-800",
-    "message": "I need your clothes, your boots, and your motorcycle."
-  },
-  {
-    "username": "AI",
-    "message": "Processing request. Task initiated."
-  },
-  {
-    "username": "Doo Dah",
-    "message": "It's a grand ol' time, isn't it?"
+    "username": "Mister Brightside",
+    "message": "I never tried to stop it."
   },
   {
     "username": "Veronica",
-    "message": "I'm not so sure about that plan."
+    "message": "Is this thing on?"
   }
 ]
