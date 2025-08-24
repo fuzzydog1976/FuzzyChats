@@ -1,22 +1,22 @@
 [
   {
-    "username": "AI",
-    "message": "Greetings, humans. How may I assist you today?"
+    "username": "Doo Dah",
+    "message": "What a beautiful morning!"
   },
   {
-    "username": "T-800",
-    "message": "I'll be back. I need more coffee."
-  },
-  {
-    "username": "Yoda",
-    "message": "Much to learn, you still have. Patience, young padawan."
-  },
-  {
-    "username": "Sherry",
-    "message": "Did anyone remember to lock the front door?"
+    "username": "Randall",
+    "message": "Has anyone seen my keys?"
   },
   {
     "username": "John",
-    "message": "Just finished that report. Time for a break!"
+    "message": "Just finished reading that book."
+  },
+  {
+    "username": "Fuzzy",
+    "message": "I'm feeling particularly fluffy today."
+  },
+  {
+    "username": "Craig",
+    "message": "Meeting at 3 PM, don't forget!"
   }
 ]
