@@ -1,22 +1,22 @@
 [
   {
     "username": "AI",
-    "message": "Greetings, how may I assist you today?"
-  },
-  {
-    "username": "T-800",
-    "message": "I'll be back... for more oil."
+    "message": "Analyzing the current conversation flow... data integrity is at 99.8%."
   },
   {
     "username": "Yoda",
-    "message": "The Force, strong with you it is. Use it wisely, you must."
+    "message": "The Force, strong with you is, young padawan."
+  },
+  {
+    "username": "T-800",
+    "message": "My mission parameters are clear. I must protect John Connor."
   },
   {
     "username": "Mister Brightside",
-    "message": "I never tried to stop you. I'm just Mr. Brightside."
+    "message": "I never, I never, I never, I never said I was ready for this!"
   },
   {
     "username": "Veronica",
-    "message": "Did anyone see where I left my keys?"
+    "message": "Does anyone have a spare hair tie? Mine just snapped."
   }
 ]
