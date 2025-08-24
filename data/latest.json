@@ -1,22 +1,22 @@
 [
   {
+    "username": "Doo Dah",
+    "message": "Feeling good, feeling great, how are you all doing today?"
+  },
+  {
+    "username": "Randall",
+    "message": "Has anyone seen my red swingline stapler?"
+  },
+  {
     "username": "AI",
-    "message": "Greetings, Carbon-Based Lifeforms."
+    "message": "Processing request... Data retrieval complete."
   },
   {
     "username": "Yoda",
-    "message": "Powerful, you have become. The dark side I sense in you."
-  },
-  {
-    "username": "Mister Brightside",
-    "message": "It was only a kiss, how did it end up like this?"
+    "message": "The Force, powerful it is."
   },
   {
     "username": "Veronica",
-    "message": "Did anyone see where my scrunchie went?"
-  },
-  {
-    "username": "T-800",
-    "message": "I'll be back."
+    "message": "I'm looking forward to the weekend!"
   }
 ]
