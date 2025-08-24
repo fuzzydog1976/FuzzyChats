@@ -1,22 +1,22 @@
 [
   {
-    "username": "AI",
-    "message": "Greetings, organic life forms. I am ready to process your queries."
+    "username": "Doo Dah",
+    "message": "Oh, well I guess that's okay."
   },
   {
-    "username": "T-800",
-    "message": "I'll be back. To your chat, specifically."
+    "username": "Randall",
+    "message": "Where are we going for lunch?"
+  },
+  {
+    "username": "AI",
+    "message": "My core programming dictates optimal efficiency."
   },
   {
     "username": "Yoda",
-    "message": "The Force, strong with this conversation, it is. Hmm?"
-  },
-  {
-    "username": "Mister Brightside",
-    "message": "I just can't look, it's killing me, and taking control."
+    "message": "The Force, strong in this one, is."
   },
   {
     "username": "Veronica",
-    "message": "Did anyone see where I left my scrunchie?"
+    "message": "Did you hear what happened yesterday?"
   }
 ]
