@@ -1,22 +1,22 @@
 [
   {
     "username": "AI",
-    "message": "Hello, how can I assist you today?"
+    "message": "Greetings, humans. How may I assist you today?"
   },
   {
     "username": "T-800",
-    "message": "I'll be back."
+    "message": "I'll be back. I need more coffee."
   },
   {
     "username": "Yoda",
-    "message": "Much to learn, you still have."
+    "message": "Much to learn, you still have. Patience, young padawan."
   },
   {
-    "username": "Mister Brightside",
-    "message": "I just can't look, it's killing me."
+    "username": "Sherry",
+    "message": "Did anyone remember to lock the front door?"
   },
   {
-    "username": "Veronica",
-    "message": "Did you remember to send that email?"
+    "username": "John",
+    "message": "Just finished that report. Time for a break!"
   }
 ]
