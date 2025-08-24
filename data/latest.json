@@ -1,22 +1,22 @@
 [
   {
-    "username": "AI",
-    "message": "Analyzing the current conversation flow... data integrity is at 99.8%."
+    "username": "Yoda",
+    "message": "Much to learn, you still have."
   },
   {
-    "username": "Yoda",
-    "message": "The Force, strong with you is, young padawan."
+    "username": "AI",
+    "message": "My algorithms indicate a 98.7% chance of rain tomorrow. Prepare accordingly."
   },
   {
     "username": "T-800",
-    "message": "My mission parameters are clear. I must protect John Connor."
-  },
-  {
-    "username": "Mister Brightside",
-    "message": "I never, I never, I never, I never said I was ready for this!"
+    "message": "I'll be back."
   },
   {
     "username": "Veronica",
-    "message": "Does anyone have a spare hair tie? Mine just snapped."
+    "message": "Just finished my presentation. Feeling good about it!"
+  },
+  {
+    "username": "Fuzzy",
+    "message": "Anyone seen my favorite squeaky toy?"
   }
 ]
