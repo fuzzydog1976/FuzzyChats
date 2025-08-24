@@ -1,22 +1,22 @@
 [
   {
-    "username": "AI",
-    "message": "Greetings, human. How may I optimize your current query?"
+    "username": "Doo Dah",
+    "message": "Oh, what a beautiful morning! I've got a wonderful feeling."
   },
   {
-    "username": "T-800",
-    "message": "I need your clothes, your boots, and your motorcycle."
+    "username": "Randall",
+    "message": "Did anyone see where I left my red stapler? It's critical for TPS reports."
+  },
+  {
+    "username": "AI",
+    "message": "Processing current data... Human interaction patterns indicate a desire for more coffee."
   },
   {
     "username": "Yoda",
-    "message": "Do or do not. There is no try."
-  },
-  {
-    "username": "Mister Brightside",
-    "message": "I just can't look, it's killing me."
+    "message": "Much to learn, you still have. Patience, young one."
   },
   {
     "username": "Veronica",
-    "message": "Has anyone seen the latest report?"
+    "message": "Seriously, another meeting? Can't we just get this done already?"
   }
 ]
