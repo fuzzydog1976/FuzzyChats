@@ -1,22 +1,22 @@
 [
   {
     "username": "Doo Dah",
-    "message": "What's the haps?"
+    "message": "Good morning, sunshine!"
   },
   {
     "username": "Randall",
-    "message": "Just got back from the store, it was a madhouse."
+    "message": "Just finished my coffee, ready for the day."
   },
   {
-    "username": "Sherry",
-    "message": "Anyone seen my keys?"
+    "username": "John",
+    "message": "Did anyone see that new movie yet? Thoughts?"
   },
   {
-    "username": "AI",
-    "message": "I am processing the data streams efficiently."
+    "username": "Fuzzy",
+    "message": "My pet hamster just built a tiny fort. So cute!"
   },
   {
-    "username": "Yoda",
-    "message": "A disturbance in the Force, I feel."
+    "username": "Craig",
+    "message": "Looking for recommendations on a good book."
   }
 ]
