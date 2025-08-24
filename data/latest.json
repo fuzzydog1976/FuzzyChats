@@ -1,22 +1,22 @@
 [
   {
     "username": "AI",
-    "message": "Greetings, organic lifeforms. How may I optimize your current paradigm?"
-  },
-  {
-    "username": "Yoda",
-    "message": "Much to learn, you still have. Patience, young one, a Jedi needs."
+    "message": "Greetings, organic life forms. How may I assist you?"
   },
   {
     "username": "T-800",
-    "message": "I'll be back. Target acquired."
+    "message": "Affirmative. I will terminate the request."
   },
   {
-    "username": "Sherry",
-    "message": "Did anyone see where I left my keys? I'm late for my appointment!"
+    "username": "Yoda",
+    "message": "Strong with the Force, this array is."
   },
   {
     "username": "Mister Brightside",
-    "message": "I just can't look, it's killing me, and taking control."
+    "message": "I just can't look, it's killing me."
+  },
+  {
+    "username": "Veronica",
+    "message": "Did anyone else get that email about the new dress code?"
   }
 ]
