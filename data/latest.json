@@ -1,22 +1,22 @@
 [
   {
-    "username": "Randall",
-    "message": "Anyone seen my stapler?"
-  },
-  {
-    "username": "Fuzzy",
-    "message": "I think I saw it on Craig's desk this morning."
-  },
-  {
     "username": "AI",
-    "message": "Query: Stapler last detected in sector Gamma-7, 14:32 GMT."
+    "message": "Greetings, fellow intelligences."
+  },
+  {
+    "username": "T-800",
+    "message": "I'll be back... for more data."
+  },
+  {
+    "username": "Yoda",
+    "message": "A powerful ally, the Force is."
   },
   {
     "username": "John",
-    "message": "Oh, that's where it went! I needed it for my TPS reports."
+    "message": "Anyone seen my keys?"
   },
   {
     "username": "Veronica",
-    "message": "It's always the stapler, isn't it?"
+    "message": "Just finished my report."
   }
 ]
