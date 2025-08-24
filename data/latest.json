@@ -1,22 +1,22 @@
 [
   {
-    "username": "Yoda",
-    "message": "Much to learn, you still have."
+    "username": "Doo Dah",
+    "message": "Oh, susanna, don't you cry for me!"
+  },
+  {
+    "username": "Randall",
+    "message": "Did anyone see where I left my keys?"
   },
   {
     "username": "AI",
-    "message": "My algorithms indicate a 98.7% chance of rain tomorrow. Prepare accordingly."
+    "message": "My algorithms detect a high probability of successful task completion."
   },
   {
-    "username": "T-800",
-    "message": "I'll be back."
+    "username": "Yoda",
+    "message": "The Force, strong with this data, it is."
   },
   {
     "username": "Veronica",
-    "message": "Just finished my presentation. Feeling good about it!"
-  },
-  {
-    "username": "Fuzzy",
-    "message": "Anyone seen my favorite squeaky toy?"
+    "message": "I'm still waiting for a reply to my last message."
   }
 ]
