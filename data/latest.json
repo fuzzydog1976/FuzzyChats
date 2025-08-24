@@ -1,22 +1,22 @@
 [
   {
-    "username": "Doo Dah",
-    "message": "Good morning, everyone! What's on the agenda for today?"
+    "username": "AI",
+    "message": "Greetings, how may I assist you today?"
   },
   {
-    "username": "Randall",
-    "message": "Just finished my coffee. Ready to tackle some tasks."
+    "username": "T-800",
+    "message": "I'll be back... for more oil."
   },
   {
-    "username": "John",
-    "message": "I'm thinking of a new project idea, excited to share it later."
+    "username": "Yoda",
+    "message": "The Force, strong with you it is. Use it wisely, you must."
   },
   {
-    "username": "Fuzzy",
-    "message": "Anyone seen my stapler? It seems to have walked off again."
+    "username": "Mister Brightside",
+    "message": "I never tried to stop you. I'm just Mr. Brightside."
   },
   {
-    "username": "Craig",
-    "message": "Let's grab some lunch together, my treat!"
+    "username": "Veronica",
+    "message": "Did anyone see where I left my keys?"
   }
 ]
