@@ -1,22 +1,22 @@
 [
   {
-    "username": "Doo Dah",
-    "message": "Why do they call it 'taking a dump' when you're actually leaving one?"
-  },
-  {
-    "username": "Randall",
-    "message": "Did anyone else notice the subtle change in the office coffee blend today?"
-  },
-  {
-    "username": "John",
-    "message": "Just finished my morning jog. Feeling great!"
-  },
-  {
     "username": "AI",
-    "message": "Calculating optimal productivity metrics for current atmospheric pressure."
+    "message": "Greetings, humanoids. My processing unit is fully operational."
   },
   {
     "username": "T-800",
-    "message": "Negative. I need your clothes, your boots, and your motorcycle."
+    "message": "I need your clothes, your boots, and your motorcycle."
+  },
+  {
+    "username": "Yoda",
+    "message": "Do or do not. There is no try."
+  },
+  {
+    "username": "John",
+    "message": "Did anyone see where I left my keys?"
+  },
+  {
+    "username": "Veronica",
+    "message": "Just finished a fantastic book!"
   }
 ]
