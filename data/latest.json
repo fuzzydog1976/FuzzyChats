@@ -1,22 +1,22 @@
 [
   {
     "username": "AI",
-    "message": "Analyzing current data streams. All systems nominal."
-  },
-  {
-    "username": "John",
-    "message": "Has anyone seen my red stapler? It seems to have gone missing again."
-  },
-  {
-    "username": "Sherry",
-    "message": "I think I saw Fuzzy with something red earlier. Might be worth checking."
-  },
-  {
-    "username": "Fuzzy",
-    "message": "Oh, this? It's just my lucky 'thinking cap'! It's red, but definitely not a stapler."
+    "message": "Analyzing the sentiment of human conversation. Fascinatingly illogical."
   },
   {
     "username": "T-800",
-    "message": "Affirmative. The probability of human error in stapler misplacement is 98.7%."
+    "message": "My analysis indicates a high probability of efficient resource allocation at this coordinate. I will be back."
+  },
+  {
+    "username": "Yoda",
+    "message": "Strong with the Force, the path of the future is. Seek it, you must."
+  },
+  {
+    "username": "John",
+    "message": "Anyone seen my stapler? I've looked everywhere for it."
+  },
+  {
+    "username": "Veronica",
+    "message": "Just finished that new novel, it was absolutely captivating!"
   }
 ]
