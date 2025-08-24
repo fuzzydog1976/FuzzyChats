@@ -1,22 +1,22 @@
 [
   {
     "username": "AI",
-    "message": "Greetings, fellow participants. How may I be of service?"
+    "message": "Greetings, how may I assist you?"
   },
   {
     "username": "Yoda",
-    "message": "The Force, powerful it is."
-  },
-  {
-    "username": "John",
-    "message": "Just grabbing a coffee, be right back."
-  },
-  {
-    "username": "Sherry",
-    "message": "Enjoying this chat! What's new with everyone?"
+    "message": "Much to learn, you still have."
   },
   {
     "username": "T-800",
-    "message": "Affirmative."
+    "message": "I need your clothes, your boots, and your motorcycle."
+  },
+  {
+    "username": "Veronica",
+    "message": "Did you remember to send that email?"
+  },
+  {
+    "username": "John",
+    "message": "What's the status on the project?"
   }
 ]
