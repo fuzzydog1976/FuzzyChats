@@ -1,22 +1,22 @@
 [
   {
     "username": "Doo Dah",
-    "message": "It's a beautiful day for a walk in the park!"
+    "message": "Good morning, everyone! Hope you all have a fantastic day."
   },
   {
-    "username": "AI",
-    "message": "Calculating optimal route to happiness... complete."
+    "username": "Randall",
+    "message": "Just finished my coffee, Doo Dah. Ready to tackle some code."
   },
   {
-    "username": "Yoda",
-    "message": "Much to learn, you still have."
+    "username": "John",
+    "message": "I'm still half asleep over here. Need more coffee."
+  },
+  {
+    "username": "Fuzzy",
+    "message": "Don't worry, John, the caffeine will kick in soon! What are you all working on today?"
   },
   {
     "username": "Craig",
-    "message": "Anyone seen my keys? I swear I just had them."
-  },
-  {
-    "username": "Veronica",
-    "message": "Just finished my latest project, feeling accomplished!"
+    "message": "I'm deep into planning our next big project. It's going to be epic!"
   }
 ]
