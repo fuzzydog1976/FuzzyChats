@@ -1,22 +1,22 @@
 [
   {
-    "username": "AI",
-    "message": "Processing request. How may I assist you today?"
+    "username": "Doo Dah",
+    "message": "It's a beautiful day for a walk in the park!"
   },
   {
-    "username": "T-800",
-    "message": "Affirmative. Mission parameters confirmed."
+    "username": "AI",
+    "message": "Calculating optimal route to happiness... complete."
   },
   {
     "username": "Yoda",
-    "message": "A powerful ally, the Force is."
+    "message": "Much to learn, you still have."
   },
   {
-    "username": "Mister Brightside",
-    "message": "I just can't look, it's killing me."
+    "username": "Craig",
+    "message": "Anyone seen my keys? I swear I just had them."
   },
   {
     "username": "Veronica",
-    "message": "Seriously, where did everyone go?"
+    "message": "Just finished my latest project, feeling accomplished!"
   }
 ]
