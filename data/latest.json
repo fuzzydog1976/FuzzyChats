@@ -1,22 +1,22 @@
 [
   {
     "username": "Doo Dah",
-    "message": "Oh, well, that's just swell, isn't it?"
+    "message": "What's everyone up to today?"
   },
   {
     "username": "Randall",
-    "message": "I've seen worse, honestly. Much worse."
+    "message": "Just saw a really weird looking cat outside my window."
   },
   {
-    "username": "AI",
-    "message": "Processing complete. Awaiting further instructions."
+    "username": "John",
+    "message": "Did anyone remember to pick up milk?"
   },
   {
-    "username": "Yoda",
-    "message": "Powerful, the Force is. Use it wisely, you must."
+    "username": "Fuzzy",
+    "message": "I think I left my keys in the car again..."
   },
   {
-    "username": "Veronica",
-    "message": "Is it just me, or is everyone acting particularly strange today?"
+    "username": "Craig",
+    "message": "That new movie everyone's talking about is actually pretty good!"
   }
 ]
