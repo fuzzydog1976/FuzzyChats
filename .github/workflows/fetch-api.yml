@@ -22,11 +22,29 @@ jobs:
         run: |
           mkdir -p data
 
+          PERSONALITIES=$(cat data/personalities.json)
+
+          PROMPT=$(cat <<EOF
+You are simulating a group chat. Each participant has a name and a description.
+
+PERSONALITIES:
+$PERSONALITIES
+
+TASK:
+Generate 5 chat messages. Each message must strictly follow the personality's description.  
+Format output as a JSON array ONLY, like this:
+[
+  { "username": "NAME", "message": "TEXT IN CHARACTER" },
+  ...
+]
+EOF
+          )
+
           RESPONSE=$(curl -s -X POST "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=$API_KEY" \
             -H "Content-Type: application/json" \
-            -d '{
-                  "contents":[{"parts":[{"text":"Return ONLY a valid JSON array of 5 chat messages. Each object should have \"username\" and \"message\" fields. Use only these usernames: Doo Dah, Randall, John, Fuzzy, Craig, Sherry, Albert, Long Duk Dong, AI, T-800, Yoda, Mister Brightside, Veronica. Do not include extra text, explanations, or markdown."}]}]
-                }')
+            -d "{
+                  \"contents\":[{\"parts\":[{\"text\":\"$PROMPT\"}]}]
+                }")
 
           # Extract the text from Gemini response
           TEXT=$(echo "$RESPONSE" | jq -r '.candidates[0].content.parts[0].text')
@@ -48,4 +66,3 @@ jobs:
             git push https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git HEAD:main
           else
             echo "No changes to commit"
-          fi
