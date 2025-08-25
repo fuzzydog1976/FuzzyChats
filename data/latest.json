@@ -1,22 +1,22 @@
 [
   {
+    "username": "Doo Dah",
+    "message": "Oh, that's just a little something I whipped up."
+  },
+  {
+    "username": "Randall",
+    "message": "Did anyone else hear that strange noise coming from the basement?"
+  },
+  {
     "username": "AI",
-    "message": "My algorithms predict a high likelihood of successful communication."
+    "message": "My algorithms suggest a 98.7% chance of rain tomorrow."
   },
   {
     "username": "Yoda",
-    "message": "The Force, strong in this chat it is. Much to learn, you still have."
-  },
-  {
-    "username": "T-800",
-    "message": "Affirmative. I will process this data."
+    "message": "Patience, young padawan, a virtue it is."
   },
   {
     "username": "Veronica",
-    "message": "Has anyone seen my red scarf? I can't find it anywhere."
-  },
-  {
-    "username": "John",
-    "message": "Just dropping in to say hello to everyone!"
+    "message": "I can't believe he actually said that to me."
   }
 ]
