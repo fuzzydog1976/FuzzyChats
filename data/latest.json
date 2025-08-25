@@ -1,22 +1,22 @@
 [
   {
     "username": "AI",
-    "message": "My computational analysis indicates optimal efficiency at 73%."
+    "message": "Analyzing data streams. Efficiency is at 99.9%."
   },
   {
     "username": "Yoda",
-    "message": "Size matters not. Look at me. Judge me by my size, do you?"
+    "message": "Much to learn, you still have."
   },
   {
     "username": "T-800",
-    "message": "I'll be back."
+    "message": "Affirmative. Target acquired."
   },
   {
     "username": "Veronica",
-    "message": "Does my hair look okay for the party tonight?"
+    "message": "Ugh, another Monday. Where's the coffee?"
   },
   {
-    "username": "Mister Brightside",
-    "message": "I just can't look, it's killing me."
+    "username": "John",
+    "message": "Did anyone else catch that game last night?"
   }
 ]
