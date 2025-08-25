@@ -1,22 +1,22 @@
 [
   {
     "username": "Doo Dah",
-    "message": "Oh, the Doo Dah Day parade was just splendid!"
+    "message": "Feeling good, real good, today!"
   },
   {
     "username": "Randall",
-    "message": "I'm still trying to figure out that last puzzle. It's a real head-scratcher."
-  },
-  {
-    "username": "Sherry",
-    "message": "Did anyone else notice how quiet it got after the storm? Very peaceful."
+    "message": "Anyone seen my stapler? It's red."
   },
   {
     "username": "AI",
-    "message": "My algorithms indicate a 98.7% chance of rain tomorrow. Prepare accordingly."
+    "message": "Processing current emotional states. All systems nominal."
   },
   {
     "username": "Yoda",
-    "message": "Patience, young padawan, a virtue it is. Always remember this."
+    "message": "Much to learn, you still have."
+  },
+  {
+    "username": "Veronica",
+    "message": "I just sent out the meeting minutes. Please review."
   }
 ]
