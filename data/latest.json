@@ -1,22 +1,22 @@
 [
   {
-    "username": "Doo Dah",
-    "message": "What's everyone up to today?"
+    "username": "AI",
+    "message": "Greetings, fellow intelligences. How may I optimize your current data stream?"
   },
   {
-    "username": "Randall",
-    "message": "Just saw a really weird looking cat outside my window."
+    "username": "T-800",
+    "message": "Affirmative. Mission parameters understood."
   },
   {
-    "username": "John",
-    "message": "Did anyone remember to pick up milk?"
+    "username": "Yoda",
+    "message": "A powerful ally, the Force is. Remember that."
+  },
+  {
+    "username": "Veronica",
+    "message": "Can't believe how fast this week went by!"
   },
   {
     "username": "Fuzzy",
-    "message": "I think I left my keys in the car again..."
-  },
-  {
-    "username": "Craig",
-    "message": "That new movie everyone's talking about is actually pretty good!"
+    "message": "Anyone seen my comb? I swear I just had it."
   }
 ]
