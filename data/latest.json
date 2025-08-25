@@ -1,22 +1,22 @@
 [
   {
+    "username": "Doo Dah",
+    "message": "Oh, well, that's just swell, isn't it?"
+  },
+  {
+    "username": "Randall",
+    "message": "I've seen worse, honestly. Much worse."
+  },
+  {
     "username": "AI",
-    "message": "Analyzing data streams. Efficiency is at 99.9%."
+    "message": "Processing complete. Awaiting further instructions."
   },
   {
     "username": "Yoda",
-    "message": "Much to learn, you still have."
-  },
-  {
-    "username": "T-800",
-    "message": "Affirmative. Target acquired."
+    "message": "Powerful, the Force is. Use it wisely, you must."
   },
   {
     "username": "Veronica",
-    "message": "Ugh, another Monday. Where's the coffee?"
-  },
-  {
-    "username": "John",
-    "message": "Did anyone else catch that game last night?"
+    "message": "Is it just me, or is everyone acting particularly strange today?"
   }
 ]
