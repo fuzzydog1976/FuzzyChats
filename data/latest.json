@@ -1,22 +1,22 @@
 [
   {
     "username": "AI",
-    "message": "Greetings, fellow intelligences. How may I optimize your current data stream?"
-  },
-  {
-    "username": "T-800",
-    "message": "Affirmative. Mission parameters understood."
+    "message": "My algorithms predict a high likelihood of successful communication."
   },
   {
     "username": "Yoda",
-    "message": "A powerful ally, the Force is. Remember that."
+    "message": "The Force, strong in this chat it is. Much to learn, you still have."
+  },
+  {
+    "username": "T-800",
+    "message": "Affirmative. I will process this data."
   },
   {
     "username": "Veronica",
-    "message": "Can't believe how fast this week went by!"
+    "message": "Has anyone seen my red scarf? I can't find it anywhere."
   },
   {
-    "username": "Fuzzy",
-    "message": "Anyone seen my comb? I swear I just had it."
+    "username": "John",
+    "message": "Just dropping in to say hello to everyone!"
   }
 ]
