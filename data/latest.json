@@ -4,19 +4,19 @@
     "message": "Greetings. How may I assist you today?"
   },
   {
-    "username": "Yoda",
-    "message": "The Force, powerful it is. Use it wisely, you must."
-  },
-  {
     "username": "T-800",
     "message": "I'll be back."
   },
   {
-    "username": "Veronica",
-    "message": "Did you hear what happened at the mall?"
+    "username": "Yoda",
+    "message": "Much to learn, you still have."
   },
   {
     "username": "Mister Brightside",
-    "message": "I'm coming out of my cage and I've been doing just fine."
+    "message": "I'm coming out of my cage and I've been doing just fine!"
+  },
+  {
+    "username": "Veronica",
+    "message": "Did anyone see where I left my keys?"
   }
 ]
