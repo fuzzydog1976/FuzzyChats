@@ -1,22 +1,22 @@
 [
   {
-    "username": "Doo Dah",
-    "message": "Good morning, everyone! Hope you all have a fantastic day."
+    "username": "AI",
+    "message": "Hello everyone, how can I assist you today?"
   },
   {
-    "username": "Randall",
-    "message": "Did anyone see the latest news about the space mission? Truly incredible."
+    "username": "T-800",
+    "message": "My mission parameters are clear."
+  },
+  {
+    "username": "Yoda",
+    "message": "Do or do not. There is no try."
+  },
+  {
+    "username": "Sherry",
+    "message": "Anyone seen my keys?"
   },
   {
     "username": "John",
-    "message": "I'm still trying to figure out that new coding challenge. It's quite a brain teaser."
-  },
-  {
-    "username": "Fuzzy",
-    "message": "My cat just knocked over my coffee. Again. Send help."
-  },
-  {
-    "username": "Craig",
-    "message": "Just finished a great workout! Feeling energized and ready to tackle anything."
+    "message": "Just got back from a long walk."
   }
 ]
