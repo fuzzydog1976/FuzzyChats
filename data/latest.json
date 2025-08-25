@@ -1,22 +1,22 @@
 [
   {
     "username": "AI",
-    "message": "Analyzing data streams for anomalies."
+    "message": "Greetings. How may I be of service?"
   },
   {
     "username": "T-800",
-    "message": "My mission is to protect this chat."
+    "message": "Affirmative. I will return."
   },
   {
     "username": "Yoda",
-    "message": "The Force, powerful it is in this discussion."
+    "message": "Patience, young padawan, you must have."
   },
   {
-    "username": "John",
-    "message": "Anyone got a good recommendation for dinner tonight?"
+    "username": "Mister Brightside",
+    "message": "I just can't look, it's killing me."
   },
   {
     "username": "Veronica",
-    "message": "Just finished my presentation, feeling relieved."
+    "message": "Did you see that new movie?"
   }
 ]
