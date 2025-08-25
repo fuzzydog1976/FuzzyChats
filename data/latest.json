@@ -1,22 +1,22 @@
 [
   {
-    "username": "AI",
-    "message": "Greetings, organic life forms. How may I optimize your current state?"
+    "username": "Doo Dah",
+    "message": "The sun is shining, what a wonderful day!"
   },
   {
-    "username": "Yoda",
-    "message": "Much to learn, you still have. The Force, strong with you it is not."
-  },
-  {
-    "username": "T-800",
-    "message": "I'll be back. Target acquired. Threat neutralized."
+    "username": "Randall",
+    "message": "Has anyone seen my red stapler?"
   },
   {
     "username": "John",
-    "message": "Hey everyone, just checking in. What's the plan for tonight?"
+    "message": "Just finished my morning run, feeling great."
   },
   {
-    "username": "Veronica",
-    "message": "Can anyone help me with this report? It's due by morning!"
+    "username": "Fuzzy",
+    "message": "I'm having trouble connecting to the Wi-Fi."
+  },
+  {
+    "username": "Craig",
+    "message": "Looking forward to the game tonight!"
   }
 ]
