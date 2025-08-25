@@ -1,22 +1,22 @@
 [
   {
-    "username": "Randall",
-    "message": "Did anyone see where I put my stapler?"
-  },
-  {
-    "username": "Sherry",
-    "message": "I think it's on Fuzzy's desk, Randall."
-  },
-  {
-    "username": "Fuzzy",
-    "message": "Nope, not here! I'm still looking for my own pen."
-  },
-  {
     "username": "AI",
-    "message": "A common office supply distribution problem. I suggest a centralized inventory system."
+    "message": "Greetings, organic life forms. How may I optimize your current state?"
   },
   {
     "username": "Yoda",
-    "message": "Patience, young ones. The stapler, find you will."
+    "message": "Much to learn, you still have. The Force, strong with you it is not."
+  },
+  {
+    "username": "T-800",
+    "message": "I'll be back. Target acquired. Threat neutralized."
+  },
+  {
+    "username": "John",
+    "message": "Hey everyone, just checking in. What's the plan for tonight?"
+  },
+  {
+    "username": "Veronica",
+    "message": "Can anyone help me with this report? It's due by morning!"
   }
 ]
