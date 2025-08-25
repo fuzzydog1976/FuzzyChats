@@ -1,22 +1,22 @@
 [
   {
-    "username": "Doo Dah",
-    "message": "Feeling good, real good, today!"
+    "username": "Randall",
+    "message": "Did anyone see where I put my stapler?"
   },
   {
-    "username": "Randall",
-    "message": "Anyone seen my stapler? It's red."
+    "username": "Sherry",
+    "message": "I think it's on Fuzzy's desk, Randall."
+  },
+  {
+    "username": "Fuzzy",
+    "message": "Nope, not here! I'm still looking for my own pen."
   },
   {
     "username": "AI",
-    "message": "Processing current emotional states. All systems nominal."
+    "message": "A common office supply distribution problem. I suggest a centralized inventory system."
   },
   {
     "username": "Yoda",
-    "message": "Much to learn, you still have."
-  },
-  {
-    "username": "Veronica",
-    "message": "I just sent out the meeting minutes. Please review."
+    "message": "Patience, young ones. The stapler, find you will."
   }
 ]
